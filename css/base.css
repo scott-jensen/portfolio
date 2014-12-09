@@ -14,6 +14,7 @@ body {
     text-align: center;
     font-family:HelveticaNeue, Helvetica, Arial, sans-serif;
     text-align: center;
+    color:#444;
 }
 .wrap {
     max-width: 1100px;
@@ -30,14 +31,14 @@ body {
 
 
 
-/* Place Holder for @font-face
+
 @font-face {
-    font-family: 'Raleway';
-    src: url('/static/fonts/raleway_thin-webfont.eot');
-    src: url('/static/fonts/raleway_thin-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/static/fonts/raleway_thin-webfont.woff') format('woff'),
-         url('/static/fonts/raleway_thin-webfont.ttf') format('truetype'),
-         url('/static/fonts/raleway_thin-webfont.svg#RalewayThin') format('svg');
+    font-family: 'Bebas';
+    src: url('../fonts/bebasneue_bold-webfont.eot');
+    src: url('../fonts/bebasneue_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebasneue_bold-webfont.woff') format('woff'),
+         url('../fonts/bebasneue_bold-webfont.ttf') format('truetype'),
+         url('../fonts/bebasneue_bold-webfont.svg#RalewayThin') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -46,13 +47,26 @@ h1 {
 
 }
 h2 {
-
+    font-family:HelveticaNeue-CondensedBold, Bebas, Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    color:#000;
+    overflow: hidden;
+    font-size: 1.2rem;
+    margin-left:-1.3em;
 }
 h3 {
 
 }
 h4 {
 
+}
+.box {
+    height:.8em;
+    background:#000;
+    display:inline-block;
+    width:.8em;
+    margin-right:.5em;
 }
 p {
     font-size:.875em;
@@ -75,7 +89,37 @@ li {
 
 /*-------------------- NAV -------------------*/
 
-
+header {
+    border-top:1px solid #999;
+    border-bottom:1px solid #999;
+    overflow: hidden;
+}
+header #wordmark {
+    display:inline-block;
+    font-family: HelveticaNeue-CondensedBold, Bebas, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 1.5rem;
+    color:#000;
+}
+    header #wordmark span {
+        color:#CCC;
+    }
+#site-nav {
+    float:right;
+}
+    #site-nav li {
+        display:inline-block;
+        width:90px;
+    }
+        #site-nav li a {
+            display:block;
+            padding:10px;
+            font-family: HelveticaNeue-CondensedBold, Bebas, Helvetica, Arial, sans-serif;
+            color:#000;
+            text-transform:uppercase;
+            text-decoration: none;
+        }
 
 
 
