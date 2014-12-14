@@ -22,7 +22,12 @@ body {
     text-align: left;
     margin:auto;
 }
-
+.black-btn {
+    display:block;
+    background:#000;
+    width:100%;
+    height:100%;
+}
 
 
 /*============================================*/
@@ -73,11 +78,12 @@ p {
     line-height: 1.4em;
 }
 ul {
-
+    margin-bottom:20px;
 }
 li {
     list-style:outside;
     margin-left:20px;
+    margin-bottom:10px;
 }
 
 
@@ -89,28 +95,38 @@ li {
 
 /*-------------------- NAV -------------------*/
 
-header {
+#site-header {
     border-top:1px solid #999;
     border-bottom:1px solid #999;
     overflow: hidden;
 }
-header #wordmark {
+#site-header #wordmark {
     display:inline-block;
     font-family: HelveticaNeue-CondensedBold, Bebas, Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: normal;
     font-size: 1.5rem;
     color:#000;
+    float:left;
+    width:25%;
+    margin-top:6px;
 }
     header #wordmark span {
         color:#CCC;
     }
 #site-nav {
     float:right;
+    margin-bottom:0px;
 }
+    #site-nav ul {
+        margin-bottom:0px;
+    }
     #site-nav li {
         display:inline-block;
+        padding:0;
+        margin:0;
         width:90px;
+        list-style: none;
     }
         #site-nav li a {
             display:block;
