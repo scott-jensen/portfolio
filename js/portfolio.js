@@ -43,7 +43,7 @@ function featuredProjects(){
 	$('.project-2').find('.project-images').addClass('project-next');
 	$('.project-2').fadeTo(0, 0);
 	$('.project-2').find('.shrapnel').each(function(){
-		$(this).css('left', windowWidth + 400 + 'px');
+		$(this).css('left', windowWidth + 2200 + 'px');
 	})
 
 	function cycleProjects(activeProject){	
@@ -52,14 +52,20 @@ function featuredProjects(){
 			animateProjectOut($('.project-1'));
 			setTimeout(function(){
 				animateProjectIn($('.project-2'))
-			},200);
+			},300);
 			
 		}
 		else if(activeProject ==2){
-			
+			animateProjectOut($('.project-2'));
+			setTimeout(function(){
+				animateProjectIn($('.project-3'))
+			},300);
 		}
 		else if(activeProject == 3){
-			
+			animateProjectOut($('.project-3'));
+			setTimeout(function(){
+				animateProjectIn($('.project-1'))
+			},300);
 		}
 
 	}
@@ -67,31 +73,38 @@ function featuredProjects(){
 	function animateProjectOut(theProject){
 		var totalElements = 0;
 		var animateElement = 1;
+		var animateTimer = 100;
+		var animateSpeed = 1200;
 		theProject.find('.shrapnel').each(function(){
 			totalElements ++;
 		});
 		function moveElement(){
+			theProject.find('.shrapnel-' + animateElement).addClass('shrapnel-out');
 			theProject.find('.shrapnel-' + animateElement).animate({
-				left: -windowWidth - 400
-			}, 1000, 'swing');
+				left: -windowWidth - 1000
+			}, animateSpeed, 'swing');
 			setTimeout(function(){
 				if(animateElement <= totalElements){
 					animateElement++
+					animateTimer = animateTimer - 10;
+					animateSpeed = animateSpeed - 120;
 					moveElement();
 				};
-			},30);
+			},animateTimer);
 		};
 		moveElement();	
 		theProject.find('.project-images').addClass('project-prev');
 		theProject.animate({
 			opacity:0
-		}, 1000);
+		}, 1200);
 		
 	};
 
 	function animateProjectIn(theProject){
 		var totalElements = 0;
 		var animateElement = 1;
+		var animateTimer = 100;
+		var animateSpeed = 1200;
 		theProject.find('.project-images').addClass('project-next');
 		theProject.css('opacity', '0');
 		theProject.find('.shrapnel').each(function(){
@@ -99,15 +112,18 @@ function featuredProjects(){
 			totalElements ++;
 		});
 		function moveElement(){
+			theProject.find('.shrapnel-' + animateElement).addClass('shrapnel-in');
 			$('.shrapnel-' + animateElement).animate({
 				left: 0
-			}, 1000, 'swing');
+			}, animateSpeed, 'swing');
 			setTimeout(function(){
 				if(animateElement <= totalElements){
 					animateElement++
+					animateTimer = animateTimer - 20;
+					animateSpeed = animateSpeed - 90;
 					moveElement();
 				};
-			},30);
+			},animateTimer);
 
 		};
 		moveElement();	
@@ -120,7 +136,49 @@ function featuredProjects(){
 		
 	};
 
-	setTimeout(function(){
-		cycleProjects(1);
-	},2000);
+	var projectCounter = 1;
+	function runProjects(){
+		setTimeout(function(){
+			cycleProjects(projectCounter);
+			if(projectCounter == 3){
+				projectCounter = 1;
+			}
+			else {
+				projectCounter++
+			}
+			
+		},3000, function(){
+			runProjects();
+		});
+	}
+	runProjects();
+	
+}
+
+function homeScroll() {
+	// WindowVars
+	var windowHeight = $(window).height();
+	var windowWidth = $(window).width();
+	var toutShowing = true;
+	var lastPosition = 0;
+	$(window).resize(function(){
+		windowHeight = $(window).height();
+		windowWidth = $(window).width();
+	});
+
+	$(window).scroll(function(){
+		var currentPosition = $(window).scrollTop();
+		if(toutShowing == true && currentPosition > lastPosition){
+			$('html, body').animate({
+				scrollTop : $('#site-header').offset().top
+			}, 500);
+			toutShowing = false;
+			
+		}
+		else if(toutShowing == false){
+			alert('going up');
+		}
+		lastPosition = $(window).scrollTop();
+
+	});
 }

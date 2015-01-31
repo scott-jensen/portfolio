@@ -30,6 +30,10 @@
 
         $(document).ready(function(){
             featuredProjects();
+            // homeScroll();
+            $('.home-content').css('height', $(window).height() + 100 + 'px');
+
+            
         });
 
     </script>
@@ -45,7 +49,7 @@
     -->
 
 </head>
-<body>
+<body class="home">
 
 <section id="tout">
 
@@ -67,6 +71,8 @@
                     <h2><span class="box"></span>CCA Tradeshow</h2>
                     <h3>Client:</h3>
                     <p>Neutron Interactive</p>
+                    <h3>Media:</h3>
+                    <p>Print, Identity, Web</p>
                 </div>
             </div>
         </li>
@@ -89,6 +95,31 @@
                     <h2><span class="box"></span>CCA Tradeshow</h2>
                     <h3>Client:</h3>
                     <p>Neutron Interactive</p>
+                    <h3>Media:</h3>
+                    <p>Print, Identity, Web</p>
+                </div>
+            </div>
+        </li>
+
+        <li class="project project-3">
+            <div class="wrap">
+                <div class="project-images">
+                    <div class="shrapnel shrapnel-1"></div>
+                    <div class="shrapnel shrapnel-2"></div>
+                    <div class="shrapnel shrapnel-3"></div>
+                    <div class="shrapnel shrapnel-4"></div>
+                    <img src="images/tout-sample.png" alt="project picture" class="shrapnel shrapnel-5 picture-1" />
+                    <div class="shrapnel shadow shadow-5 shrapnel-5"></div>
+                    <div class="shrapnel shrapnel-6"></div>
+                    <div class="shrapnel shrapnel-7"></div>
+                </div>
+                
+                <div class="project-details">
+                    <h2><span class="box"></span>CCA Tradeshow</h2>
+                    <h3>Client:</h3>
+                    <p>Neutron Interactive</p>
+                    <h3>Media:</h3>
+                    <p>Print, Identity, Web</p>
                 </div>
             </div>
         </li>
@@ -98,11 +129,16 @@
 
 <header id="site-header">
     <div class="wrap">
-        <div id="logo"></div>
+        <div id="logo">
+            <div class="logo-1"></div>
+            <div class="logo-2"></div>
+            <div class="logo-3"></div>
+            <div class="logo-4"></div>
+        </div>
         <h1 id="wordmark">Scott Jensen <span>Design</span></h1>
         <nav id="site-nav">
             <ul>    
-                <li><a href="" class="black-btn">Work</a></li>
+                <li><a href="" class="black-btn selected">Work</a></li>
                 <li><a href="" class="black-btn">Writing</a></li>
                 <li><a href="" class="black-btn">About</a></li>
                 <li><a href="" class="black-btn">Contact</a></li>
@@ -110,27 +146,49 @@
         </nav>
     </div>
 </header>
+<div class="home-content">
+    <section id="project-gallery" class="project-list">
+        <div class="wrap">
+            <h2><span class="box"></span>Project Gallery</h2>
+            <ul>
+                <li class="project-thumbnail">
 
-<section id="project-gallery" class="project-list">
-    <div class="wrap">
-        <h2><span class="box"></span>Project Gallery</h2>
-        <ul>
-            <li class="project-thumbnail">
+                </li>
+                <li class="project-thumbnail">
 
-            </li>
-        </ul>
-    </div>
-</section>
+                </li>
+                <li class="project-thumbnail">
 
-<section id="dribbble-gallery" class="project-list">
-    <div class="wrap">
-        <h2><span class="box"></span>From Dribbble</h2>
-        <ul>
-            <li class="project-thumbnail">
+                </li>
+                <li class="project-thumbnail">
 
-            </li>
-        </ul>
-    </div>
-</section>
+                </li>
+                <li class="project-thumbnail">
+
+                </li>
+                <li class="project-thumbnail">
+
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="dribbble-gallery" class="project-list">
+        <div class="wrap">
+            <h2><span class="box"></span>From Dribbble</h2>
+            <ul id="dribbble-shots">
+                <li class="project-thumbnail">
+
+                </li>
+                <li class="project-thumbnail">
+
+                </li>
+                <li class="project-thumbnail">
+
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
 </body>
 </html>
