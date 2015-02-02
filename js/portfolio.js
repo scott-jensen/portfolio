@@ -159,26 +159,58 @@ function homeScroll() {
 	// WindowVars
 	var windowHeight = $(window).height();
 	var windowWidth = $(window).width();
-	var toutShowing = true;
 	var lastPosition = 0;
+	var navOffset = windowHeight - $('#site-header').height();
 	$(window).resize(function(){
 		windowHeight = $(window).height();
 		windowWidth = $(window).width();
+		navOffset = windowHeight - $('#site-header').height();
 	});
 
-	$(window).scroll(function(){
+	$('#site-header').css('border-top', '1px solid #CCC');
+
+	$(window).scroll(function() {
+
 		var currentPosition = $(window).scrollTop();
-		if(toutShowing == true && currentPosition > lastPosition){
-			$('html, body').animate({
-				scrollTop : $('#site-header').offset().top
-			}, 500);
-			toutShowing = false;
+
+		/* Auto Scroll Stuff
+	    clearTimeout($.data(this, 'scrollTimer'));
+	    $.data(this, 'scrollTimer', setTimeout(function() {
+	    	
+	        if(currentPosition > lastPosition && currentPosition < navOffset){
+				$('html, body').animate({
+					scrollTop : $('#site-header').offset().top
+				}, 500);
 			
-		}
-		else if(toutShowing == false){
-			alert('going up');
-		}
-		lastPosition = $(window).scrollTop();
+			}
+			else if(currentPosition < lastPosition && currentPosition < navOffset){
+				$('html, body').animate({
+					scrollTop : 0
+				}, 500);
+			}
+			lastPosition = $(window).scrollTop();
+	        console.log("Haven't scrolled in 250ms!");
+	    }, 250));
+		*/
+
+		// Fixing the nav when scrolling
+	    if(currentPosition >= navOffset){
+	    	$('#site-header').css('position', 'fixed');
+	    	$('#project-gallery').css('margin-top', '96px');
+	    	$('#site-header').css('border-top', 'none');
+	    }
+	    else{
+	    	$('#site-header').css('position', 'relative');
+	    	$('#project-gallery').css('margin-top', '0px');
+	    	$('#site-header').css('border-top', '1px solid #CCC');
+	    }
 
 	});
+
+
+
+
+		
+
+
 }

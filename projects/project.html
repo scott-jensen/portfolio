@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Use this block if using media queries
+    <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
+    -->
+
+    <title>Scott Jensen Design</title>
+    <meta name="description" content="" />
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- iTunes App Link 
+    <meta name="apple-itunes-app" content="app-id=55555555">
+    -->
+
+    <!-- Homescreen Bookmark Icon
+    <link rel="apple-touch-icon-precomposed" href="sample-icon.png"/>
+    -->
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/preloader.css" type="text/css">
+    <link rel="stylesheet" href="../css/base.css" />
+
+    
+    <!-- Load Jquery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+    <script type="text/javascript" src="../js/portfolio.js"></script>
+
+    <script>
+
+    $(document).ready(function(){
+        var slideCounter = 0;
+        var imagesLoaded = 0;
+        var iframeHeight = $(window).height();
+
+        // function to show gallery when loaded
+        function displayGallery() {
+            $('#load-wrapper').fadeOut(function(){
+                $('#project-slides').fadeIn('slow');
+                $('#project-info').css('bottom', '0px');
+            });
+        };
+
+        //count the images in the gallery
+        $('.project-image').each(function(){
+            slideCounter++;
+        });
+        //check for load on each image
+        $('.project-image').load(function(){
+
+            imagesLoaded++;
+
+            if(imagesLoaded == slideCounter) {
+                displayGallery();
+            }
+        });
+        // fallback if load isn't called
+        setTimeout(function(){
+            displayGallery();
+        }, 2000);
+
+        function hideDescription() {
+            var boxHeight = $('#project-info').height();
+            var titleOffset = $('h1').height();
+            var hideValue = -(boxHeight - titleOffset) + 10;
+            $('#project-info').css('bottom', hideValue + 'px');
+        };
+
+        // carousel
+
+        $('.slide').css('left', '100%');
+        $('#slide1').css('left', '0');
+
+        var currentSlide = 1;
+        function nextSlide() {
+            if(currentSlide == slideCounter){
+                upcomingSlide = '#slide1';
+                mainSlide = '#slide' + currentSlide;
+                currentSlide = 1;
+            }
+            else {
+                upcomingSlide = '#slide' + (currentSlide + 1);
+                mainSlide = '#slide' + currentSlide; 
+                currentSlide ++;
+            }
+            $(upcomingSlide).css('left', '100%');
+            $(upcomingSlide).fadeTo(0, 1)
+            $(mainSlide).fadeTo(400, .3, function(){
+                $(mainSlide).animate({
+                    left : '-100%'
+                }, 400);
+                $(upcomingSlide).animate({
+                    left : '0%'
+                }, 400);
+             });
+
+        }
+        function prevSlide() {
+            if(currentSlide == 1){
+                upcomingSlide = '#slide' + slideCounter;
+                mainSlide = '#slide' + currentSlide;
+                currentSlide = slideCounter;
+            }
+            else {
+                upcomingSlide = '#slide' + (currentSlide - 1);
+                mainSlide = '#slide' + currentSlide; 
+                currentSlide --;
+            }
+            $(upcomingSlide).css('left', '-100%');
+            $(upcomingSlide).fadeTo(0, 1)
+            $(mainSlide).fadeTo(400, .3, function(){
+                $(mainSlide).animate({
+                    left : '100%'
+                }, 400);
+                $(upcomingSlide).animate({
+                    left : '0%'
+                }, 400);
+             });
+
+        }
+
+
+        $('#next-btn').click(function(){
+            hideDescription();
+            nextSlide();
+        });
+        $('#prev-btn').click(function(){
+            hideDescription();
+            prevSlide();
+        });
+        $('#project-info').mouseenter(function(){
+            $(this).css('bottom', '0');
+        });
+
+        $('.related-project').click(function(){
+            window.top.location.href = 'file:///Users/T1000/Sites/www/portfolio/index.html#' + this.id + '-gallery';
+        });
+
+
+
+
+
+    });
+
+    </script>
+
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]--> 
+
+</head>
+<body class="project-page">
+
+    <div id="load-wrapper">
+        <div id="animation-block">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <span class="loading">Loading</span>
+    </div>
+
+    <ul id="project-slides">
+        <li id="slide1" class="slide"><img src="../images/project-image.jpg" alt="Project Image" class="project-image" /></li>
+        <li id="slide2" class="slide"><img src="../images/project-image2.jpg" alt="Project Image" class="project-image" /></li>
+        <li id="slide3" class="slide"><img src="../images/project-image.jpg" alt="Project Image" class="project-image" /></li>
+        <li id="slide4" class="slide"><img src="../images/project-image2.jpg" alt="Project Image" class="project-image" /></li>
+    </ul>
+
+    <div id="next-btn"></div>
+    <div id="prev-btn"></div>
+
+    <article id="project-info">
+
+        <h1><span class="box"></span>CCA Trade show</h1>
+        <h3>Client:</h3>
+        <p>Neutron Interactive</p>
+        <h3>Media:</h3>
+        <p>Identity, Web, Print</p>
+        <p>
+            Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui.
+        </p>
+        <br />
+        <h3>Related Projects:</h3>
+        <ul id="related-projects">
+            <li><a href="" id="project1" class="related-project"><img src="../images/thumbnail.png" alt="thumbnail"></a></li>
+            <li><a href="" id="project2" class="related-project"><img src="../images/thumbnail.png" alt="thumbnail"></a></li>
+        </ul>
+
+    </article>
+
+</body>
+</html>

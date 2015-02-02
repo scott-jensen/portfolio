@@ -18,21 +18,77 @@
     -->
 
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/fancybox/fancybox.css" />
     <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/featured-projects.css" />
 
     
     <!-- Load Jquery -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
     <script type="text/javascript" src="js/portfolio.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox-1.3.4.js"></script>
 
     <script>
 
         $(document).ready(function(){
             featuredProjects();
-            // homeScroll();
+            homeScroll();
             $('.home-content').css('height', $(window).height() + 100 + 'px');
 
+
+            // project thumbnail hover states
+            $('.project').mouseenter(function(){
+               
+                var projectOverlay = $(this).find('.overlay');
+                var projectTitle = $(this).find('h4');
+                var projectMeta = $(this).find('.project-meta');
+
+                $(projectOverlay).stop();
+                $(projectTitle).stop();
+                $(projectMeta).stop();  
+
+                $(projectOverlay).animate({
+                    left : '0px'
+                }, 300);
+                $(projectTitle).animate({
+                    left : '20px'
+                }, 370);
+                $(projectMeta).animate({
+                    left : '20px'
+                }, 440);
+
+                $('.project').mouseleave(function(){  
+                    $(projectOverlay).stop();
+                    $(projectTitle).stop();
+                    $(projectMeta).stop();        
+                    $(projectOverlay).animate({
+                        left : '120%'
+                    }, 320);
+                    $(projectTitle).animate({
+                        left : '480px'
+                    }, 430);
+                    $(projectMeta).animate({
+                        left : '580px'
+                    }, 490);
+                });
+
+            });
+
+            // fancybox 
+            $(".project-link").fancybox({
+                'transitionIn'  :   'fade',
+                'transitionOut' :   'fade',
+                'overlayColor'  :   'black',
+                'overlayOpacity':   .9,
+                'padding'       :   '0',
+                'height'        :   '95%',
+                'width'        :   '95%',
+                'type'          : 'iframe'
+             });
+            $('.project').click(function(){
+                window.location.hash = this.id + '-gallery';
+            });
             
         });
 
@@ -147,44 +203,185 @@
     </div>
 </header>
 <div class="home-content">
-    <section id="project-gallery" class="project-list">
+    <section id="project-gallery">
         <div class="wrap">
             <h2><span class="box"></span>Project Gallery</h2>
-            <ul>
-                <li class="project-thumbnail">
+            <ul class="project-list">
+                <li class="project thumb-1" id="project1">
+                    <div class="live-area">
+                        <div class="overlay"></div>
+                        <img src="images/thumbnail.png" alt="thumbnail" />
 
+                            <h4 class="project-title">Ender Labs</h4>
+                            <div class="project-meta">
+                                <h5>Media:</h5>
+                                <p>Identity, Website, Print</p>
+                            </div>
+
+                    </div>
+                    <a href="projects/project.html" class="project-link"></a>
                 </li>
-                <li class="project-thumbnail">
+                <li class="project thumb-2" id="project2">
+                    <div class="live-area">
+                        <div class="overlay"></div>
+                        <img src="images/thumbnail.png" alt="thumbnail" />
 
+                            <h4 class="project-title">Ender Labs</h4>
+                            <div class="project-meta">
+                                <h5>Media:</h5>
+                                <p>Identity, Website, Print</p>
+                            </div>
+
+                    </div>
+                    <a href="" class="project-link"></a>
                 </li>
-                <li class="project-thumbnail">
+                <li class="project thumb-3" id="project3">
+                    <div class="live-area">
+                        <div class="overlay"></div>
+                        <img src="images/thumbnail.png" alt="thumbnail" />
 
+                            <h4 class="project-title">Ender Labs</h4>
+                            <div class="project-meta">
+                                <h5>Media:</h5>
+                                <p>Identity, Website, Print</p>
+                            </div>
+
+                    </div>
+                    <a href="" class="project-link"></a>
                 </li>
-                <li class="project-thumbnail">
+                <li class="project thumb-4" id="project4">
+                    <div class="live-area">
+                        <div class="overlay"></div>
+                        <img src="images/thumbnail.png" alt="thumbnail" />
 
+                            <h4 class="project-title">Ender Labs</h4>
+                            <div class="project-meta">
+                                <h5>Media:</h5>
+                                <p>Identity, Website, Print</p>
+                            </div>
+
+                    </div>
+                    <a href="" class="project-link"></a>
                 </li>
-                <li class="project-thumbnail">
+                <li class="project thumb-5" id="project5">
+                    <div class="live-area">
+                        <div class="overlay"></div>
+                        <img src="images/thumbnail.png" alt="thumbnail" />
 
+                            <h4 class="project-title">Ender Labs</h4>
+                            <div class="project-meta">
+                                <h5>Media:</h5>
+                                <p>Identity, Website, Print</p>
+                            </div>
+
+                    </div>
+                    <a href="" class="project-link"></a>
                 </li>
-                <li class="project-thumbnail">
+                <li class="project thumb-6" id="project6">
+                    <div class="live-area">
+                        <div class="overlay"></div>
+                        <img src="images/thumbnail.png" alt="thumbnail" />
 
+                            <h4 class="project-title">Ender Labs</h4>
+                            <div class="project-meta">
+                                <h5>Media:</h5>
+                                <p>Identity, Website, Print</p>
+                            </div>
+
+                    </div>
+                    <a href="" class="project-link"></a>
                 </li>
             </ul>
         </div>
     </section>
 
-    <section id="dribbble-gallery" class="project-list">
+    <section id="dribbble-gallery">
         <div class="wrap">
             <h2><span class="box"></span>From Dribbble</h2>
-            <ul id="dribbble-shots">
-                <li class="project-thumbnail">
+            <ul class="project-list">
+                <li class="project thumb-1" id="">
+                    <div class="live-area">
+                        <div class="overlay"></div>
+                        <img src="images/thumbnail.png" alt="thumbnail" />
 
+                            <h4 class="project-title">Ender Labs</h4>
+                            <div class="project-meta">
+                                <h5>Media:</h5>
+                                <p>Identity, Website, Print</p>
+                            </div>
+
+                    </div>
+                    <a href="" class="project-link"></a>
                 </li>
-                <li class="project-thumbnail">
+                <li class="project thumb-2" id="">
+                    <div class="live-area">
+                        <div class="overlay"></div>
+                        <img src="images/thumbnail.png" alt="thumbnail" />
 
+                            <h4 class="project-title">Ender Labs</h4>
+                            <div class="project-meta">
+                                <h5>Media:</h5>
+                                <p>Identity, Website, Print</p>
+                            </div>
+
+                    </div>
+                    <a href="" class="project-link"></a>
                 </li>
-                <li class="project-thumbnail">
+                <li class="project thumb-3" id="">
+                    <div class="live-area">
+                        <div class="overlay"></div>
+                        <img src="images/thumbnail.png" alt="thumbnail" />
 
+                            <h4 class="project-title">Ender Labs</h4>
+                            <div class="project-meta">
+                                <h5>Media:</h5>
+                                <p>Identity, Website, Print</p>
+                            </div>
+
+                    </div>
+                    <a href="" class="project-link"></a>
+                </li>
+                <li class="project thumb-4" id="">
+                    <div class="live-area">
+                        <div class="overlay"></div>
+                        <img src="images/thumbnail.png" alt="thumbnail" />
+
+                            <h4 class="project-title">Ender Labs</h4>
+                            <div class="project-meta">
+                                <h5>Media:</h5>
+                                <p>Identity, Website, Print</p>
+                            </div>
+
+                    </div>
+                    <a href="" class="project-link"></a>
+                </li>
+                <li class="project thumb-5" id="">
+                    <div class="live-area">
+                        <div class="overlay"></div>
+                        <img src="images/thumbnail.png" alt="thumbnail" />
+
+                            <h4 class="project-title">Ender Labs</h4>
+                            <div class="project-meta">
+                                <h5>Media:</h5>
+                                <p>Identity, Website, Print</p>
+                            </div>
+
+                    </div>
+                    <a href="" class="project-link"></a>
+                </li>
+                <li class="project thumb-6" id="">
+                    <div class="live-area">
+                        <div class="overlay"></div>
+                        <img src="images/thumbnail.png" alt="thumbnail" />
+
+                            <h4 class="project-title">Ender Labs</h4>
+                            <div class="project-meta">
+                                <h5>Media:</h5>
+                                <p>Identity, Website, Print</p>
+                            </div>
+
+                    </div>
+                    <a href="" class="project-link"></a>
                 </li>
             </ul>
         </div>
