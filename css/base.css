@@ -392,7 +392,7 @@ li {
     overflow: hidden;
     margin:0;
     padding:0;
-    display:none;
+    opacity: 0;
 }
 #project-slides li{
     list-style: none;
@@ -406,7 +406,8 @@ li {
     height:100%;
 }
     #project-slides li img {
-        width:100%;
+        min-width:100%;
+        min-height:100%;
     }
 #project-info {
     position: absolute;
