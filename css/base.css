@@ -576,15 +576,18 @@ li {
 }
 .dropcap {
     display:inline-block;
-    font-size:2.5rem;
+    font-size:2.6rem;
     font-weight: bold;
-    padding:17px 12px;
+    padding:18px 12px;
     margin-right:4px;
     margin-bottom:0px;
     background:#000;
+    margin-top:-2px;
     color:#FFF;
     float:left;
     vertical-align: top;
+
+
 }
 
 
