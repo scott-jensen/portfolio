@@ -33,12 +33,33 @@
         var slideCounter = 0;
         var imagesLoaded = 0;
         var iframeHeight = $(window).height();
+        var userInteraction = false;
 
         // function to show gallery when loaded
         function displayGallery() {
             $('#load-wrapper').fadeOut(function(){
-                $('#project-slides').fadeIn('slow');
-                $('#project-info').css('bottom', '0px');
+                $('#project-slides').animate({
+                    opacity : '1'
+                });
+                if(userInteraction == false){
+                    $('#project-info').css('bottom', '0px');
+                }
+                
+            });
+        };
+
+        // size the images in the gallery
+        function sizeGallery() {
+            var viewWidth = $(window).width();
+            var viewHeight = $(window).height();
+
+            $('.project-image').each(function(){
+                var imageWidth = $(this).width();
+                var imageHeight = $(this).height();
+                if (imageWidth > viewWidth) {
+                    var leftOffset = -((imageWidth - viewWidth) / 2);
+                    $(this).css('margin-left', leftOffset + 'px');
+                };
             });
         };
 
@@ -47,16 +68,20 @@
             slideCounter++;
         });
         //check for load on each image
-        $('.project-image').load(function(){
+        $('.project-image').each(function(){
+            $(this).load(function(){
+                imagesLoaded++;
 
-            imagesLoaded++;
-
-            if(imagesLoaded == slideCounter) {
-                displayGallery();
-            }
+                if(imagesLoaded == slideCounter) {
+                    sizeGallery();
+                    displayGallery();
+                }
+            })
+            
         });
         // fallback if load isn't called
         setTimeout(function(){
+            sizeGallery();
             displayGallery();
         }, 2000);
 
@@ -124,20 +149,21 @@
         $('#next-btn').click(function(){
             hideDescription();
             nextSlide();
+            userInteraction = true;
         });
         $('#prev-btn').click(function(){
             hideDescription();
             prevSlide();
+            userInteraction = true;
         });
         $('#project-info').mouseenter(function(){
             $(this).css('bottom', '0');
         });
 
         $('.related-project').click(function(){
-            window.top.location.href = 'file:///Users/T1000/Sites/www/portfolio/index.html#' + this.id + '-gallery';
+            window.top.location.href = 'file:///Users/Scott/Sites/www/portfolio/index.html#' + this.id + '-gallery';
+
         });
-
-
 
 
 
@@ -184,8 +210,8 @@
         <br />
         <h3>Related Projects:</h3>
         <ul id="related-projects">
-            <li><a href="" id="project1" class="related-project"><img src="../images/thumbnail.png" alt="thumbnail"></a></li>
-            <li><a href="" id="project2" class="related-project"><img src="../images/thumbnail.png" alt="thumbnail"></a></li>
+            <li><a href="http://betacrumb.com" id="project1" class="related-project"><img src="../images/thumbnail.png" alt="thumbnail"></a></li>
+            <li><a href="http://betacrumb.com" id="project2" class="related-project"><img src="../images/thumbnail.png" alt="thumbnail"></a></li>
         </ul>
 
     </article>
