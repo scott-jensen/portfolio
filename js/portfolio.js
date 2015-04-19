@@ -43,6 +43,12 @@ function homeScroll() {
 		toutHeight = windowHeight - headerHeight;
 	});
 
+	$('#wordmark').click(function(){
+		if(hasScrolled == true){
+			showTout();
+		}
+	})
+
 	function hideTout(){
 		scrollReady = false;
 		$('#tout').animate({
@@ -59,7 +65,7 @@ function homeScroll() {
 			setTimeout(function(){
 				$('body').css('overflow', 'auto');
 				$('window').scrollTop(0)
-				scrollReady = true;
+				scrollReady = false;
 			},500);
 			
 
@@ -69,6 +75,7 @@ function homeScroll() {
 		$('.home-content').css('position', 'relative');
 		$('.home-content').css('overflow', 'visible');
 		$('#site-header').css('position', 'fixed');
+		$('#logo').fadeIn();
 		hasScrolled = true;
 		
 		$('.work-nav').addClass('selected');
@@ -100,18 +107,25 @@ function homeScroll() {
 	}
 	$('.work-nav').click(hideTout);
 
-	$('#site-header').css('border-top', '1px solid #CCC');
+	$('#site-header').css('border-top', '1px solid #EAEAEA');
 
 	$(window).bind('mousewheel DOMMouseScroll', function(event){
 		var currentPosition = $(window).scrollTop();
 		
 	    if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-
+	    	if(lastPosition == 0 && hasScrolled == true && scrollReady == false){
+	    		setTimeout(function(){
+	    			scrollReady = true;
+	    		},1300)
+	    	}
+	    	
+	    	// moving up
 	        if(lastPosition == 0 && hasScrolled == true && scrollReady == true){
 				showTout();
 			}
 	    }
 	    else {
+	    	// moving down
 	        if(lastPosition == 0 && hasScrolled == false && scrollReady == true) {
 	        	hideTout();	
 			}
