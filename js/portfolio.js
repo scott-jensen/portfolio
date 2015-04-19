@@ -55,6 +55,7 @@ function homeScroll() {
 			top : headerHeight + 50
 		}, 700, function(){
 			$('body').css('overflow', 'auto');
+			$('#logo').fadeIn();
 		});
 
 	
@@ -62,7 +63,7 @@ function homeScroll() {
 		$('.home-content').css('overflow', 'visible');
 		$('#site-header').css('position', 'fixed');
 		hasScrolled = true;
-		$('#logo').fadeIn();
+		
 		$('.work-nav').addClass('selected');
 
 	}
