@@ -574,6 +574,18 @@ li {
     display:inline-block;
     vertical-align: middle;
 }
+.dropcap {
+    display:inline-block;
+    font-size:2.5rem;
+    font-weight: bold;
+    padding:17px 12px;
+    margin-right:4px;
+    margin-bottom:0px;
+    background:#000;
+    color:#FFF;
+    float:left;
+    vertical-align: top;
+}
 
 
 
