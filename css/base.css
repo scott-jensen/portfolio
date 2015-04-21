@@ -33,7 +33,7 @@ aside {
     display:inline-block;
     margin-left:9%;
     vertical-align: top;
-    margin-top:150px;
+    margin-top:100px;
 }
 
 
@@ -97,7 +97,7 @@ h4 {
 p {
     font-size:.81rem;
     line-height: 1.4em;
-    margin-bottom:20px;
+    margin-bottom:30px;
 }
 ul {
     margin-bottom:20px;
@@ -542,7 +542,7 @@ img {
     padding-left:0;
 }
     .article-list .article-lead {
-        margin-bottom:80px;
+        margin-bottom:40px;
     }
         .article-list h2 a {
             text-decoration: none;
@@ -566,7 +566,7 @@ img {
         list-style: none;
         margin-left:0;
         padding-left:0;
-        margin-bottom:30px;
+        margin-bottom:15px;
     }
         .book-list li img {
             display:inline-block;
@@ -625,7 +625,7 @@ img {
     -webkit-font-smoothing: antialiased;
 }
     .article-page .article-cover {
-        margin-bottom:40px;
+        margin-bottom:60px;
     }
 
     .article-page aside {
@@ -664,6 +664,7 @@ img {
     }
 .article-page #comment-list {
     padding-top:20px;
+    margin-bottom:40px;
 }
     .article-page #comment-list li {
         list-style: none;
