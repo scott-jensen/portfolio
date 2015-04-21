@@ -74,6 +74,7 @@ function homeScroll() {
 	
 		$('.home-content').css('position', 'relative');
 		$('.home-content').css('overflow', 'visible');
+		$('footer').fadeIn();
 		$('#site-header').css('position', 'fixed');
 		$('#logo').fadeIn();
 		hasScrolled = true;
@@ -99,6 +100,7 @@ function homeScroll() {
 
 		$('.home-content').css('position', 'absolute');
 		$('#site-header').css('position', 'absolute');
+		$('footer').fadeOut();
 		hasScrolled = false;
 		$('#logo').fadeOut();
 		$('.work-nav').removeClass('selected');
