@@ -228,7 +228,6 @@ img {
 }
 
 #site-header {
-    border-bottom:1px solid #EAEAEA;
     overflow: hidden;
     margin-bottom:60px;
     position: fixed;
@@ -237,6 +236,7 @@ img {
     background: #FFF;
     background: rgba(255,255,255,.95);
     z-index: 100;
+    box-shadow: 0px 1px 1px rgba(0,0,0,.1);
 }
 .home #site-header {
     position: absolute;
@@ -695,6 +695,13 @@ img {
             vertical-align: top;
             line-height: 1em;
         }
+    .article-page .add-comment {
+        display:block;
+        cursor: pointer;
+        max-width: 300px;
+        margin-left:auto;
+        margin-right:auto;
+    }
 
 /*----------------- FOOTER -------------------*/
 
