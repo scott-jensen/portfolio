@@ -458,7 +458,7 @@ img {
     right:0;
     background:#000;
     background:rgba(0,0,0,.95);
-    padding:15px 45px 20px 45px;
+    padding:5px 20px 20px 20px;
     color:#939598;
     bottom:-100%;
     width:20%;
@@ -475,8 +475,7 @@ img {
         overflow: hidden;
         margin-top:10px;
         font-size: 1.4375rem;
-        margin-left:-1.3em;
-        margin-bottom:40px;
+        margin-bottom:30px;
         color:#FFF;
         letter-spacing: .02em;
         -webkit-font-smoothing: antialiased;
@@ -486,9 +485,13 @@ img {
         #project-info h1 .box {
             background:#FFF;
         }
+    #project-info p {
+        margin-bottom:15px;
+        color:#DDD;
+    }
     #project-info h4 {
-        color:#FFF;
         font-size: .75rem;
+        color:#444;
         font-weight: bold;
         text-transform: uppercase;
     }
@@ -508,6 +511,7 @@ img {
             #project-info #related-projects li img {
                 width:100%;
                 vertical-align: middle;
+                margin-bottom:0px;
             }
                 #project-info #related-projects li:hover {
                     border:1px solid #FFF;

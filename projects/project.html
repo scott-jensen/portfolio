@@ -88,7 +88,7 @@
         function hideDescription() {
             var boxHeight = $('#project-info').height();
             var titleOffset = $('h1').height();
-            var hideValue = -(boxHeight - titleOffset) + 10;
+            var hideValue = -(boxHeight - titleOffset);
             $('#project-info').css('bottom', hideValue + 'px');
         };
 
@@ -199,7 +199,7 @@
 
     <article id="project-info">
 
-        <h1><span class="box"></span>CCA Trade show</h1>
+        <h1>CCA Trade show</h1>
         <h4>Client:</h4>
         <p>Neutron Interactive</p>
         <h4>Media:</h4>
