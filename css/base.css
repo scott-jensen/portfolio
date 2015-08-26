@@ -710,6 +710,16 @@ img {
         margin-left:auto;
         margin-right:auto;
     }
+    .article-page #comment-form {
+        border-top:1px solid #EAEAEA;
+        margin-top:15px;
+        width:100%;
+        padding-top:30px;
+        display:none;
+    }
+        .article-page #comment-form ul {
+            margin-top:30px;
+        }
 
 .article-list img {
     margin-bottom:10px;
@@ -742,7 +752,25 @@ footer {
 /*------------------- FORMS ------------------*/
 /*============================================*/
 
-
+form {
+    display:block;
+}
+form li {
+    list-style: none;
+    display:inline-block;
+    margin-left:0;
+    padding-left:0;
+    display:block;
+    margin-bottom:20px;
+}
+label {
+    display:block;
+    text-transform: uppercase;
+    color:#000;
+    font-weight: bold;
+    margin-bottom:3px;
+    font-size: .75rem;
+}
 input[type="text"], input[type="password"], input[type="number"], input[type="email"] {
     -webkit-appearance:none;
     -moz-appearance:none;
@@ -750,11 +778,79 @@ input[type="text"], input[type="password"], input[type="number"], input[type="em
     border:none;
     outline: none;
     background:none;
+    border:1px solid #EAEAEA;
+    padding:1.5%;
+    display:block;
+    width:97%;
+    font-size:.875rem;
+    -webkit-transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
 }
-    /* Hover, focus, active states for ALL types of text inputs */
-    input[type="text"]:hover, input[type="text"]:active, input[type="text"]:focus, input[type="password"]:hover, input[type="password"]:active, input[type="password"]:focus, input[type="number"]:hover, input[type="number"]:active, input[type="number"]:focus, input[type="email"]:hover, input[type="email"]:active, input[type="email"]:focus {
 
+    /* Hover, focus, active states for ALL types of text inputs */
+    input[type="text"]:hover, input[type="password"]:active, input[type="number"]:focus, input[type="email"]:hover {
+        background:#EAEAEA;
+    }
+    input[type="text"]:active, input[type="text"]:focus, input[type="password"]:active, input[type="password"]:focus, input[type="number"]:active, input[type="number"]:focus, input[type="email"]:active, input[type="email"]:focus {
+        background:#000;
+        color:#EAEAEA;
 }
+input[type="submit"]{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    border:none;
+    outline: none;
+    width:100%;
+    display:inline-block;
+    background:url(../images/button-bg.png) left top no-repeat;
+    background-size:100% 100%;
+    background-position: 0 75px;
+    overflow: hidden;
+    text-align: center;
+    border:1px solid #EAEAEA;
+    padding:10px 30px;
+    display:inline-block;
+    color:#000;
+    font-weight: bold;
+    font-size: .75rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1em;
+    -webkit-transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+    input[type="submit"]:focus{
+        background-position: 0 0;
+        color:#FFF;
+        border-color:#000;
+    }
+textarea {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    border:none;
+    outline: none;
+    background:none;
+    border:1px solid #EAEAEA;
+    padding:1.5%;
+    width:97%;
+    display:block;
+    min-height: 150px;
+    font-size: .875rem;
+    -webkit-transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+    textarea:hover {
+        background: #EAEAEA;
+    }
+    textarea:focus, textarea:active {
+        color:#FFF;
+        background:#000;
+    }
 
 select {
     -ms-appearance:none;

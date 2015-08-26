@@ -137,5 +137,9 @@ function homeScroll() {
 
 	});
 
+	function addComment() {
+		$('#comment-form').slideDown();
+	}
+
 
 }
