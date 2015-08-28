@@ -73,7 +73,7 @@ h2 {
 
 h3 {
     text-transform: uppercase;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: bold;
     margin-bottom:15px;
     letter-spacing: .02em;
@@ -729,7 +729,7 @@ img {
 /*------------------ ABOUT -------------------*/
 
 .find-me {
-    vertical-align: top;
+    padding-top:3px;
     margin-bottom:20px;
 }
 .find-me .avatar {
@@ -737,6 +737,8 @@ img {
     width:45px;
     margin-right:15px;
     float:left;
+    margin-top:-3px;
+    display:inline-block;
 }
 .social-media li {
     list-style: none;
@@ -755,6 +757,46 @@ img {
     margin-right:15px;
     margin-left:0 !important;
 }
+.about .pie-chart {
+    width:40%;
+    display:inline-block;
+    vertical-align: top;
+}
+.about .abilities {
+    width:59%;
+    vertical-align: top;
+    display:inline-block;
+}
+    .abilities ul {
+        margin-top:30px;
+    }
+    .abilities li {
+        font-size:.81rem;
+        list-style: none;
+        margin-left:0px;
+    }
+    .abilities .bar-graph {
+        background:#EAEAEA;
+        height:8px;
+        display:inline-block;
+        width:70%;
+        float:right;
+        margin-top:3px;
+    }
+        .abilities .bar-graph .fill {
+            background:#000;
+            height:100%;
+            width:70%;
+        }
+.about .pie {
+    height:150px;
+    width:150px;
+    border-radius: 75px;
+    border:1px solid #EAEAEA;
+    margin-bottom:30px;
+    margin-top:30px;
+}
+
 
 
 
