@@ -725,6 +725,40 @@ img {
     margin-bottom:10px;
 }
 
+
+/*------------------ ABOUT -------------------*/
+
+.find-me {
+    vertical-align: top;
+    margin-bottom:20px;
+}
+.find-me .avatar {
+    height:45px;
+    width:45px;
+    margin-right:15px;
+    float:left;
+}
+.social-media li {
+    list-style: none;
+    margin-left:0;
+    margin-bottom:20px;
+}
+.social-media h4 {
+    vertical-align: top;
+    margin-top:5px;
+}
+.social-media p {
+    margin-bottom:0;
+}
+.social-media a {
+    float:left;
+    margin-right:15px;
+    margin-left:0 !important;
+}
+
+
+
+
 /*----------------- FOOTER -------------------*/
 
 footer {
