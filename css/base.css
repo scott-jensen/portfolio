@@ -767,8 +767,11 @@ img {
     vertical-align: top;
     display:inline-block;
 }
+    .abilities h4 {
+        margin-top:20px;
+    }
     .abilities ul {
-        margin-top:30px;
+       margin-top:10px;
     }
     .abilities li {
         font-size:.81rem;
@@ -789,12 +792,12 @@ img {
             width:70%;
         }
 .about .pie {
-    height:150px;
-    width:150px;
-    border-radius: 75px;
+    height:200px;
+    width:200px;
+    border-radius: 100px;
     border:1px solid #EAEAEA;
     margin-bottom:30px;
-    margin-top:30px;
+    margin-top:10px;
 }
 
 
