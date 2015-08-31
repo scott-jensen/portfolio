@@ -845,7 +845,29 @@ img {
                 background:#EAEAEA;
                 cursor: pointer;
             }
-
+.press-logos li {
+    list-style: none;
+    display:inline-block;
+    margin-top:15px;
+    width:18%;
+    padding-left:0;
+    margin-right:4%;
+    margin-left:4%;
+    opacity: .25;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+    .press-logos li:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+    .press-logos li:nth-child(1) {
+        margin-left:0;
+    }
+    .press-logos li:nth-child(4) {
+        margin-right:0;
+    }
 
 
 
