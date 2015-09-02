@@ -807,6 +807,7 @@ img {
         padding-top:20px;
         padding-bottom:40px;
     }
+    /* Special thanks to Patrick Denny for help on this http://codepen.io/AtomicNoggin/pen/fEish */
     .about .pie {
         position:absolute;
         width:100px;
