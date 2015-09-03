@@ -775,7 +775,8 @@ img {
 .about .abilities {
     width:59%;
     vertical-align: top;
-    display:inline-block;
+    display:none;
+
 }
     .abilities h4 {
         margin-top:70px;
@@ -799,7 +800,7 @@ img {
         .abilities .bar-graph .fill {
             background:#000;
             height:100%;
-            width:70%;
+            width:0%;
         }
     .about #skill-pie {
         position: relative;

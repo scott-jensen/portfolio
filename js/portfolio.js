@@ -137,3 +137,35 @@ function homeScroll() {
 
 
 }
+function pieChart() {
+	$('.pie').click(function(){
+		var abilitiesDiv = '.' + this.id.split('-')[0] + '-abilities';
+		$('.pie').removeClass('selected');
+		$(this).addClass('selected');
+		$('.abilities').fadeOut(function(){
+			$('.ability').fadeOut(0);
+			var abilityCount = 0;
+			$(abilitiesDiv + ' .ability').each(function(){
+				abilityCount ++;
+			})
+			$(abilitiesDiv).css('display', 'inline-block');
+			var i = abilityCount;
+			function displayAbility() {
+				$(abilitiesDiv + ' li:nth-last-of-type(' + i + ')').fadeIn('fast')
+				i--;
+				if(i != 0){
+					setTimeout(function(){
+						displayAbility();
+					}, 50);
+				}
+				else{
+					return none;
+				}
+				
+			}
+			displayAbility();
+
+		})
+		
+	});
+}
