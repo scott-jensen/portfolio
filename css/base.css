@@ -801,6 +801,9 @@ img {
             background:#000;
             height:100%;
             width:0%;
+            -webkit-transition: all .3s ease-in-out;
+            -moz-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
         }
     .about #skill-pie {
         position: relative;

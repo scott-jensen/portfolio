@@ -144,22 +144,25 @@ function pieChart() {
 		$(this).addClass('selected');
 		$('.abilities').fadeOut(function(){
 			$('.ability').fadeOut(0);
+			$('.fill').css('width', '0');
 			var abilityCount = 0;
 			$(abilitiesDiv + ' .ability').each(function(){
 				abilityCount ++;
 			})
 			$(abilitiesDiv).css('display', 'inline-block');
-			var i = abilityCount;
 			function displayAbility() {
-				$(abilitiesDiv + ' li:nth-last-of-type(' + i + ')').fadeIn('fast')
-				i--;
-				if(i != 0){
+				var ability = abilitiesDiv + ' li:nth-last-of-type(' + abilityCount + ')'
+				var barFill = $(ability + ' .fill').attr('value') + '%';
+				$(ability).fadeIn('fast');
+				$(ability + ' .bar-graph .fill').css('width', barFill);
+				abilityCount--;
+				if(abilityCount != 0){
 					setTimeout(function(){
 						displayAbility();
 					}, 50);
 				}
 				else{
-					return none;
+					return;
 				}
 				
 			}
