@@ -142,34 +142,34 @@ function pieChart() {
 		var abilitiesDiv = '.' + this.id.split('-')[0] + '-abilities';
 		$('.pie').removeClass('selected');
 		$(this).addClass('selected');
-		$('.abilities').fadeOut('fast', function(){
-			$('.ability').css('display', 'none');
-			$('.fill').css('width', '0');
-			var abilityCount = 0;
-			$(abilitiesDiv + ' .ability').each(function(){
-				abilityCount ++;
-			})
-			$(abilitiesDiv).css('display', 'inline-block');
-			function displayAbility() {
-				var ability = abilitiesDiv + ' li:nth-last-of-type(' + abilityCount + ')'
-				var barFill = $(ability + ' .fill').attr('value') + '%';
-				$(ability).fadeIn('fast');
-				$(ability + ' .bar-graph .fill').css('width', barFill);
-				abilityCount--;
-				if(abilityCount != 0){
-					setTimeout(function(){
-						displayAbility();
-					}, 50);
-				}
-				else{
-					return;
-				}
-				
-			}
-			displayAbility();
-
-		})
+		$('.abilities').hide();
 		
+		$('.abilities').css('display', 'none');
+		$('.ability').css('display', 'none');
+		$('.fill').css('width', '0');
+		var abilityCount = 0;
+		$(abilitiesDiv + ' .ability').each(function(){
+			abilityCount ++;
+		})
+		$(abilitiesDiv).css('display', 'inline-block');
+		function displayAbility() {
+			var ability = abilitiesDiv + ' li:nth-last-of-type(' + abilityCount + ')'
+			var barFill = $(ability + ' .fill').attr('value') + '%';
+			$(ability).fadeIn('fast');
+			$(ability + ' .bar-graph .fill').css('width', barFill);
+			abilityCount--;
+			if(abilityCount != 0){
+				setTimeout(function(){
+					displayAbility();
+				}, 100);
+			}
+			else{
+				return;
+			}
+			
+		}
+		displayAbility();
+
 	});
-	
+
 }
