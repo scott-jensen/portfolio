@@ -810,7 +810,7 @@ img {
     /* Special thanks to Patrick Denny for help on this http://codepen.io/AtomicNoggin/pen/fEish */
     .about .pie {
         position:absolute;
-        width:100px;
+        width:105px;
         height:200px;
         overflow:hidden;
         left:100px;
@@ -820,17 +820,7 @@ img {
         -webkit-transform-origin:left center;
         transform-origin:left center;
     }
-    .pie.big {
-        width:200px;
-        height:200px;
-        left:0px;
-        z-index: 0;
-        -moz-transform-origin:center center;
-        -ms-transform-origin:center center;
-        -o-transform-origin:center center;
-        -webkit-transform-origin:center center;
-        transform-origin:center center;
-    }
+
     .about .pie:BEFORE {
         content:"";
         position:absolute;
@@ -838,6 +828,10 @@ img {
         height:200px;
         left:-100px;
         border-radius:100px 0 0 100px;
+        border:1px solid #EAEAEA;
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
         -moz-transform-origin:right center;
         -ms-transform-origin:right center;
         -o-transform-origin:right center;
@@ -845,17 +839,13 @@ img {
         transform-origin:right center;
         
     }
-    .about .pie.big:BEFORE {
-        left:0px;
+    .about .pie:AFTER {
+        border:1px solid #EAEAEA;
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
     }
-    .about .pie.big:AFTER {
-        content:"";
-        position:absolute;
-        width:100px;
-        height:200px;
-        left:100px;
-        border-radius:0 100px 100px 0;
-    }
+
     .about .pie[data-start="30"] {
         -moz-transform: rotate(30deg); /* Firefox */
         -ms-transform: rotate(30deg); /* IE */
@@ -914,33 +904,45 @@ img {
     }
     .pie:nth-of-type(1):BEFORE,
     .pie:nth-of-type(1):AFTER {
-        background-color:blue;
-        z-index: 2;  
+        border:1px solid #EAEAEA;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        z-index: 5;
     }
     .pie:nth-of-type(2):AFTER,
     .pie:nth-of-type(2):BEFORE {
-        background-color:green;
-        z-index: 4; 
+        border:1px solid #EAEAEA;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
     }
     .pie:nth-of-type(3):AFTER,
     .pie:nth-of-type(3):BEFORE {
-        background-color:red; 
-        z-index: 3;  
+        border:1px solid #EAEAEA;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
     }
     .pie:nth-of-type(4):AFTER,
     .pie:nth-of-type(4):BEFORE {
-        background-color:orange;    
+        border:1px solid #EAEAEA;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
         z-index: 1;
     }
-
-        .about .pie {
-            -webkit-transition: all .2s ease-in-out;
-            -moz-transition: all .2s ease-in-out;
-            transition: all .2s ease-in-out;
+        .about .pie-chart .selected:AFTER, .about .pie-chart .selected:BEFORE {
+            background: #000;
+            border:1px solid #000;
         }
-            .about .pie:hover {
+            .about .pie:hover:AFTER, .about .pie:hover:BEFORE {
                 background:#EAEAEA;
                 cursor: pointer;
+            }
+            .about .pie-chart .selected:hover:AFTER, .about .pie-chart .selected:hover:BEFORE {
+                background:#000;
+                border:1px solid #000;
             }
 .press-logos li {
     list-style: none;
