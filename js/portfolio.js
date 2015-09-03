@@ -142,8 +142,8 @@ function pieChart() {
 		var abilitiesDiv = '.' + this.id.split('-')[0] + '-abilities';
 		$('.pie').removeClass('selected');
 		$(this).addClass('selected');
-		$('.abilities').fadeOut(function(){
-			$('.ability').fadeOut(0);
+		$('.abilities').fadeOut('fast', function(){
+			$('.ability').css('display', 'none');
 			$('.fill').css('width', '0');
 			var abilityCount = 0;
 			$(abilitiesDiv + ' .ability').each(function(){
@@ -171,4 +171,5 @@ function pieChart() {
 		})
 		
 	});
+	
 }
