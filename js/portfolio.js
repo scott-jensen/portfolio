@@ -138,6 +138,28 @@ function homeScroll() {
 
 }
 function pieChart() {
+	$('.design-abilities').css('display', 'inline-block');
+	var designCount = 0;
+	$('.design-abilities .ability').each(function(){
+		designCount++;
+	});
+	function displayDesign(){
+		var ability = '.design-abilities li:nth-last-of-type(' + designCount + ')'
+		var barFill = $(ability + ' .fill').attr('value') + '%';
+		$(ability).fadeIn('fast');
+		$(ability + ' .bar-graph .fill').css('width', barFill);
+		designCount--;
+		if(designCount != 0){
+			setTimeout(function(){
+				displayDesign();
+			}, 100);
+		}
+		else{
+			return;
+		}
+	};
+	displayDesign();
+
 	$('.pie').click(function(){
 		var abilitiesDiv = '.' + this.id.split('-')[0] + '-abilities';
 		$('.pie').removeClass('selected');
@@ -152,6 +174,7 @@ function pieChart() {
 			abilityCount ++;
 		})
 		$(abilitiesDiv).css('display', 'inline-block');
+
 		function displayAbility() {
 			var ability = abilitiesDiv + ' li:nth-last-of-type(' + abilityCount + ')'
 			var barFill = $(ability + ' .fill').attr('value') + '%';
