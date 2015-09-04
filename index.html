@@ -37,9 +37,42 @@
             $('.home-content').css('height', $(window).height() + 100 + 'px');
 
 
+            // fancybox 
+            $(".project-link").fancybox({
+                'transitionIn'  :   'fade',
+                'transitionOut' :   'fade',
+                'overlayColor'  :   'black',
+                'overlayOpacity':   .9,
+                'padding'       :   '0',
+                'height'        :   '95%',
+                'width'        :   '95%',
+                'type'          : 'iframe'
+             });
+            $('.project').click(function(){
+                window.location.hash = this.id + '-gallery';
+            });
+
+
+            // Dribbble Shots
+            var dataURL = "https://api.dribbble.com/v1/users/ScottJensen/shots?access_token=74a5e6faf815227977fab652c9c6cfd67c70d3ade9fdfc3c1818258db190b3bb"
+            $.getJSON(dataURL, function(dribbbleList) {
+                for(i = 1; i <= 6; i++){
+                    var shotHTML = '<li class="project thumb-' + i + '"><div class="live-area"><div class="overlay"></div><img src="' + dribbbleList[i-1].images.normal + '" /><h4 class="project-title">' + dribbbleList[i-1].title + '</h4><div class="project-meta"><h5>Description:</h5><p>' + dribbbleList[i-1].description + '</p></div></div><a href="' + dribbbleList[i-1].html_url + '" class="project-link" target="_blank"></a></li>';
+                    $('#dribbble-gallery .project-list').append(shotHTML);
+                    
+                };
+            });
+
+
+            
+        });
+
+    </script>
+    <script>
+        $(document).ready(function(){
             // project thumbnail hover states
             $('.project').mouseenter(function(){
-               
+           
                 var projectOverlay = $(this).find('.overlay');
                 var projectTitle = $(this).find('h4');
                 var projectMeta = $(this).find('.project-meta');
@@ -74,24 +107,7 @@
                 });
 
             });
-
-            // fancybox 
-            $(".project-link").fancybox({
-                'transitionIn'  :   'fade',
-                'transitionOut' :   'fade',
-                'overlayColor'  :   'black',
-                'overlayOpacity':   .9,
-                'padding'       :   '0',
-                'height'        :   '95%',
-                'width'        :   '95%',
-                'type'          : 'iframe'
-             });
-            $('.project').click(function(){
-                window.location.hash = this.id + '-gallery';
-            });
-            
         });
-
     </script>
 
     <!--[if IE]>
@@ -231,6 +247,7 @@
         <div class="wrap">
             <h2><span class="box"></span>From Dribbble</h2>
             <ul class="project-list">
+                <!-- Placeholder Dribbble Project
                 <li class="project thumb-1" id="">
                     <div class="live-area">
                         <div class="overlay"></div>
@@ -245,76 +262,7 @@
                     </div>
                     <a href="" class="project-link"></a>
                 </li>
-                <li class="project thumb-2" id="">
-                    <div class="live-area">
-                        <div class="overlay"></div>
-                        <img src="images/thumbnail.png" alt="thumbnail" />
-
-                            <h4 class="project-title">Ender Labs</h4>
-                            <div class="project-meta">
-                                <h5>Media:</h5>
-                                <p>Identity, Website, Print</p>
-                            </div>
-
-                    </div>
-                    <a href="" class="project-link"></a>
-                </li>
-                <li class="project thumb-3" id="">
-                    <div class="live-area">
-                        <div class="overlay"></div>
-                        <img src="images/thumbnail.png" alt="thumbnail" />
-
-                            <h4 class="project-title">Ender Labs</h4>
-                            <div class="project-meta">
-                                <h5>Media:</h5>
-                                <p>Identity, Website, Print</p>
-                            </div>
-
-                    </div>
-                    <a href="" class="project-link"></a>
-                </li>
-                <li class="project thumb-4" id="">
-                    <div class="live-area">
-                        <div class="overlay"></div>
-                        <img src="images/thumbnail.png" alt="thumbnail" />
-
-                            <h4 class="project-title">Ender Labs</h4>
-                            <div class="project-meta">
-                                <h5>Media:</h5>
-                                <p>Identity, Website, Print</p>
-                            </div>
-
-                    </div>
-                    <a href="" class="project-link"></a>
-                </li>
-                <li class="project thumb-5" id="">
-                    <div class="live-area">
-                        <div class="overlay"></div>
-                        <img src="images/thumbnail.png" alt="thumbnail" />
-
-                            <h4 class="project-title">Ender Labs</h4>
-                            <div class="project-meta">
-                                <h5>Media:</h5>
-                                <p>Identity, Website, Print</p>
-                            </div>
-
-                    </div>
-                    <a href="" class="project-link"></a>
-                </li>
-                <li class="project thumb-6" id="">
-                    <div class="live-area">
-                        <div class="overlay"></div>
-                        <img src="images/thumbnail.png" alt="thumbnail" />
-
-                            <h4 class="project-title">Ender Labs</h4>
-                            <div class="project-meta">
-                                <h5>Media:</h5>
-                                <p>Identity, Website, Print</p>
-                            </div>
-
-                    </div>
-                    <a href="" class="project-link"></a>
-                </li>
+                -->
             </ul>
         </div>
     </section>
