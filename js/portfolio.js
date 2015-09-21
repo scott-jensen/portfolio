@@ -201,3 +201,12 @@ function pieChart() {
 	});
 
 }
+
+function contactForm() {
+	$('#contact-iframe').load(function() {
+	    this.style.height =
+	    this.contentWindow.document.body.offsetHeight + 'px';
+	});
+
+
+}

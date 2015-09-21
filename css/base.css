@@ -107,6 +107,9 @@ p {
     line-height: 1.4em;
     margin-bottom:30px;
 }
+    .dark p {
+        color:#CCC;
+    }
 a {
     color:#999;
 }
@@ -985,7 +988,7 @@ img {
 /*------------------ CONTACT -----------------*/
 
 .overlay {
-    position: absolute;
+    position: fixed;
     top:0;
     left:0;
     height:100%;
@@ -999,9 +1002,8 @@ img {
     top:0;
     max-height: 100%;
     max-width: 100%;
-    padding:2%;
-    height:300px;
     background:#000;
+    padding:2%;
 }
 .contact-page {
     background:#000;
@@ -1060,7 +1062,7 @@ label {
     font-size: .75rem;
 }
     .dark label {
-        color:#999;
+        color:#CCC;
     }
 input[type="text"], input[type="password"], input[type="number"], input[type="email"] {
     -webkit-appearance:none;
