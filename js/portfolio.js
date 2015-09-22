@@ -210,3 +210,35 @@ function contactForm() {
 
 
 }
+
+function module() {
+	setTimeout(function(){
+		centerContent();
+	}, 30);
+	
+	$(window).resize(centerContent)
+	$('.overlay').click(function(){
+		$('.module').fadeOut('fast');
+		$('.overlay').fadeOut('fast');
+	});
+
+	$('.module-link').click(function(event){
+		event.preventDefault();
+		var contentURL = $(this).attr('href');
+		
+	});
+}
+
+function centerContent(){
+	var windowHeight = $(window).height();
+	var windowWidth = $(window).width();
+	$('.module').each(function(){
+		var contentWidth = $(this).width();
+		var contentHeight = $(this).height();
+		var topOffset = (windowHeight - contentHeight) / 2;
+		var leftOffset = (windowWidth - contentWidth) / 2;
+		$(this).css('left', leftOffset + 'px');
+		$(this).css('top', topOffset + 'px');
+	})
+	return;
+}
