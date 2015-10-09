@@ -217,10 +217,7 @@ function module() {
 	}, 30);
 	
 	$(window).resize(centerContent)
-	$('.overlay').click(function(){
-		$('.module').fadeOut('fast');
-		$('.overlay').fadeOut('fast');
-	});
+	
 
 	$('.module-link').click(function(event){
 		event.preventDefault();
@@ -231,6 +228,14 @@ function module() {
 			centerContent();
 		}, 30);
 		$('.module').fadeIn('fast');
+		$('.overlay').click(function(){
+			$('.module').fadeOut('fast');
+			$('.overlay').fadeOut('fast', function(){
+				$('.overlay').remove();
+				$('.module').remove();
+			});
+			
+		});
 	});
 }
 
