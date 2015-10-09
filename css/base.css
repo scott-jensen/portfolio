@@ -39,6 +39,8 @@ aside {
     position: absolute;
     z-index: 102;
     box-shadow: 0px 0px 10px rgba(0,0,0, .8);
+    min-width: 520px;
+    min-height: 570px;
 }
 
 
@@ -1018,6 +1020,9 @@ img {
 .contact-page h3 {
     color:#FFF;
 }
+.contact-me {
+    padding:40px 40px 20px 20px;
+}
 
 
 /*----------------- FOOTER -------------------*/
@@ -1094,6 +1099,33 @@ input[type="text"], input[type="password"], input[type="number"], input[type="em
         background:#000;
         color:#EAEAEA;
 }
+
+    .dark input[type="text"], .dark input[type="password"], .dark input[type="number"], .dark input[type="email"] {
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        appearance:none;
+        border:none;
+        outline: none;
+        background:none;
+        border:1px solid #FFF;
+        padding:1.5%;
+        display:block;
+        color:#FFF;
+        width:97%;
+        font-size:.875rem;
+        -webkit-transition: all .15s ease-in-out;
+        -moz-transition: all .15s ease-in-out;
+        transition: all .15s ease-in-out;
+    }
+
+        /* Hover, focus, active states for ALL types of text inputs */
+        .dark input[type="text"]:hover, .dark input[type="password"]:active, .dark input[type="number"]:focus, .dark input[type="email"]:hover {
+            background:#1E1E1E;
+        }
+        .dark input[type="text"]:active, .dark input[type="text"]:focus, .dark input[type="password"]:active, .dark input[type="password"]:focus, .dark input[type="number"]:active, .dark input[type="number"]:focus, .dark input[type="email"]:active, .dark input[type="email"]:focus {
+            background:#FFF;
+            color:#1E1E1E;
+        }   
 input[type="submit"]{
     -webkit-appearance:none;
     -moz-appearance:none;
@@ -1149,6 +1181,31 @@ textarea {
         color:#FFF;
         background:#000;
     }
+    .dark textarea {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    border:none;
+    outline: none;
+    background:none;
+    border:1px solid #FFF;
+    padding:1.5%;
+    width:97%;
+    color:#FFF;
+    display:block;
+    min-height: 150px;
+    font-size: .875rem;
+    -webkit-transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    }
+        .dark textarea:hover {
+            background:#1E1E1E;
+        }
+        .dark textarea:focus, .dark textarea:active {
+            background:#FFF;
+            color:#1E1E1E;
+        }
 
 select {
     -ms-appearance:none;
@@ -1185,11 +1242,37 @@ select {
     -moz-transition: all .15s ease-in-out;
     transition: all .15s ease-in-out;
 }
-    .black-btn:hover {
+    .black-btn:hover, .black-btn:focus {
         background-position: 0 0;
         color:#FFF;
         border-color:#000;
     }
+    .dark .black-btn {
+        display:inline-block;
+        background:url(../images/button-bg.png) left top no-repeat;
+        background-color:#FFF;
+        background-size:100% 100%;
+        background-position: 0 0;
+        overflow: hidden;
+        text-align: center;
+        border:1px solid #EAEAEA;
+        padding:10px 30px;
+        display:inline-block;
+        color:#FFF;
+        font-weight: bold;
+        font-size: .75rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        line-height: 1em;
+        -webkit-transition: all .15s ease-in-out;
+        -moz-transition: all .15s ease-in-out;
+        transition: all .15s ease-in-out;
+    }
+        .dark .black-btn:hover, .dark .black-btn:focus {
+            background-position: left -75px;
+            color:#000;
+            border-color:#FFF;
+        }
 .btn {
     border:1px solid #EAEAEA;
     padding:10px 30px;

@@ -222,12 +222,12 @@ function module() {
 	$('.module-link').click(function(event){
 		event.preventDefault();
 		var contentURL = $(this).attr('href');
-		$('body').append('<div class="overlay"></div><iframe src="'+ contentURL +'" class="module" frameborder="0" scrolling="no"></iframe>');
+		$('body').append('<div class="overlay"></div><iframe src="'+ contentURL +'" class="module" style="display:none;" frameborder="0" scrolling="no"></iframe>');
 		$('.overlay').fadeIn('fast');
 		setTimeout(function(){
 			centerContent();
 		}, 30);
-		$('.module').fadeIn('fast');
+		$('.module').fadeIn();
 		$('.overlay').click(function(){
 			$('.module').fadeOut('fast');
 			$('.overlay').fadeOut('fast', function(){
