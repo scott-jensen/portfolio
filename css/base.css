@@ -33,12 +33,12 @@ aside {
     display:inline-block;
     margin-left:9%;
     vertical-align: top;
-    margin-top:100px;
+
 }
 .module {
     position: absolute;
     z-index: 102;
-    box-shadow: 0px 0px 10px rgba(0,0,0, .8);
+    box-shadow: 0px 0px 15px rgba(0,0,0, .3);
     min-width: 520px;
     min-height: 570px;
 }
@@ -408,7 +408,7 @@ img {
     }
     .project-list li .overlay {
             background: #000;
-            background:rgba(0,0,0,.93);
+            background:rgba(0,0,0,.9);
             width:100%;
             height: 100%;
             position: absolute;
@@ -566,7 +566,7 @@ img {
         cursor: pointer;
     }
 #fancybox-outer {
-    background:#000;
+    background:#FFF;
 }
 
 
@@ -994,13 +994,13 @@ img {
 
 /*------------------ CONTACT -----------------*/
 
-.overlay {
+.page-overlay {
     position: fixed;
     top:0;
     left:0;
     height:100%;
     width:100%;
-    background:rgba(0,0,0,.8);
+    background:rgba(255,255,255,.8);
     z-index: 101;
 }
 #contact-form {
