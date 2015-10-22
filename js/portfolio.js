@@ -98,6 +98,7 @@ function homeScroll() {
 
 	}
 	function showTout(){
+		window.scrollTo(0, 0);
 		scrollReady = false;
 		$('#tout').animate({
 			top : toutHeight
