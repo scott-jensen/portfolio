@@ -335,10 +335,18 @@ img {
             border-bottom:4px solid #FFF;
             -webkit-font-smoothing: antialiased;
         }
+            .home #site-nav li a {
+                visibility: hidden;
+            }
             #site-nav li .selected {
                 border-bottom:4px solid #000;
             }
             #site-nav li a:hover {
+                color:#FFF;
+                border-bottom:4px solid #000;
+            }
+            #site-nav li .loaded {
+                background-position: 0 0;
                 color:#FFF;
                 border-bottom:4px solid #000;
             }
@@ -422,6 +430,12 @@ img {
             left:120%;
             z-index: 2;
         }
+        #dribbble-gallery .project-list li .overlay {
+            background-image:url(../images/link-out-arrow.png);
+            background-repeat: no-repeat;
+            background-position: 93% 20px;
+            background-size:21px 22px;
+        }
 
         .project-list li  h4 {
             font-family: HelveticaNeue-CondensedBold, Helvetica, Arial, sans-serif;
@@ -451,7 +465,7 @@ img {
             bottom:20px;
             left:580px;
             z-index: 11;
-            width:280px;
+            width:93%;
             color:#FFF;
         }
         .project-list .project-link {
