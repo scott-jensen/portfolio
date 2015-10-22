@@ -21,9 +21,12 @@ function featuredProjects(){
 			$('#main-nav li:nth-child(' + loadCount + ') a').removeClass('loaded');
 			if(loadCount < navCount){
 				loadCount++
-				loadNav();
+				setTimeout(function(){
+					loadNav();
+				}, 50)
+				
 			}
-		}, 200);
+		}, 220);
 
 	}
 	loadNav();
