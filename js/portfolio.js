@@ -241,6 +241,9 @@ function module() {
 		var contentURL = $(this).attr('href');
 		$('body').append('<div class="page-overlay"></div><iframe src="'+ contentURL +'" class="module" style="display:none;" frameborder="0" scrolling="no"></iframe>');
 		if($(this).attr('size') == 'full'){
+			$('.module').css('position', 'fixed');
+			$('.module').css('left', '5%');
+			$('.module').css('top', '5%');
 			$('.module').css('min-width', '90%');
 			$('.module').css('min-height', '90%');
 		}
@@ -276,10 +279,12 @@ function centerContent(){
 
 (function($) {
 	$.fn.dropcap = function() {
-		var content = $('p:first', this).text().trim();
-		var cap = '<span class="dropcap">' + content.charAt(0) + '</span>';
-		var content = cap + content.substr(1);
-		$('p:first', this).html(content);
-	
+		$('p:first', this).each(function(){
+			var content = $(this).text().trim();
+			var cap = '<span class="dropcap">' + content.charAt(0) + '</span>';
+			var content = cap + content.substr(1);
+			$(this).html(content);
+		})
+		
 	}
 })(jQuery);
