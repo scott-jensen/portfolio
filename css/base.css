@@ -502,7 +502,9 @@ img {
     overflow: hidden;
     height:100%;
 }
-
+    #project-slides li img {
+        max-width: inherit;
+    }
 #project-info {
     position: absolute;
     right:0;
