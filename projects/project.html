@@ -53,33 +53,37 @@
         function sizeGallery() {
             var viewWidth = $(window).width();
             var viewHeight = $(window).height();
+            var viewRatio = viewWidth / viewHeight;
 
             $('.project-image').each(function(){
                 var imageWidth = $(this).width();
                 var imageHeight = $(this).height();
                 var imageRatio = imageWidth / imageHeight;
-                
-                if (imageHeight < viewHeight) {
-                    $(this).css('height', '100%');
-                    imageWidth = $(this).height() * imageRatio;
-                    console.debug(imageRatio + ' ' + imageWidth);
-                    $(this).css('width', imageWidth + 'px');
+
+                // for height
+                if (imageRatio > viewRatio) {
+                    $(this).css('height', viewHeight + 'px');
+                    $(this).css('width', viewHeight * imageRatio + 'px'); 
+                    var leftOffset = -(($(this).width() - viewWidth) / 2);
+                    $(this).css('margin-left', leftOffset + 'px'); 
+                    
+                    //var topOffset = -((imageHeight - viewHeight) / 2);
+                    //$(this).css('margin-top', topOffset + 'px');  
+
                 }
-                if (imageWidth > viewWidth) {
-                    var leftOffset = -((imageWidth - viewWidth) / 2);
-                    $(this).css('margin-left', leftOffset + 'px');
-                }
-                if (imageWidth < viewWidth) {
-                    $(this).css('width', '100%');
-                }
-                if (imageHeight > viewHeight){
-                    var topOffset = -((imageHeight - viewHeight) / 2);
+                // for width
+                else if (imageRatio < viewRatio) {
+                    $(this).css('width', viewWidth + 'px');
+                    $(this).css('height', viewWidth / imageRatio + 'px');
+                    var topOffset = -(($(this).height() - viewHeight) / 2);
                     $(this).css('margin-top', topOffset + 'px');
                 }
 
             });
+
             displayGallery();
             galleryVisible = true;
+
         };
 
         //count the images in the gallery
@@ -184,6 +188,7 @@
 
         });
 
+        $(window).resize(sizeGallery);
 
 
     });

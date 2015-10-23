@@ -243,6 +243,10 @@ function module() {
 		event.preventDefault();
 		var contentURL = $(this).attr('href');
 		$('body').append('<div class="page-overlay"></div><iframe src="'+ contentURL +'" class="module" style="display:none;" frameborder="0" scrolling="no"></iframe>');
+		if($(this).attr('size') == 'full'){
+			$('.module').css('min-width', '90%');
+			$('.module').css('min-height', '90%');
+		}
 		$('.page-overlay').fadeIn('fast');
 		setTimeout(function(){
 			centerContent();
