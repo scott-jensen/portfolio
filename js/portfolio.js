@@ -226,9 +226,6 @@ function contactForm() {
 	$('#contact-iframe').load(function() {
 	    this.style.height = this.contentWindow.document.body.offsetHeight + 'px';
 	});
-	
-
-
 }
 
 function module() {
@@ -276,3 +273,9 @@ function centerContent(){
 	})
 	return;
 }
+
+(function($) {
+	$.fn.dropcap = function(target) {
+		alert(target.id);
+	}
+})(jQuery);
