@@ -275,7 +275,11 @@ function centerContent(){
 }
 
 (function($) {
-	$.fn.dropcap = function(target) {
-		alert(target.id);
+	$.fn.dropcap = function() {
+		var content = $('p:first', this).text().trim();
+		var cap = '<span class="dropcap">' + content.charAt(0) + '</span>';
+		var content = cap + content.substr(1);
+		$('p:first', this).html(content);
+	
 	}
 })(jQuery);
