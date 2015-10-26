@@ -484,6 +484,9 @@ img {
 .project-page {
     overflow:hidden;
 }
+    .project-page header {
+        display:none;
+    }
 #project-slides {
     height:100%;
     overflow: hidden;
@@ -508,6 +511,7 @@ img {
 #project-info {
     position: absolute;
     right:0;
+    z-index: 80;
     background:#000;
     background:rgba(0,0,0,.95);
     padding:5px 20px 20px 20px;
@@ -1365,8 +1369,41 @@ select {
 /*--------------- iPAD PORTRAIT --------------*/
 
 @media screen and (max-width: 768px) {
-
-
+    .project-page {
+        padding-top:60px;
+        overflow: visible;
+    }
+    .project-page header {
+        display:block;
+    }
+    .project-page #project-slides .slide {
+        padding:5px 5px 0 5px; 
+        width:auto;
+        height:auto;
+        display:block;
+        position: relative;
+        left:auto !important;
+        margin-bottom:0;
+    }
+    .project-page #project-info {
+        position: relative;
+        display:block;
+        top:auto;
+        left:auto;
+        right:auto;
+        bottom:auto;
+        width:auto;
+        background:#FFF;
+        padding:5px;
+    }
+    .project-page .slide img {
+        width:100%;
+        height: auto;
+        margin-bottom:0;
+    }
+    #next-btn, #prev-btn {
+        display:none;
+    }
 }
 
 

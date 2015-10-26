@@ -55,31 +55,33 @@
             var viewHeight = $(window).height();
             var viewRatio = viewWidth / viewHeight;
 
-            $('.project-image').each(function(){
-                var imageWidth = $(this).width();
-                var imageHeight = $(this).height();
-                var imageRatio = imageWidth / imageHeight;
+            if(viewWidth > 768){
+                $('.project-image').each(function(){
+                    var imageWidth = $(this).width();
+                    var imageHeight = $(this).height();
+                    var imageRatio = imageWidth / imageHeight;
 
-                // for height
-                if (imageRatio > viewRatio) {
-                    $(this).css('height', viewHeight + 'px');
-                    $(this).css('width', viewHeight * imageRatio + 'px'); 
-                    var leftOffset = -(($(this).width() - viewWidth) / 2);
-                    $(this).css('margin-left', leftOffset + 'px'); 
-                    
-                    //var topOffset = -((imageHeight - viewHeight) / 2);
-                    //$(this).css('margin-top', topOffset + 'px');  
+                    // for height
+                    if (imageRatio > viewRatio) {
+                        $(this).css('height', viewHeight + 'px');
+                        $(this).css('width', viewHeight * imageRatio + 'px'); 
+                        var leftOffset = -(($(this).width() - viewWidth) / 2);
+                        $(this).css('margin-left', leftOffset + 'px'); 
+                        
+                        //var topOffset = -((imageHeight - viewHeight) / 2);
+                        //$(this).css('margin-top', topOffset + 'px');  
 
-                }
-                // for width
-                else if (imageRatio < viewRatio) {
-                    $(this).css('width', viewWidth + 'px');
-                    $(this).css('height', viewWidth / imageRatio + 'px');
-                    var topOffset = -(($(this).height() - viewHeight) / 2);
-                    $(this).css('margin-top', topOffset + 'px');
-                }
+                    }
+                    // for width
+                    else if (imageRatio < viewRatio) {
+                        $(this).css('width', viewWidth + 'px');
+                        $(this).css('height', viewWidth / imageRatio + 'px');
+                        var topOffset = -(($(this).height() - viewHeight) / 2);
+                        $(this).css('margin-top', topOffset + 'px');
+                    }
 
-            });
+                });
+            }
 
             displayGallery();
             galleryVisible = true;
@@ -201,7 +203,43 @@
 
 </head>
 <body class="project-page">
+<header id="site-header">
+    <div class="wrap">
+        <div id="logo">
+            <div class="logo-1"></div>
+            <div class="logo-2"></div>
+            <div class="logo-3"></div>
+            <div class="logo-4"></div>
+        </div>
+        <h1 id="wordmark">Scott Jensen <span>Design</span></h1>
+        <nav id="site-nav">
+            <ul id="main-nav">    
+                <li><a class="black-btn work-nav">Work</a></li>
+                <li><a href="writing.html" class="black-btn writing-nav">Writing</a></li>
+                <li><a href="about.html" class="black-btn about-nav">About</a></li>
+                <li><a href="contact.html" class="black-btn contact-nav module-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <article id="project-info">
 
+        <h1>CCA Trade show</h1>
+        <h4>Client:</h4>
+        <p>Neutron Interactive</p>
+        <h4>Media:</h4>
+        <p>Identity, Web, Print</p>
+        <p>
+            Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui.
+        </p>
+        <br />
+        <h4>Related Projects:</h4>
+        <ul id="related-projects">
+            <li><a href="http://betacrumb.com" id="project1" class="related-project"><img src="../images/thumbnail.png" alt="thumbnail"></a></li>
+            <li><a href="http://betacrumb.com" id="project2" class="related-project"><img src="../images/thumbnail.png" alt="thumbnail"></a></li>
+        </ul>
+
+    </article>
     <div id="load-wrapper">
         <div id="animation-block">
             <div class="bar1"></div>
@@ -221,24 +259,7 @@
     <div id="next-btn"></div>
     <div id="prev-btn"></div>
 
-    <article id="project-info">
-
-        <h1>CCA Trade show</h1>
-        <h4>Client:</h4>
-        <p>Neutron Interactive</p>
-        <h4>Media:</h4>
-        <p>Identity, Web, Print</p>
-        <p>
-            Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui.
-        </p>
-        <br />
-        <h4>Related Projects:</h4>
-        <ul id="related-projects">
-            <li><a href="http://betacrumb.com" id="project1" class="related-project"><img src="../images/thumbnail.png" alt="thumbnail"></a></li>
-            <li><a href="http://betacrumb.com" id="project2" class="related-project"><img src="../images/thumbnail.png" alt="thumbnail"></a></li>
-        </ul>
-
-    </article>
+    
 
 </body>
 </html>
