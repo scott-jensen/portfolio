@@ -447,7 +447,7 @@ img {
             left:480px;
             top:40%;
             z-index: 10;
-            width:280px;
+            width:93%;
             color:#FFF;
             -webkit-font-smoothing: antialiased;
 
@@ -1369,6 +1369,24 @@ select {
 /*--------------- iPAD PORTRAIT --------------*/
 
 @media screen and (max-width: 768px) {
+    #logo {
+        margin-left:0;
+    }
+    #site-header #wordmark {
+        margin-left:40px;
+    }
+    .wrap {
+        padding:0 20px;
+    }
+    #content {
+        padding-top:80px;
+    }
+    h2 {
+        margin-left:0;
+    }
+    .article-page #article-title {
+        margin-left:0;
+    }
     .project-page {
         padding-top:50px;
         overflow: visible;
@@ -1377,7 +1395,7 @@ select {
         display:block;
     }
     .project-page #project-slides .slide {
-        padding:5px 5px 0 5px; 
+        padding:5px 20px 0 5px; 
         width:auto;
         height:auto;
         display:block;
@@ -1394,7 +1412,7 @@ select {
         bottom:auto;
         width:auto;
         background:#FFF;
-        padding:5px;
+        padding:0px 20px;
         overflow: hidden;
     }
         .project-page #project-info h1 {
@@ -1437,6 +1455,18 @@ select {
         float:left;
         width:50%;
         margin-right:10%;
+    }
+    .abilities-section, .press-logos {
+        width:145%;
+    }
+    #article-content {
+        max-width: 66%;
+    }
+    aside {
+        margin-left:5%;
+    }
+    .project-list li .project-meta {
+        display: none;
     }
 
 }
