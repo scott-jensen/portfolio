@@ -1370,7 +1370,7 @@ select {
 
 @media screen and (max-width: 768px) {
     .project-page {
-        padding-top:60px;
+        padding-top:50px;
         overflow: visible;
     }
     .project-page header {
@@ -1395,7 +1395,19 @@ select {
         width:auto;
         background:#FFF;
         padding:5px;
+        overflow: hidden;
     }
+        .project-page #project-info h1 {
+            color:#000;
+            font-size: 1.63rem;
+        }
+        .project-page #project-info h4 {
+            font-size:1rem;
+            color:#000;
+        }
+        .project-page #project-info p {
+            color:#444;
+        }
     .project-page .slide img {
         width:100%;
         height: auto;
@@ -1404,6 +1416,29 @@ select {
     #next-btn, #prev-btn {
         display:none;
     }
+    .related-projects-box {
+        float:right;
+        width:40%;
+        vertical-align: bottom;
+    }
+        .related-projects-box li {
+            padding:3px;
+            margin-right:5px !important;
+            border:1px solid #EAEAEA !important;
+            -webkit-transition: all .15s ease-in-out;
+            -moz-transition: all .15s ease-in-out;
+            transition: all .15s ease-in-out;
+        }
+        #project-info #related-projects li:hover {
+            border:1px solid #EAEAEA;
+            box-shadow: 0px 3px 10px rgba(0,0,0,.2);
+        }
+    .project-page .project-details {
+        float:left;
+        width:50%;
+        margin-right:10%;
+    }
+
 }
 
 

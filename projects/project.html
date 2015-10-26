@@ -192,6 +192,8 @@
 
         $(window).resize(sizeGallery);
 
+        module();
+
 
     });
 
@@ -214,10 +216,10 @@
         <h1 id="wordmark">Scott Jensen <span>Design</span></h1>
         <nav id="site-nav">
             <ul id="main-nav">    
-                <li><a class="black-btn work-nav">Work</a></li>
-                <li><a href="writing.html" class="black-btn writing-nav">Writing</a></li>
-                <li><a href="about.html" class="black-btn about-nav">About</a></li>
-                <li><a href="contact.html" class="black-btn contact-nav module-link">Contact</a></li>
+                <li><a class="black-btn work-nav selected">Work</a></li>
+                <li><a href="../writing.html" class="black-btn writing-nav">Writing</a></li>
+                <li><a href="../about.html" class="black-btn about-nav">About</a></li>
+                <li><a href="../contact.html" class="black-btn contact-nav module-link">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -225,19 +227,23 @@
     <article id="project-info">
 
         <h1>CCA Trade show</h1>
-        <h4>Client:</h4>
-        <p>Neutron Interactive</p>
-        <h4>Media:</h4>
-        <p>Identity, Web, Print</p>
-        <p>
-            Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui.
-        </p>
-        <br />
-        <h4>Related Projects:</h4>
-        <ul id="related-projects">
-            <li><a href="http://betacrumb.com" id="project1" class="related-project"><img src="../images/thumbnail.png" alt="thumbnail"></a></li>
-            <li><a href="http://betacrumb.com" id="project2" class="related-project"><img src="../images/thumbnail.png" alt="thumbnail"></a></li>
-        </ul>
+        <div class="project-details">
+            <h4>Client:</h4>
+            <p>Neutron Interactive</p>
+            <h4>Media:</h4>
+            <p>Identity, Web, Print</p>
+            <p>
+                Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui.
+            </p>
+           
+        </div>
+        <div class="related-projects-box">
+            <h4>Related Projects:</h4>
+            <ul id="related-projects">
+                <li><a href="http://betacrumb.com" id="project1" class="related-project"><img src="../images/thumbnail.png" alt="thumbnail"></a></li>
+                <li><a href="http://betacrumb.com" id="project2" class="related-project"><img src="../images/thumbnail.png" alt="thumbnail"></a></li>
+            </ul>
+        </div>
 
     </article>
     <div id="load-wrapper">
