@@ -83,7 +83,7 @@
                 });
             }
 
-            //displayGallery();
+            displayGallery();
             galleryVisible = true;
 
         };
@@ -113,7 +113,7 @@
         function hideDescription() {
             var boxHeight = $('#project-info').height();
             var titleOffset = $('h1').height();
-            var hideValue = -(boxHeight - titleOffset);
+            var hideValue = -(boxHeight - titleOffset) + 30;
             $('#project-info').css('bottom', hideValue + 'px');
         };
 
