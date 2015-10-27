@@ -23,7 +23,6 @@ body {
     width:60px;
     margin-left:auto;
     margin-right:auto;
-    border:1px solid red;
     margin-bottom:10px;
     -webkit-perspective: 600px;
     -moz-perspective: 600px;
@@ -32,12 +31,35 @@ body {
 .bar1 {
     width:40px;
     height:40px;
-    border:1px solid red;
-    margin-left:auto;
-    margin-right:auto;
+  
+    top:0px;
+    position: absolute;
+    left:10px;
     -webkit-animation: bar1 1.8s linear infinite;
     -moz-animation: bar1 1.8s linear infinite;
     animation: bar1 1.8s linear infinite;
+}
+.bar2 {
+    width:40px;
+    height:40px;
+ 
+    top:0px;
+    position: absolute;
+    left:10px;
+    -webkit-animation: bar2 1.8s linear infinite;
+    -moz-animation: bar2 1.8s linear infinite;
+    animation: bar2 1.8s linear infinite;
+}
+.bar3 {
+    width:40px;
+    height:40px;
+
+    top:0px;
+    position:absolute;
+    left:10px;
+    -webkit-animation: bar3 1.8s linear infinite;
+    -moz-animation: bar3 1.8s linear infinite;
+    animation: bar3 1.8s linear infinite;
 }
 .bar1 .bar {
     width:40px;
@@ -48,28 +70,23 @@ body {
     left:0px;
     
 }
-.bar2 {
+.bar2 .bar {
     width:25px;
     height:2px;
     background:#000;
     position:absolute;
     top:0px;
-    left:20px;
-    -webkit-animation: bar2 1.8s linear infinite;
-    -moz-animation: bar2 1.8s linear infinite;
-    animation: bar2 1.8s linear infinite;
+    left:0px;
+    
 }
 
-.bar3 {
+.bar3 .bar {
     width:30px;
     height:1px;
     background:#000;
     position:absolute;
     top:0px;
-    left:20px;
-    -webkit-animation: bar3 1.8s linear infinite;
-    -moz-animation: bar3 1.8s linear infinite;
-    animation: bar3 1.8s linear infinite;
+    left:0px;  
 }
 
 @-webkit-keyframes bar1 {
@@ -79,14 +96,45 @@ body {
         10% {
             -webkit-transform: rotateZ(20deg);
                 }
-        90% {
-            -webkit-transform: rotateZ(340deg);
+        70% {
+            -webkit-transform: rotateZ(330deg);
                 }
 
         100% {
             -webkit-transform: rotateZ(360deg);
                 }
 }
+@-webkit-keyframes bar2 {
+        0% {
+            -webkit-transform: rotateZ(50deg);
+                }
+        70% {
+            -webkit-transform: rotateZ(380deg);
+                }
+        90% {
+            -webkit-transform: rotateZ(390deg);
+        }
+
+        100% {
+            -webkit-transform: rotateZ(410deg);
+                }
+}
+@-webkit-keyframes bar3 {
+        0% {
+            -webkit-transform: rotateZ(30deg);
+                }
+        85% {
+            -webkit-transform: rotateZ(360deg);
+                }
+        95% {
+            -webkit-transform: rotateZ(370deg);
+            }
+
+        100% {
+            -webkit-transform: rotateZ(390deg);
+                }
+}
+
 
 
 
