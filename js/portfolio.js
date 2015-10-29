@@ -312,6 +312,7 @@ function centerContent(){
 			imageCount++;
 		});
 		
+		
 		$(this).find('img').each(function(){
 			
 			$(this).load(function(){
@@ -325,6 +326,8 @@ function centerContent(){
 		$(this).css('position', 'relative');
 		$(this).find('.load-wrapper').css('left', leftOffset + 'px');
 		$(this).find('.load-wrapper').css('top', topOffset + 'px');
-		
+		if(imageCount == 0){
+			displayObject();
+		}
 	}
 })(jQuery);
