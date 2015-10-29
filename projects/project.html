@@ -35,18 +35,14 @@
         var iframeHeight = $(window).height();
         var userInteraction = false;
         var galleryVisible = false;
+        $('#full-project').height($(window).height());
+        $('#full-project').preloader(displayGallery);
 
         // function to show gallery when loaded
         function displayGallery() {
-            $('#load-wrapper').fadeOut(function(){
-                $('#project-slides').animate({
-                    opacity : '1'
-                });
-                if(userInteraction == false){
+             if(userInteraction == false){
                     $('#project-info').css('bottom', '0px');
-                }
-                
-            });
+             }
         };
 
         // size the images in the gallery
@@ -83,7 +79,7 @@
                 });
             }
 
-            displayGallery();
+            //displayGallery();
             galleryVisible = true;
 
         };
@@ -224,6 +220,7 @@
         </nav>
     </div>
 </header>
+<div id="full-project">
     <article id="project-info">
 
         <h1>CCA Trade show</h1>
@@ -246,6 +243,7 @@
         </div>
 
     </article>
+    <!--
     <div id="load-wrapper">
         <div id="animation-block">
             <div class="bar1"><div class="bar"></div></div>
@@ -254,6 +252,7 @@
         </div>
         <span class="loading">Loading</span>
     </div>
+-->
 
     <ul id="project-slides">
         <li id="slide1" class="slide"><img src="../images/project-image.jpg" alt="Project Image" class="project-image" /></li>
@@ -264,7 +263,7 @@
 
     <div id="next-btn"></div>
     <div id="prev-btn"></div>
-
+</div>
     
 
 </body>

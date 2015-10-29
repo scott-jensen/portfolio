@@ -4,6 +4,7 @@
     position: absolute;
     text-align: center;
     color:#000;
+    z-index: 1000;
 }
 .loading {
     font-family:HelveticaNeue-CondensedBold, Helvetica, Arial, sans-serif;

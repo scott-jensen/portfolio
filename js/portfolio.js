@@ -290,7 +290,7 @@ function centerContent(){
 })(jQuery);
 
 (function($) {
-	$.fn.preloader = function() {
+	$.fn.preloader = function(callback) {
 		var theObj = $(this);
 		var theChildren = $(this).children()
 		$(theChildren).fadeTo(0, 0);
@@ -304,7 +304,7 @@ function centerContent(){
 
 		function displayObject(){
 			$(theObj).find('.load-wrapper').fadeOut(function(){
-				$(theChildren).fadeTo("slow", 1);
+				$(theChildren).fadeTo("fast", 1, callback);
 			});
 		};
 
@@ -323,11 +323,12 @@ function centerContent(){
 			})
 		});
 		$(this).prepend(spinnerHTML);
-		$(this).css('position', 'relative');
-		$(this).find('.load-wrapper').css('left', leftOffset + 'px');
-		$(this).find('.load-wrapper').css('top', topOffset + 'px');
+		//$(this).css('position', 'relative');
+		$(this).find('.load-wrapper').css('margin-left', leftOffset + 'px');
+		$(this).find('.load-wrapper').css('margin-top', topOffset + 'px');
 		if(imageCount == 0){
 			displayObject();
 		}
+
 	}
 })(jQuery);
