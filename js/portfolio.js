@@ -291,21 +291,21 @@ function centerContent(){
 
 (function($) {
 	$.fn.preloader = function() {
+		var theObj = $(this);
 		var theChildren = $(this).children()
 		$(theChildren).fadeTo(0, 0);
 		var objheight = $(this).height();
 		var objwidth = $(this).width();
 		var topOffset = (objheight - 150) / 2;	
 		var leftOffset = (objwidth - 150) / 2;
-		var spinnerHTML = "<div id='load-wrapper'><div id='animation-block'><div class='bar1'><div class='bar'></div></div><div class='bar2'><div class='bar'></div></div><div class='bar3'><div class='bar'></div></div></div><span class='loading'>Loading</span></div>"
+		var spinnerHTML = "<div class='load-wrapper'><div class='animation-block'><div class='bar1'><div class='bar'></div></div><div class='bar2'><div class='bar'></div></div><div class='bar3'><div class='bar'></div></div></div><span class='loading'>Loading</span></div>"
 		var imageCount = 0;
 		var imagesLoaded = 0;
 
 		function displayObject(){
-			$('#load-wrapper').fadeOut(function(){
+			$(theObj).find('.load-wrapper').fadeOut(function(){
 				$(theChildren).fadeTo("slow", 1);
 			});
-			
 		};
 
 		$(this).find('img').each(function(){
@@ -323,8 +323,8 @@ function centerContent(){
 		});
 		$(this).prepend(spinnerHTML);
 		$(this).css('position', 'relative');
-		$(this).find('#load-wrapper').css('left', leftOffset + 'px');
-		$(this).find('#load-wrapper').css('top', topOffset + 'px');
+		$(this).find('.load-wrapper').css('left', leftOffset + 'px');
+		$(this).find('.load-wrapper').css('top', topOffset + 'px');
 		
 	}
 })(jQuery);

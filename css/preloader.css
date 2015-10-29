@@ -1,7 +1,4 @@
-body {
-    background:#FFF;
-}
-#load-wrapper {
+.load-wrapper {
     height:150px;
     width:150px;
     position: absolute;
@@ -14,7 +11,7 @@ body {
     text-transform: uppercase;
     font-weight: normal;
 }
-#animation-block {
+.animation-block {
     position: relative;
     height:60px;
     width:60px;
