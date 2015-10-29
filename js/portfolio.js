@@ -304,7 +304,8 @@ function centerContent(){
 
 		function displayObject(){
 			$(theObj).find('.load-wrapper').fadeOut(function(){
-				$(theChildren).fadeTo("fast", 1, callback);
+				$(theChildren).fadeTo("fast", 1);
+				callback();
 			});
 		};
 

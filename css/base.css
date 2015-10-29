@@ -521,9 +521,9 @@ img {
     bottom:-100%;
     width:20%;
     text-align: left;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
 }
     #project-info h1 {
         font-family:HelveticaNeue-CondensedBold, Bebas, Helvetica, Arial, sans-serif;
