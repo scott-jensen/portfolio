@@ -8,8 +8,19 @@ function featuredProjects(){
 	$(window).resize(function(){
 		windowHeight = $(window).height();
 		windowWidth = $(window).width();
+		positionProjects();
 	});
 
+	// Center each of the projects
+	function positionProjects(){
+		$('.tout-project').each(function(){
+			var leftOffset = (windowWidth - $(this).width()) / 2;
+			var topOffset = (windowHeight - $(this).height()) / 2;
+			$(this).css('top', topOffset + 'px');
+			$(this).css('left', leftOffset + 'px');
+		});
+	}
+	positionProjects();
 
 
 	var navCount = $('#main-nav > li').length;

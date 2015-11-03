@@ -1,0 +1,20 @@
+#tout {
+	height:100%;
+	width:100%;
+}
+#featured-projects {
+	height:100%;
+	width:100%;
+	position: absolute;
+	top:0;
+	left:0;
+}
+
+#featured-projects li {
+	list-style: none;
+	position: absolute;
+	width:70%;
+	border:1px solid black;
+	height:70%;
+	margin:0;
+}
