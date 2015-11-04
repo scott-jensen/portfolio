@@ -16,8 +16,8 @@ function featuredProjects(){
 		$('.tout-project').each(function(){
 			var leftOffset = (windowWidth - $(this).width()) / 2;
 			var topOffset = (windowHeight - $(this).height()) / 2;
-			$(this).css('top', topOffset + 'px');
-			$(this).css('left', leftOffset + 'px');
+			$(this).css('margin-top', topOffset + 'px');
+			$(this).css('margin-left', leftOffset + 'px');
 		});
 	}
 	positionProjects();
@@ -115,7 +115,7 @@ function homeScroll() {
 		window.scrollTo(0, 0);
 		scrollReady = false;
 		$('#tout').animate({
-			top : toutHeight
+			top : 0
 		}, 600);
 
 		$('#site-header').animate({
