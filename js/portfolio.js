@@ -80,8 +80,8 @@ function featuredProjects(){
 		setTimeout(function(){
 			$(activeProject).animate({
 				'opacity' : 0,
-				'left' : -100
-			}, 800)
+				'left' : -80
+			}, 1000)
 		}, 200);
 		
 
