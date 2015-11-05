@@ -70,7 +70,7 @@
 	left:60%;
 	-webkit-transform: rotateY(35deg) rotateX(30deg) rotateZ(-5deg);
 	-webkit-animation: float-one 2s ease-in-out infinite;
-	z-index:2;
+	z-index:40;
 }
 .project-1 .bar4 {
 	height:10px;
