@@ -34,6 +34,7 @@
 	top:17%;
 	position: absolute;
 	z-index: 10;
+	-webkit-animation: float-two 3s ease-in-out infinite;
 }
 .project-1 .bar1 {
 	height:30px;
@@ -42,6 +43,7 @@
 	z-index: 6;
 	left:25%;
 	-webkit-transform: rotateY(40deg) rotateX(40deg);
+	-webkit-animation: float-three 3s ease-in-out infinite;
 }
 .project-1 .bar2 {
 	height:4px;
@@ -49,6 +51,7 @@
 	top:35%;
 	left:55%;
 	-webkit-transform: rotateY(33deg) rotateX(10deg);
+	-webkit-animation: float-one 2s ease-in-out infinite;
 	z-index: 30;
 }
 .project-1 .bar3 {
@@ -57,6 +60,7 @@
 	top:65%;
 	left:15%;
 	-webkit-transform: rotateY(75deg) rotateX(10deg) rotateZ(45deg);
+	-webkit-animation: float-three 2s ease-in-out infinite;
 	z-index:4;
 }
 .project-1 .bar4 {
@@ -88,11 +92,12 @@
 }
 .project1-shadow {
 	width:30%;
-	height:65%;
+	height:60%;
 	border-radius: 20px;
 	z-index: 1;
 	top:30%;
 	left:40%;
+	-webkit-animation: float-two 3s ease-in-out infinite;
 	-webkit-transform: rotateY(0deg) rotateX(0deg) rotateZ(20deg);
 }
 
