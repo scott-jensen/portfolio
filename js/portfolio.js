@@ -72,7 +72,7 @@ function featuredProjects(){
 				setTimeout(function(){
 					animateElementOut(objNum++);
 				}, animationWait);
-				animationWait = animationWait - 5;
+				animationWait = animationWait - 3;
 				animationSpeed = animationSpeed - 20;
 			}
 		}
