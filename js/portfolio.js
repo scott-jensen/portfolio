@@ -47,8 +47,8 @@ function featuredProjects(){
 	var currentProject = 1;
 	var projectNumber = $('#featured-projects').children().length;
 	function nextProject(){
-		var animationSpeed = 1000;
-		var animationWait = 90;
+		var animationSpeed = 900;
+		var animationWait = 100;
 		var activeProject = '.project-' + currentProject;
 		if(currentProject == projectNumber){
 			var nextProject = $('.project-1');
@@ -73,15 +73,16 @@ function featuredProjects(){
 					animateElementOut(objNum++);
 				}, animationWait);
 				animationWait = animationWait - 5;
-				animationSpeed = animationSpeed - 40;
+				animationSpeed = animationSpeed - 20;
 			}
 		}
 		animateElementOut(objNum);
 		setTimeout(function(){
 			$(activeProject).animate({
 				'opacity' : 0,
+				'left' : -100
 			}, 800)
-		}, 300);
+		}, 200);
 		
 
 		
