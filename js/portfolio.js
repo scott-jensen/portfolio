@@ -41,6 +41,57 @@ function featuredProjects(){
 
 	}
 	loadNav();
+
+	// Project Carousel
+
+	var currentProject = 1;
+	var projectNumber = $('#featured-projects').children().length;
+	function nextProject(){
+		var animationSpeed = 400;
+		var animationWait = 160;
+		var activeProject = '.project-' + currentProject;
+		if(currentProject == projectNumber){
+			var nextProject = $('.project-1');
+			currentProject = 1;
+		}
+		else{
+			var nextProject = $('.project-' + currentProject++);
+			currentProject++
+		}
+		var objNum = 1;
+		var numElements = $(activeProject).children().length;
+		function animateElementOut(currentNum){
+			
+			var currentNum = currentNum;
+			var activeElement = $(activeProject + ' .project-obj:nth-child(' + currentNum + ')');
+			activeElement.animate({
+				'marginLeft' : -windowWidth * 2
+			}, animationSpeed);
+
+			if(objNum <= numElements){
+				setTimeout(function(){
+					animateElementOut(objNum++);
+				}, animationWait);
+				animationWait = animationWait - 10;
+				animationSpeed = animationSpeed - 90;
+			}
+		}
+		animateElementOut(objNum);
+		$(activeProject).animate({
+			'left' : -windowWidth,
+			'opacity' : 0
+		}, 800)
+
+		
+	}
+
+	function prevProject(){
+
+	}
+
+	setTimeout(function(){
+		nextProject();
+	}, 1500)
 }
 
 function homeScroll() {
