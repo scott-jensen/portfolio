@@ -17,7 +17,7 @@
 
 	height:80%;
 	margin:0;
-	-webkit-perspective: 300px;
+	-webkit-perspective: 1200px;
 }
 .shadow {
 	background:#F2F2F2;
@@ -41,16 +41,16 @@
 	width:25%;
 	top:40%;
 	z-index: 6;
-	left:25%;
+	left:15%;
 	-webkit-transform: rotateY(40deg) rotateX(40deg);
 	-webkit-animation: float-three 3s ease-in-out infinite;
 }
 .project-1 .bar6 {
 	height:4px;
-	width:45%;
+	width:25%;
 	top:35%;
 	left:55%;
-	-webkit-transform: rotateY(33deg) rotateX(10deg);
+	-webkit-transform: rotateY(33deg) rotateX(10deg) rotateZ(30deg);
 	-webkit-animation: float-one 2s ease-in-out infinite;
 	z-index: 30;
 }
@@ -58,7 +58,7 @@
 	height:10px;
 	width:35%;
 	top:65%;
-	left:15%;
+	left:10%;
 	-webkit-transform: rotateY(75deg) rotateX(10deg) rotateZ(45deg);
 	-webkit-animation: float-three 2s ease-in-out infinite;
 	z-index:4;
@@ -85,7 +85,7 @@
 	height:3px;
 	width:10%;
 	top:55%;
-	left:20%;
+	left:10%;
 	-webkit-transform: rotateY(45deg) rotateX(50deg) rotateZ(-15deg);
 	z-index:3;
 	-webkit-animation: float-one 3s ease-in-out infinite;

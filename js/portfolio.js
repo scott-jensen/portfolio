@@ -47,8 +47,8 @@ function featuredProjects(){
 	var currentProject = 1;
 	var projectNumber = $('#featured-projects').children().length;
 	function nextProject(){
-		var animationSpeed = 400;
-		var animationWait = 160;
+		var animationSpeed = 1000;
+		var animationWait = 90;
 		var activeProject = '.project-' + currentProject;
 		if(currentProject == projectNumber){
 			var nextProject = $('.project-1');
@@ -65,22 +65,24 @@ function featuredProjects(){
 			var currentNum = currentNum;
 			var activeElement = $(activeProject + ' .project-obj:nth-child(' + currentNum + ')');
 			activeElement.animate({
-				'marginLeft' : -windowWidth * 2
+				'marginLeft' : -windowWidth * 2,
 			}, animationSpeed);
 
 			if(objNum <= numElements){
 				setTimeout(function(){
 					animateElementOut(objNum++);
 				}, animationWait);
-				animationWait = animationWait - 10;
-				animationSpeed = animationSpeed - 90;
+				animationWait = animationWait - 5;
+				animationSpeed = animationSpeed - 40;
 			}
 		}
 		animateElementOut(objNum);
-		$(activeProject).animate({
-			'left' : -windowWidth,
-			'opacity' : 0
-		}, 800)
+		setTimeout(function(){
+			$(activeProject).animate({
+				'opacity' : 0,
+			}, 800)
+		}, 300);
+		
 
 		
 	}
