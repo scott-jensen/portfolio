@@ -47,7 +47,7 @@ function featuredProjects(){
 	var currentProject = 1;
 	var projectNumber = $('#featured-projects').children().length;
 	function nextProject(){
-		var animationSpeed = 1000;
+		var animationSpeed = 900;
 		var animationWait = 80;
 		var activeProject = '.project-' + currentProject;
 		if(currentProject == projectNumber){
@@ -72,8 +72,8 @@ function featuredProjects(){
 				setTimeout(function(){
 					animateElementOut(objNum++);
 				}, animationWait);
-				animationWait = animationWait - 3;
-				animationSpeed = animationSpeed - 10;
+				animationWait = animationWait - 5;
+				animationSpeed = animationSpeed - 30;
 			}
 		}
 		animateElementOut(objNum);
