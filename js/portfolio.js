@@ -11,17 +11,6 @@ function featuredProjects(){
 		positionProjects();
 	});
 
-	// Center each of the projects
-	function positionProjects(){
-		$('.tout-project').each(function(){
-			var leftOffset = (windowWidth - $(this).width()) / 2;
-			var topOffset = (windowHeight - $(this).height()) / 2;
-			$(this).css('margin-top', topOffset + 'px');
-			$(this).css('margin-left', leftOffset + 'px');
-		});
-	}
-	positionProjects();
-
 
 	var navCount = $('#main-nav > li').length;
 	var loadCount = 1;
@@ -42,68 +31,7 @@ function featuredProjects(){
 	}
 	loadNav();
 
-	// Project Carousel
-
-	var currentProject = 1;
-	var projectNumber = $('#featured-projects').children().length;
-	function nextProject(){
-		var animationSpeed = 900;
-		var animationWait = 30;
-		var activeProject = '.project-' + currentProject;
-		if(currentProject == projectNumber){
-			var nextProject = '.project-1';
-			currentProject = 1;
-		}
-		else{
-			var nextProject = '.project-' + currentProject++;
-			currentProject++
-		}
-		var objNum = 1;
-		var numElements = $(activeProject).children().length;
-		function animateElementOut(currentNum){
-			
-			var currentNum = currentNum;
-			var activeElement = $(activeProject + ' .project-obj:nth-child(' + currentNum + ')');
-			activeElement.animate({
-				'marginLeft' : -windowWidth * 2,
-			}, animationSpeed);
-
-			if(objNum <= numElements){
-				setTimeout(function(){
-					animateElementOut(objNum++);
-				}, animationWait);
-				animationWait = animationWait + 15;
-				animationSpeed = animationSpeed - 30;
-			}
-			else {
-				animateElementIn(nextObjNum);
-			}
-		}
-		animateElementOut(objNum);
-		setTimeout(function(){
-			$(activeProject).animate({
-				'opacity' : 0,
-				
-			}, 1200)
-		}, 300);
-		var nextObjNum = 1;
-		var nextNumElements = $(nextProject).children().length;
-		$(nextProject + ' .project-obj').css('margin-left', windowWidth * 2 + 'px');
-		function animateElementIn(currentNum){
-			var currentNum = currentNum;
-			var activeElement = $(nextProject + ' .project-obj:nth-child(' + currentNum + ')');
-		}
-		
-	}
-
-	function prevProject(){
-
-
-	}
-
-	setTimeout(function(){
-		nextProject();
-	}, 1500)
+	
 }
 
 function homeScroll() {
