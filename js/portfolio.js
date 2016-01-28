@@ -8,7 +8,7 @@ function featuredProjects(){
 	$(window).resize(function(){
 		windowHeight = $(window).height();
 		windowWidth = $(window).width();
-		positionProjects();
+		
 	});
 
 
@@ -63,6 +63,7 @@ function homeScroll() {
 			$('.home-content').css('top', windowHeight + 50 + 'px');
 			$('.home').css('height', windowHeight + 2 + 'px');
 		}
+		console.debug('position tout')
 		
 	}
 	positionTout();
