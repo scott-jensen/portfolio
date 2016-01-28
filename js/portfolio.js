@@ -31,10 +31,13 @@ function featuredProjects(){
 	}
 	loadNav();
 
-	var currentSlide = 1;
-	function loadFirstSlide(){
-		$('#project-1').css('left', windowWidth + 'px');
-		$('#project-1').animate({
+	var currentSlide = 0;
+	var onDeck = 1;
+	var prevSlide = 0;
+	function nextSlide(){
+
+		$('#project-' + onDeck).css({'left': windowWidth + 'px', 'visibility': 'visible'});
+		$('#project-' + onDeck).animate({
 			left : 0
 		}, 400, function(){
 			$('#project-1 .foreground').animate({
@@ -49,12 +52,7 @@ function featuredProjects(){
 		});
 
 	}
-	$('#tout').preloader(loadFirstSlide);
-
-	function nextSlide() {
-
-	}
-
+	$('#tout').preloader(nextSlide);
 	
 }
 
