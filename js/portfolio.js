@@ -34,26 +34,31 @@ function featuredProjects(){
 	var currentSlide = 0;
 	var onDeck = 1;
 	var prevSlide = 0;
+	var slideTime = 6000;
+	var transitionTime = 600;
+	var slideNum = $('.tout-project').length;
 	function nextSlide(){
 
 		$('#project-' + onDeck).css({'left': windowWidth + 'px', 'visibility': 'visible'});
 		$('#project-' + onDeck).animate({
 			left : 0
-		}, 400, function(){
+		}, transitionTime, function(){
+
 			$('#project-1 .foreground').animate({
 				left : '-15%'
-			}, 5000, "linear");
+			}, slideTime, "linear");
 			$('#project-1 .middleground').animate({
 				left : '-10%'
-			}, 5000, "linear");
+			}, slideTime, "linear");
 			$('#project-1 .background').animate({
 				left : '-5%'
-			}, 5000, "linear");
+			}, slideTime, "linear");
+
 		});
 
 	}
 	$('#tout').preloader(nextSlide);
-	
+
 }
 
 function homeScroll() {
@@ -85,7 +90,6 @@ function homeScroll() {
 			$('.home-content').css('top', windowHeight + 50 + 'px');
 			$('.home').css('height', windowHeight + 2 + 'px');
 		}
-		console.debug('position tout')
 		
 	}
 	positionTout();
