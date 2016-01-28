@@ -31,6 +31,30 @@ function featuredProjects(){
 	}
 	loadNav();
 
+	var currentSlide = 1;
+	function loadFirstSlide(){
+		$('#project-1').css('left', windowWidth + 'px');
+		$('#project-1').animate({
+			left : 0
+		}, 400, function(){
+			$('#project-1 .foreground').animate({
+				left : '-15%'
+			}, 5000, "linear");
+			$('#project-1 .middleground').animate({
+				left : '-10%'
+			}, 5000, "linear");
+			$('#project-1 .background').animate({
+				left : '-5%'
+			}, 5000, "linear");
+		});
+
+	}
+	$('#tout').preloader(loadFirstSlide);
+
+	function nextSlide() {
+
+	}
+
 	
 }
 
