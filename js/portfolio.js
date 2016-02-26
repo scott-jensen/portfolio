@@ -49,6 +49,10 @@ function featuredProjects(){
 			else {
 				currentSlide++;
 			}
+			$('#project-'+ currentSlide + ' > .project-details').animate({
+				bottom : -20,
+				opacity : 1
+			}, 400);
 			$('#project-'+ currentSlide +' .foreground').animate({
 				left : '-15%'
 			}, slideTime, "linear");
@@ -71,6 +75,7 @@ function featuredProjects(){
 				}, transitionTime, function(){
 					$('#project-' + currentSlide + ' > .tout-element').css('left', 0);
 					$('#project-' + currentSlide).css('visibility', 'hidden');
+					$('#project-'+ currentSlide + ' > .project-details').css({'bottom':'-70px', 'opacity':0})
 				});
 				nextSlide();
 
@@ -93,10 +98,12 @@ function homeScroll() {
 	var headerHeight = $('#site-header').height();
 	var toutHeight = windowHeight - headerHeight;
 	var navOffset = windowHeight - $('#site-header').height();
+	var wrapOffset = (windowWidth - $('.wrap').width()) / 2;
 	var scrollReady = true;
 	$(window).resize(function(){
 		windowHeight = $(window).height();
 		windowWidth = $(window).width();
+		wrapOffset = (windowWidth - $('.wrap').width()) / 2;
 		navOffset = windowHeight - $('#site-header').height();
 		headerHeight = $('#site-header').height();
 		toutHeight = windowHeight - headerHeight;
@@ -106,6 +113,7 @@ function homeScroll() {
 	function positionTout() {
 		var headerHeight = $('#site-header').height();
 		var toutHeight = windowHeight - headerHeight;
+		$('.project-details').css('left', wrapOffset + 'px');
 		$('.tout-element > .artwork').each(function(){
 			if(this.height >= toutHeight * .7){
 				$(this).css({'height':toutHeight * .70 + 'px', 'top':'10%', 'width':'auto'});

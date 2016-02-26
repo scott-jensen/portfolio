@@ -21,6 +21,17 @@
 	margin:0;
 	-webkit-perspective: 1200px;
 }
+#featured-projects .project-details {
+	position: absolute;
+	z-index: 10;
+	bottom:-70px;
+	text-align: left;
+	opacity: 0;
+}
+#featured-projects .project-details article{
+	max-width: 300px;
+}
+
 .shadow {
 	background:#F2F2F2;
     box-shadow:0px 0px 75px #E5E5E5;
