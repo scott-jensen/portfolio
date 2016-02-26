@@ -43,16 +43,25 @@ function featuredProjects(){
 		$('#project-' + onDeck).animate({
 			left : 0
 		}, transitionTime, function(){
-
-			$('#project-1 .foreground').animate({
+			currentSlide++;
+			$('#project-'+ currentSlide +' .foreground').animate({
 				left : '-15%'
 			}, slideTime, "linear");
-			$('#project-1 .middleground').animate({
+			$('#project-'+ currentSlide +' .middleground').animate({
 				left : '-10%'
 			}, slideTime, "linear");
-			$('#project-1 .background').animate({
+			$('#project-'+ currentSlide +' .background').animate({
 				left : '-5%'
-			}, slideTime, "linear");
+			}, slideTime, "linear", function(){
+				onDeck++;
+				
+				prevSlide++;
+				$('#project-' + currentSlide).animate({
+					left: -windowWidth
+				}, transitionTime);
+				nextSlide();
+
+			});
 
 		});
 
