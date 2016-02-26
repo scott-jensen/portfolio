@@ -30,20 +30,25 @@ function featuredProjects(){
 
 	}
 	loadNav();
-
 	var currentSlide = 0;
 	var onDeck = 1;
 	var prevSlide = 0;
 	var slideTime = 6000;
 	var transitionTime = 600;
 	var slideNum = $('.tout-project').length;
+
 	function nextSlide(){
 
 		$('#project-' + onDeck).css({'left': windowWidth + 'px', 'visibility': 'visible'});
 		$('#project-' + onDeck).animate({
 			left : 0
 		}, transitionTime, function(){
-			currentSlide++;
+			if (currentSlide == slideNum){
+				currentSlide = 1;
+			}
+			else {
+				currentSlide++;
+			}
 			$('#project-'+ currentSlide +' .foreground').animate({
 				left : '-15%'
 			}, slideTime, "linear");
@@ -53,12 +58,20 @@ function featuredProjects(){
 			$('#project-'+ currentSlide +' .background').animate({
 				left : '-5%'
 			}, slideTime, "linear", function(){
-				onDeck++;
-				
-				prevSlide++;
+				if (currentSlide == slideNum){
+					prevSlide = slideNum;
+					onDeck = 1;
+				}
+				else {
+					onDeck++;
+					prevSlide++;
+				}
 				$('#project-' + currentSlide).animate({
 					left: -windowWidth
-				}, transitionTime);
+				}, transitionTime, function(){
+					$('#project-' + currentSlide + ' > .tout-element').css('left', 0);
+					$('#project-' + currentSlide).css('visibility', 'hidden');
+				});
 				nextSlide();
 
 			});
@@ -93,6 +106,12 @@ function homeScroll() {
 	function positionTout() {
 		var headerHeight = $('#site-header').height();
 		var toutHeight = windowHeight - headerHeight;
+		$('.tout-element > .artwork').each(function(){
+			if(this.height >= toutHeight * .7){
+				$(this).css({'height':toutHeight * .70 + 'px', 'top':'10%', 'width':'auto'});
+			}
+		});
+
 		if(hasScrolled == false){
 			$('#featured-projects').height(toutHeight);
 			$('#site-header').css('top', toutHeight + 2 + 'px');
@@ -126,6 +145,7 @@ function homeScroll() {
 			$('body').css('overflow', 'auto');
 
 		});
+		
 
 	
 		$('.home-content').css('position', 'relative');
