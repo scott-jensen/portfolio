@@ -1397,8 +1397,30 @@ select {
 /*-------------- iPAD LANDSCAPE --------------*/
 
 @media screen and (max-width: 1024px) {
+    .wrap {
+        overflow: hidden;
+    }
+    .abilities-section {
+        width:100%;
+    }
 
-
+}
+@media screen and (max-width: 920px) {
+    .pie-chart h3 {
+        margin-bottom:0;
+    }
+    .abilities li .bar-graph {
+        display:block;
+        width:100%;
+        margin-bottom:10px;
+    }
+    .about .abilities h4 {
+        margin-top:60px;
+    }
+    .about .abilities {
+        width:50%;
+        float:right;
+    }
 }
 
 
@@ -1492,14 +1514,8 @@ select {
         width:50%;
         margin-right:10%;
     }
-    .abilities-section, .press-logos {
-        width:145%;
-    }
     #article-content {
         max-width: 66%;
-    }
-    aside {
-        margin-left:5%;
     }
     .project-list li .project-meta {
         display: none;
@@ -1538,6 +1554,64 @@ select {
             max-width:inherit;
             margin-bottom:0;
         }
+    aside {
+        display:block;
+        width:inherit;
+        margin-left:0;
+        float:none;
+    }
+    #article-content {
+        max-width:inherit;
+        float:none;
+    }
+    .book-list {
+        overflow: hidden;
+    }
+        .book-list li {
+            display:inline-block;
+            max-width:48%;
+            float:left;
+            margin-right:1%;
+        }
+    .box {
+        display:none;
+    }
+
+}
+
+@media screen and (max-width: 675px) {
+    #site-header #wordmark{
+        display:none;
+    }
+    .book-list li img {
+        max-width:25%;
+        vertical-align: top;
+    }
+    .article-page .article-cover {
+        margin-bottom:20px;
+    }
+
+}
+@media screen and (max-width: 500px) {
+    .about .abilities {
+        width:100%;
+        float:none;
+        margin-bottom:30px;
+        min-height: 200px;
+    }
+        .about .abilities h4 {
+            margin-top:-20px;
+        }
+    .about .pie-chart {
+        width:100%;
+        display:block;
+    }
+        .about .pie-chart #skill-pie {
+            margin-left:auto;
+            margin-right:auto;
+            text-align: center;
+            width:200px;
+        }
 
 }
 
@@ -1545,8 +1619,34 @@ select {
 /*-------------- iPHONE PORTRAIT --------------*/
 
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 420px) {
 
+    .book-list li {
+        display:block;
+        max-width:inherit;
+        float:none;
+        margin-right:0;
+    }
+    #site-nav {
+        width:90%;
+    }
+        #site-nav li {
+            width:25%;
+            position: relative;
+            font-size:.8rem;
+        }
+    footer p {
+        display:none;
+    }
+    footer .share-links {
+        float:none;
+        width:100%;
+        text-align: center;
+    }
+        footer .share-links a {
+            margin-left:5px;
+            margin-right:5px;
+        }
 
 }
 
