@@ -717,6 +717,24 @@ img {
     -webkit-font-smoothing: antialiased;
     font-weight: bold;
 }
+.article-page #article-content .full-width {
+    width:160%;
+    max-width: inherit;
+}
+.article-page #article-content .pull-left {
+    margin-left:-4.8%;
+    max-width:55%;
+    float:left;
+    margin-right:2%;
+    margin-bottom:5px;
+}
+.article-page #article-content .pull-right {
+    margin-left:2%;
+    max-width:85%;
+    float:right;
+    margin-right:-60%;
+    margin-bottom:5px;
+}
 .article-page .entry {
     padding-bottom:20px;
 }
@@ -786,6 +804,22 @@ img {
 .article-list img {
     margin-bottom:10px;
 }
+.about-me {
+    overflow: hidden;
+    margin-left:115%;
+    width:45%;
+    margin-top:-140px;
+}
+    .about-me .avatar {
+        float:left;
+        width:30%;
+        margin-right:5%;
+        margin-bottom:15px;
+
+    }
+    .about-me p {
+        max-width: 350px;
+    }
 
 
 /*------------------ ABOUT -------------------*/
@@ -1470,6 +1504,40 @@ select {
     .project-list li .project-meta {
         display: none;
     }
+    .article-page #article-content .full-width {
+        width:100%;
+        max-width: 100%;
+    }
+    .article-page #article-content .pull-left {
+        margin-left:0;
+        max-width:100%;
+        float:none;
+        margin-right:0;
+        margin-bottom:20px;
+    }
+    .article-page #article-content .pull-right {
+        margin-right:0;
+        max-width:100%;
+        float:none;
+        margin-left:0;
+        margin-bottom:20px;
+    }
+    .article-page .about-me {
+        margin:0;
+        width:inherit;
+        padding-top:20px;
+        padding-bottom:20px;
+        border-top:1px solid #EAEAEA;
+        border-bottom:1px solid #EAEAEA;
+        margin-bottom:20px;
+    }
+        .article-page .about-me .avatar {
+            width:15%;
+        }
+        .article-page .about-me p {
+            max-width:inherit;
+            margin-bottom:0;
+        }
 
 }
 
