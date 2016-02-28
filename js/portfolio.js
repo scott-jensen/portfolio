@@ -298,8 +298,11 @@ function module() {
 	setTimeout(function(){
 		centerContent();
 	}, 30);
-	
-	$(window).resize(centerContent)
+	var windowWidth = $(window).width();
+	$(window).resize(function(){
+		centerContent();
+		windowWidth = $(window).width();
+	})
 	
 
 	$('.module-link').click(function(event){
