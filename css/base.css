@@ -1043,7 +1043,7 @@ img {
     list-style: none;
     display:inline-block;
     margin-top:15px;
-    width:18%;
+    width:13%;
     padding-left:0;
     margin-right:4%;
     margin-left:4%;
@@ -1618,6 +1618,12 @@ select {
         width:inherit;
         overflow: visible;
     }
+    .press-logos {
+        text-align: center;
+    }
+    .press-logos li {
+        width:25%;
+    }
 
 }
 
@@ -1638,9 +1644,7 @@ select {
     .post-date {
         margin-top:0px;
     }
-    .contact-me p {
-        display:none;
-    }
+    
     .module {
         min-height: 440px;
     }
@@ -1661,6 +1665,9 @@ select {
         float:none;
         margin-bottom:30px;
         min-height: 200px;
+    }
+    .contact-me p {
+        display:none;
     }
         .about .abilities h4 {
             margin-top:-20px;

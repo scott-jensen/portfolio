@@ -402,6 +402,9 @@ function centerContent(){
 		if(imageCount == 0){
 			displayObject();
 		}
+		setTimeout(function(){
+			displayObject();
+		}, 4000);
 
 	}
 })(jQuery);
