@@ -1,5 +1,5 @@
 
-
+// home page featured projects tout carousel
 function featuredProjects(){
 
 	// WindowVars
@@ -10,7 +10,6 @@ function featuredProjects(){
 		windowWidth = $(window).width();
 		
 	});
-
 
 	var navCount = $('#main-nav > li').length;
 	var loadCount = 1;
@@ -108,6 +107,10 @@ function homeScroll() {
 		headerHeight = $('#site-header').height();
 		toutHeight = windowHeight - headerHeight;
 	});
+	//scrolls window back to the top on unload so the browser doesn't try to scroll down on reload
+	$(window).on('beforeunload', function() {
+	    $(window).scrollTop(0);
+	});
 	
 	// Position Home Tout
 	function positionTout() {
@@ -154,18 +157,15 @@ function homeScroll() {
 
 		});
 		
-
-	
 		$('.home-content').css('position', 'relative');
 		$('.home-content').css('overflow', 'visible');
 		$('footer').fadeIn();
 		$('#site-header').css('position', 'fixed');
 		$('#logo').fadeIn();
 		hasScrolled = true;
-		
 		$('.work-nav').addClass('selected');
-
 	}
+
 	function showTout(){
 		window.scrollTo(0, 0);
 		scrollReady = false;
@@ -189,15 +189,174 @@ function homeScroll() {
 		hasScrolled = false;
 		$('#logo').fadeOut();
 		$('.work-nav').removeClass('selected');
-		
-
 	}
 	$('.work-nav').click(hideTout);
 
 	$('#site-header').css('border-top', '1px solid #EAEAEA');
-
 }
 
+//gallery for inline project carousels on home page
+function projectGallery(){
+	var slideCounter = 0;
+    var imagesLoaded = 0;
+    var iframeHeight = $(window).height();
+    var userInteraction = false;
+    var galleryVisible = false;
+    $('#full-project').height($(window).height());
+    $('#full-project').preloader(displayGallery);
+
+    // function to show gallery when loaded
+    function displayGallery() {
+         if(userInteraction == false){
+                $('#project-info').css('bottom', '0px');
+         }
+    };
+
+    // size the images in the gallery
+    function sizeGallery() {
+        var viewWidth = $(window).width();
+        var viewHeight = $(window).height();
+        var viewRatio = viewWidth / viewHeight;
+
+        if(viewWidth > 768){
+            $('.project-image').each(function(){
+                var imageWidth = $(this).width();
+                var imageHeight = $(this).height();
+                var imageRatio = imageWidth / imageHeight;
+
+                // for height
+                if (imageRatio > viewRatio) {
+                    $(this).css('height', viewHeight + 'px');
+                    $(this).css('width', viewHeight * imageRatio + 'px'); 
+                    var leftOffset = -(($(this).width() - viewWidth) / 2);
+                    $(this).css('margin-left', leftOffset + 'px'); 
+                    
+                    //var topOffset = -((imageHeight - viewHeight) / 2);
+                    //$(this).css('margin-top', topOffset + 'px');  
+
+                }
+                // for width
+                else if (imageRatio < viewRatio) {
+                    $(this).css('width', viewWidth + 'px');
+                    $(this).css('height', viewWidth / imageRatio + 'px');
+                    var topOffset = -(($(this).height() - viewHeight) / 2);
+                    $(this).css('margin-top', topOffset + 'px');
+                }
+
+            });
+        }
+
+        //displayGallery();
+        galleryVisible = true;
+
+    };
+
+    //count the images in the gallery
+    $('.project-image').each(function(){
+        slideCounter++;
+    });
+    //check for load on each image
+    $('.project-image').each(function(){
+        $(this).load(function(){
+            imagesLoaded++;
+
+            if(imagesLoaded == slideCounter) {
+                sizeGallery();
+            }
+        })
+        
+    });
+    // fallback if load isn't called
+    setTimeout(function(){
+        if (galleryVisible == false){
+            sizeGallery();  
+        }
+    }, 3000);
+
+    function hideDescription() {
+        var boxHeight = $('#project-info').height();
+        var titleOffset = $('h1').height();
+        var hideValue = -(boxHeight - titleOffset) + 30;
+        $('#project-info').css('bottom', hideValue + 'px');
+    };
+
+    // carousel
+
+    $('.slide').css('left', '100%');
+    $('#slide1').css('left', '0');
+
+    var currentSlide = 1;
+    function nextSlide() {
+        if(currentSlide == slideCounter){
+            upcomingSlide = '#slide1';
+            mainSlide = '#slide' + currentSlide;
+            currentSlide = 1;
+        }
+        else {
+            upcomingSlide = '#slide' + (currentSlide + 1);
+            mainSlide = '#slide' + currentSlide; 
+            currentSlide ++;
+        }
+        $(upcomingSlide).css('left', '100%');
+        $(upcomingSlide).fadeTo(0, 1)
+        $(mainSlide).fadeTo(200, .3, function(){
+            $(mainSlide).animate({
+                left : '-100%'
+            }, 400);
+            $(upcomingSlide).animate({
+                left : '0%'
+            }, 400);
+         });
+
+    }
+    function prevSlide() {
+        if(currentSlide == 1){
+            upcomingSlide = '#slide' + slideCounter;
+            mainSlide = '#slide' + currentSlide;
+            currentSlide = slideCounter;
+        }
+        else {
+            upcomingSlide = '#slide' + (currentSlide - 1);
+            mainSlide = '#slide' + currentSlide; 
+            currentSlide --;
+        }
+        $(upcomingSlide).css('left', '-100%');
+        $(upcomingSlide).fadeTo(0, 1)
+        $(mainSlide).fadeTo(200, .3, function(){
+            $(mainSlide).animate({
+                left : '100%'
+            }, 400);
+            $(upcomingSlide).animate({
+                left : '0%'
+            }, 400);
+         });
+
+    }
+
+
+    $('#next-btn').click(function(){
+        hideDescription();
+        nextSlide();
+        userInteraction = true;
+    });
+    $('#prev-btn').click(function(){
+        hideDescription();
+        prevSlide();
+        userInteraction = true;
+    });
+    $('#project-info').mouseenter(function(){
+        $(this).css('bottom', '0');
+    });
+
+    $('.related-project').click(function(){
+        window.top.location.href = 'file:///Users/Scott/Sites/www/portfolio/index.html#' + this.id + '-gallery';
+
+    });
+
+    $(window).resize(sizeGallery);
+}
+
+// dispatch function to handle redirecting urls between mobile and desktop experiences
 function dispatch(){
 	var windowWidth = $(window).width();
 	var projectID = $('body').attr('id');
@@ -205,17 +364,19 @@ function dispatch(){
 	// rediret to the homepage if screen size is bigger than iPad portrait
 	if($('body').hasClass('project-page') && !$('body').hasClass('home')){
 		if(windowWidth > 768 && self == top ) {
-			window.location.replace('../index.html#' + projectID + 'gallery')
+			window.location.replace('../index.html#' + projectID + '-gallery')
 		}
 	}
 	// check for hash and load project if mobile and on homepage
 	else if($('body').hasClass('home')){
 		var windowHash = window.location.hash;
+		// if there is a hash but they are on mobile
 		if(windowHash.length > 1 && windowWidth < 768){
 			var projectNum = windowHash.split('-')[0];
 			console.debug(projectNum.split('#')[1]);
 			window.location.replace('projects/' + projectNum.split('#')[1] + '.html' );
 		}
+		// if there is a hash on desktop, load the project
 		else if(windowHash.length > 1){
 			var projectNum = windowHash.split('-')[0];
 			launchModule('full', 'projects/' + projectNum.split('#')[1] + '.html');
@@ -223,6 +384,7 @@ function dispatch(){
 	}
 }
 
+// pie chart function for about page abilities
 function pieChart() {
 	$('.design-abilities').css('display', 'inline-block');
 	var designCount = 0;
@@ -274,11 +436,9 @@ function pieChart() {
 			}
 			else{
 				return;
-			}
-			
+			}	
 		}
 		displayAbility();
-
 	});
 
 }
@@ -289,6 +449,7 @@ function contactForm() {
 	});
 }
 
+// moved this out of the module function so it can be utilized by the dispatch function
 function launchModule(size, contentURL){
 	$('body').append('<div class="page-overlay"></div><iframe src="'+ contentURL +'" class="module" style="display:none;" frameborder="0" scrolling="no"></iframe>');
 		
@@ -305,6 +466,7 @@ function launchModule(size, contentURL){
 		}, 30);
 		$('.module').fadeIn();
 		$('.page-overlay').click(function(){
+			window.location.hash = '';
 			$('.module').fadeOut('fast');
 			$('.page-overlay').fadeOut('fast', function(){
 				$('.page-overlay').remove();
@@ -330,10 +492,10 @@ function module() {
 			var contentURL = $(this).attr('href');
 			launchModule(size, contentURL);
 		}
-		
 	});
 }
 
+// global function for centering something on the page
 function centerContent(){
 	var windowHeight = $(window).height();
 	var windowWidth = $(window).width();
@@ -348,6 +510,7 @@ function centerContent(){
 	return;
 }
 
+// dropcap plugin
 (function($) {
 	$.fn.dropcap = function() {
 		$('p:first', this).each(function(){
@@ -360,6 +523,7 @@ function centerContent(){
 	}
 })(jQuery);
 
+// preloader plugin
 (function($) {
 	$.fn.preloader = function(callback) {
 		var theObj = $(this);
