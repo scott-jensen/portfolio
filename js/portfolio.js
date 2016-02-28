@@ -223,11 +223,31 @@ function homeScroll() {
 
 	});
 
-*/
-	
+*/	
 
 
 }
+
+function dispatch(){
+	var windowWidth = $(window).width();
+	var projectID = $('body').attr('id');
+
+	// rediret to the homepage if screen size is bigger than iPad portrait
+	if($('body').hasClass('project-page') && !$('body').hasClass('home')){
+		if(windowWidth > 768){
+			window.location.replace('../index.html#' + projectID + 'gallery')
+		}
+	}
+	// check for hash and load project
+	else if($('body').hasClass('home')){
+		var windowHash = window.location.hash;
+		console.debug(windowHash);
+		if(windowHash.length > 1){
+			console.debug('');
+		}
+	}
+}
+
 function pieChart() {
 	$('.design-abilities').css('display', 'inline-block');
 	var designCount = 0;
