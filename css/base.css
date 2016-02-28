@@ -363,6 +363,7 @@ img {
 }
 .home #tout{
     position: absolute;
+    overflow: hidden;
 }
 
 .home-content {
@@ -421,6 +422,7 @@ img {
         top:0px;
         left:0px;
         margin-bottom:0;
+        vertical-align: middle;
     }
     .project-list li .overlay {
             background: #000;
@@ -487,6 +489,9 @@ img {
     overflow:hidden;
 }
     .project-page header {
+        display:none;
+    }
+    .project-page footer {
         display:none;
     }
 #project-slides {
@@ -1415,7 +1420,7 @@ select {
         margin-bottom:10px;
     }
     .about .abilities h4 {
-        margin-top:60px;
+        margin-top:40px;
     }
     .about .abilities {
         width:50%;
@@ -1429,6 +1434,7 @@ select {
 @media screen and (max-width: 768px) {
     #logo {
         margin-left:0;
+        display:block !important;
     }
     #site-header #wordmark {
         margin-left:40px;
@@ -1452,14 +1458,20 @@ select {
     .project-page header {
         display:block;
     }
+
     .project-page #project-slides .slide {
-        padding:5px 20px 0 5px; 
         width:auto;
         height:auto;
         display:block;
         position: relative;
         left:auto !important;
-        margin-bottom:0;
+        margin-bottom:20px;
+    }
+    .project-page footer {
+        display: block;
+    }
+    .project-page #full-project {
+        height: auto !important;
     }
     .project-page #project-info {
         position: relative;
@@ -1472,6 +1484,7 @@ select {
         background:#FFF;
         padding:0px 20px;
         overflow: hidden;
+        opacity: 1 !important;
     }
         .project-page #project-info h1 {
             color:#000;
@@ -1490,7 +1503,7 @@ select {
         margin-bottom:0;
     }
     #next-btn, #prev-btn {
-        display:none;
+        display:none !important;
     }
     .related-projects-box {
         float:right;
@@ -1513,6 +1526,8 @@ select {
         float:left;
         width:50%;
         margin-right:10%;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
     #article-content {
         max-width: 66%;
@@ -1576,6 +1591,33 @@ select {
     .box {
         display:none;
     }
+    .comments {
+        margin-bottom:30px;
+        border-bottom:1px solid #EAEAEA;
+        padding-bottom:30px;
+    }
+    .about aside {
+        display:none;
+    }
+    .module {
+        min-width: 0;
+        
+        width:90%;
+    }
+    .contact-me {
+        padding:20px 5px 5px 5px;
+    }
+    .article-page blockquote {
+        margin-left:0;
+    }
+    .project-page #next-btn, .project-page #prev-btn {
+        display: none !important;
+    }
+    #project-slides {
+        padding:0 20px 30px 20px;
+        width:inherit;
+        overflow: visible;
+    }
 
 }
 
@@ -1583,12 +1625,33 @@ select {
     #site-header #wordmark{
         display:none;
     }
+    #site-header #logo {
+        display:block !important;
+    }
     .book-list li img {
         max-width:25%;
         vertical-align: top;
     }
     .article-page .article-cover {
         margin-bottom:20px;
+    }
+    .post-date {
+        margin-top:0px;
+    }
+    .contact-me p {
+        display:none;
+    }
+    .module {
+        min-height: 440px;
+    }
+    .project-list li {
+        width:48%;
+    }
+    .project-list .thumb-3 {
+        margin-right:3%;
+    }
+    .project-list .thumb-2, .project-list .thumb-4 {
+        margin-right:0;
     }
 
 }
@@ -1612,6 +1675,27 @@ select {
             text-align: center;
             width:200px;
         }
+    .article-page #comment-list .meta {
+        display:block;
+        float:none;
+        width:inherit;
+    }
+    .article-page #comment-list .the-comment {
+        width:inherit;
+        float: none;
+        display:block;
+    }
+    .related-projects-box {
+        width:inherit;
+        display:block;
+        float: none;
+        margin-bottom:20px;
+    }
+    .project-page .project-details {
+        width:inherit;
+        display:block;
+        float:none;
+    }
 
 }
 
@@ -1626,6 +1710,9 @@ select {
         max-width:inherit;
         float:none;
         margin-right:0;
+    }
+    #logo {
+        margin-left:-4%;
     }
     #site-nav {
         width:90%;
@@ -1647,7 +1734,14 @@ select {
             margin-left:5px;
             margin-right:5px;
         }
-
+    .article-page blockquote {
+        display:block;
+        width:inherit;
+        margin-left:0;
+        margin-bottom:20px;
+        padding-right:0;
+    }
+    
 }
 
 
