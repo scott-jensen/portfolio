@@ -195,36 +195,6 @@ function homeScroll() {
 	$('.work-nav').click(hideTout);
 
 	$('#site-header').css('border-top', '1px solid #EAEAEA');
-/*
-
-	$(window).bind('mousewheel DOMMouseScroll', function(event){
-		var currentPosition = $(window).scrollTop();
-		
-	    if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-	    	if(lastPosition == 0 && hasScrolled == true && scrollReady == false){
-	    		setTimeout(function(){
-	    			scrollReady = true;
-	    		},1300)
-	    	}
-	    	
-	    	// moving up
-	        if(lastPosition == 0 && hasScrolled == true && scrollReady == true){
-				showTout();
-			}
-	    }
-	    else {
-	    	// moving down
-	        if(lastPosition == 0 && hasScrolled == false && scrollReady == true) {
-	        	hideTout();	
-			}
-	    }
-
-	    lastPosition = $(window).scrollTop();
-
-	});
-
-*/	
-
 
 }
 
@@ -234,16 +204,17 @@ function dispatch(){
 
 	// rediret to the homepage if screen size is bigger than iPad portrait
 	if($('body').hasClass('project-page') && !$('body').hasClass('home')){
-		if(windowWidth > 768){
+		if(windowWidth > 768 && self == top ) {
 			window.location.replace('../index.html#' + projectID + 'gallery')
 		}
 	}
-	// check for hash and load project
+	// check for hash and load project if mobile and on homepage
 	else if($('body').hasClass('home')){
 		var windowHash = window.location.hash;
-		console.debug(windowHash);
-		if(windowHash.length > 1){
-			console.debug('');
+		if(windowHash.length > 1 && windowWidth < 768){
+			var projectNum = windowHash.split('-')[0];
+			console.debug(projectNum.split('#')[1]);
+			window.location.replace('projects/' + projectNum.split('#')[1] + '.html' );
 		}
 	}
 }
