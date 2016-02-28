@@ -216,6 +216,10 @@ function dispatch(){
 			console.debug(projectNum.split('#')[1]);
 			window.location.replace('projects/' + projectNum.split('#')[1] + '.html' );
 		}
+		else if(windowHash.length > 1){
+			var projectNum = windowHash.split('-')[0];
+			launchModule('full', 'projects/' + projectNum.split('#')[1] + '.html');
+		}
 	}
 }
 
@@ -285,6 +289,30 @@ function contactForm() {
 	});
 }
 
+function launchModule(size, contentURL){
+	$('body').append('<div class="page-overlay"></div><iframe src="'+ contentURL +'" class="module" style="display:none;" frameborder="0" scrolling="no"></iframe>');
+		
+		if(size == 'full'){
+			$('.module').css('position', 'fixed');
+			$('.module').css('left', '5%');
+			$('.module').css('top', '5%');
+			$('.module').css('min-width', '90%');
+			$('.module').css('min-height', '90%');
+		}
+		$('.page-overlay').fadeIn('fast');
+		setTimeout(function(){
+			centerContent();
+		}, 30);
+		$('.module').fadeIn();
+		$('.page-overlay').click(function(){
+			$('.module').fadeOut('fast');
+			$('.page-overlay').fadeOut('fast', function(){
+				$('.page-overlay').remove();
+				$('.module').remove();
+			});
+		});
+};
+
 function module() {
 	setTimeout(function(){
 		centerContent();
@@ -294,33 +322,13 @@ function module() {
 		centerContent();
 		windowWidth = $(window).width();
 	})
-	
 
 	$('.module-link').click(function(event){
 		if(windowWidth > 768){
 			event.preventDefault();
+			var size = $(this).attr('size');
 			var contentURL = $(this).attr('href');
-			$('body').append('<div class="page-overlay"></div><iframe src="'+ contentURL +'" class="module" style="display:none;" frameborder="0" scrolling="no"></iframe>');
-			if($(this).attr('size') == 'full'){
-				$('.module').css('position', 'fixed');
-				$('.module').css('left', '5%');
-				$('.module').css('top', '5%');
-				$('.module').css('min-width', '90%');
-				$('.module').css('min-height', '90%');
-			}
-			$('.page-overlay').fadeIn('fast');
-			setTimeout(function(){
-				centerContent();
-			}, 30);
-			$('.module').fadeIn();
-			$('.page-overlay').click(function(){
-				$('.module').fadeOut('fast');
-				$('.page-overlay').fadeOut('fast', function(){
-					$('.page-overlay').remove();
-					$('.module').remove();
-				});
-				
-			});
+			launchModule(size, contentURL);
 		}
 		
 	});
