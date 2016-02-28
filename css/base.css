@@ -1696,6 +1696,11 @@ select {
         display:block;
         float:none;
     }
+    .project-list li {
+        margin-right:0;
+        width:100%;
+        padding:2%;
+    }
 
 }
 
