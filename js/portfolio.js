@@ -373,6 +373,7 @@ function centerContent(){
 		var spinnerHTML = "<div class='load-wrapper'><div class='animation-block'><div class='bar1'><div class='bar'></div></div><div class='bar2'><div class='bar'></div></div><div class='bar3'><div class='bar'></div></div></div><span class='loading'>Loading</span></div>"
 		var imageCount = 0;
 		var imagesLoaded = 0;
+		var contentLoaded = false;
 
 		function displayObject(){
 			$(theObj).find('.load-wrapper').fadeOut(function(){
@@ -391,7 +392,10 @@ function centerContent(){
 			$(this).load(function(){
 				imagesLoaded++
 				if(imagesLoaded == imageCount){
-					displayObject();
+					if(contentLoaded == false){
+						displayObject();
+					}
+					contentLoaded = true;
 				}
 			})
 		});
@@ -400,10 +404,15 @@ function centerContent(){
 		$(this).find('.load-wrapper').css('margin-left', leftOffset + 'px');
 		$(this).find('.load-wrapper').css('margin-top', topOffset + 'px');
 		if(imageCount == 0){
-			displayObject();
+			if(contentLoaded == false){
+				displayObject();
+			}
+			contentLoaded = true;
 		}
 		setTimeout(function(){
-			displayObject();
+			if(contentLoaded == false){
+				displayObject();
+			}
 		}, 4000);
 
 	}
