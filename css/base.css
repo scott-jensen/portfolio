@@ -173,6 +173,9 @@ img {
     top:12px;
     transform: perspective( 50px ) rotateY( 20deg ) rotateX( 30deg ) rotate(-10deg);
     -webkit-animation: logo-1 2s ease-in-out infinite;
+    -moz-animation: logo-1 2s ease-in-out infinite;
+    -ms-animation: logo-1 2s ease-in-out infinite;
+    animation: logo-1 2s ease-in-out infinite;
 }
 .logo-2 {
     background:#000;
@@ -180,6 +183,9 @@ img {
     width:35px;
     top:15px;
     -webkit-animation: logo-2 2.5s ease-in-out infinite;
+    -moz-animation: logo-2 2.5s ease-in-out infinite;
+    -ms-animation: logo-2 2.5s ease-in-out infinite;
+    animation: logo-2 2.5s ease-in-out infinite;
     transform: perspective( 50px ) rotateY( 20deg ) rotateX( 30deg ) rotate(-30deg);
 }
 .logo-3 {
@@ -189,6 +195,9 @@ img {
     left:10px;
     top:20px;
     -webkit-animation: logo-3 3s ease-in-out infinite;
+    -moz-animation: logo-3 3s ease-in-out infinite;
+    -ms-animation: logo-3 3s ease-in-out infinite;
+    animation: logo-3 3s ease-in-out infinite;
     transform: perspective( 50px ) rotateY( 10deg ) rotateX( 40deg ) rotate(0deg);
 }
 .logo-4 {
@@ -197,6 +206,9 @@ img {
     width:25px;
     top:20px;
     -webkit-animation: logo-4 1.5s ease-in-out infinite;
+    -moz-animation: logo-4 1.5s ease-in-out infinite;
+    -ms-animation: logo-4 1.5s ease-in-out infinite;
+    animation: logo-4 1.5s ease-in-out infinite;
     transform: perspective( 50px ) rotateY( 45deg ) rotateX( 30deg ) rotate(20deg);
 }
 @-webkit-keyframes logo-1 {
@@ -260,6 +272,189 @@ img {
     }
 }
 
+
+@-moz-keyframes logo-1 {
+    0%   {
+        top:12px;
+        transform: perspective( 50px ) rotateY( 20deg ) rotateX( 30deg ) rotate(-10deg);
+    }
+    50%  {
+        top:18px;
+        transform: perspective( 50px ) rotateY( 20deg ) rotateX( 30deg ) rotate(-30deg);
+
+    }
+    100% {
+        top:12px;
+        transform: perspective( 50px ) rotateY( 20deg ) rotateX( 30deg ) rotate(-10deg);
+    }
+}
+@-moz-keyframes logo-2 {
+    0%   {
+        top:10px;
+        transform: perspective( 50px ) rotateY( 20deg ) rotateX( 30deg ) rotate(-20deg);
+    }
+    50%  {
+        top:20px;
+        transform: perspective( 50px ) rotateY( 20deg ) rotateX( 30deg ) rotate(0deg);
+
+    }
+    100% {
+        top:10px;
+        transform: perspective( 50px ) rotateY( 20deg ) rotateX( 30deg ) rotate(-20deg);
+    }
+}
+@-moz-keyframes logo-3 {
+    0%   {
+        top:25px;
+        transform: rotate(10deg);    
+    }
+    50%  {
+        top:15px;
+        transform: rotate(40deg);
+
+    }
+    100% {
+        top:25px;
+        transform: rotate(10deg);
+    }
+}
+@-moz-keyframes logo-4 {
+    0%   {
+        top:20px;
+        transform: rotate(20deg);    
+    }
+    50%  {
+        top:15px;
+        transform: rotate(0deg);
+
+    }
+    100% {
+        top:20px;
+        transform: rotate(20deg);
+    }
+}
+
+@-ms-keyframes logo-1 {
+    0%   {
+        top:12px;
+        transform: perspective( 50px ) rotateY( 20deg ) rotateX( 30deg ) rotate(-10deg);
+    }
+    50%  {
+        top:18px;
+        transform: perspective( 50px ) rotateY( 20deg ) rotateX( 30deg ) rotate(-30deg);
+
+    }
+    100% {
+        top:12px;
+        transform: perspective( 50px ) rotateY( 20deg ) rotateX( 30deg ) rotate(-10deg);
+    }
+}
+@-ms-keyframes logo-2 {
+    0%   {
+        top:10px;
+        transform: perspective( 50px ) rotateY( 20deg ) rotateX( 30deg ) rotate(-20deg);
+    }
+    50%  {
+        top:20px;
+        transform: perspective( 50px ) rotateY( 20deg ) rotateX( 30deg ) rotate(0deg);
+
+    }
+    100% {
+        top:10px;
+        transform: perspective( 50px ) rotateY( 20deg ) rotateX( 30deg ) rotate(-20deg);
+    }
+}
+@-ms-keyframes logo-3 {
+    0%   {
+        top:25px;
+        transform: rotate(10deg);    
+    }
+    50%  {
+        top:15px;
+        transform: rotate(40deg);
+
+    }
+    100% {
+        top:25px;
+        transform: rotate(10deg);
+    }
+}
+@-ms-keyframes logo-4 {
+    0%   {
+        top:20px;
+        transform: rotate(20deg);    
+    }
+    50%  {
+        top:15px;
+        transform: rotate(0deg);
+
+    }
+    100% {
+        top:20px;
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes logo-1 {
+    0%   {
+        top:12px;
+        transform: perspective( 50px ) rotateY( 20deg ) rotateX( 30deg ) rotate(-10deg);
+    }
+    50%  {
+        top:18px;
+        transform: perspective( 50px ) rotateY( 20deg ) rotateX( 30deg ) rotate(-30deg);
+
+    }
+    100% {
+        top:12px;
+        transform: perspective( 50px ) rotateY( 20deg ) rotateX( 30deg ) rotate(-10deg);
+    }
+}
+@keyframes logo-2 {
+    0%   {
+        top:10px;
+        transform: perspective( 50px ) rotateY( 20deg ) rotateX( 30deg ) rotate(-20deg);
+    }
+    50%  {
+        top:20px;
+        transform: perspective( 50px ) rotateY( 20deg ) rotateX( 30deg ) rotate(0deg);
+
+    }
+    100% {
+        top:10px;
+        transform: perspective( 50px ) rotateY( 20deg ) rotateX( 30deg ) rotate(-20deg);
+    }
+}
+@keyframes logo-3 {
+    0%   {
+        top:25px;
+        transform: rotate(10deg);    
+    }
+    50%  {
+        top:15px;
+        transform: rotate(40deg);
+
+    }
+    100% {
+        top:25px;
+        transform: rotate(10deg);
+    }
+}
+@keyframes logo-4 {
+    0%   {
+        top:20px;
+        transform: rotate(20deg);    
+    }
+    50%  {
+        top:15px;
+        transform: rotate(0deg);
+
+    }
+    100% {
+        top:20px;
+        transform: rotate(20deg);
+    }
+}
 #site-header {
     overflow: hidden;
     margin-bottom:60px;

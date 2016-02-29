@@ -89,6 +89,9 @@
 	position: absolute;
 	z-index: 10;
 	-webkit-animation: float-two 3s ease-in-out infinite;
+	-moz-animation: float-two 3s ease-in-out infinite;
+	-ms-animation: float-two 3s ease-in-out infinite;
+	animation: float-two 3s ease-in-out infinite;
 }
 .project-1 .foreground .bar2 {
 	height:30px;
@@ -98,6 +101,12 @@
 	left:20%;
 	-webkit-transform: rotateY(40deg) rotateX(60deg) rotateZ(-20deg);
 	-webkit-animation: float-three 3s ease-in-out infinite;
+	-moz-transform: rotateY(40deg) rotateX(60deg) rotateZ(-20deg);
+	-moz-animation: float-three 3s ease-in-out infinite;
+	-ms-transform: rotateY(40deg) rotateX(60deg) rotateZ(-20deg);
+	-ms-animation: float-three 3s ease-in-out infinite;
+	transform: rotateY(40deg) rotateX(60deg) rotateZ(-20deg);
+	animation: float-three 3s ease-in-out infinite;
 }
 .project-1 .foreground .bar6 {
 	height:4px;
@@ -106,6 +115,12 @@
 	left:55%;
 	-webkit-transform: rotateY(33deg) rotateX(10deg) rotateZ(30deg);
 	-webkit-animation: float-one 2s ease-in-out infinite;
+	-moz-transform: rotateY(33deg) rotateX(10deg) rotateZ(30deg);
+	-moz-animation: float-one 2s ease-in-out infinite;
+	-ms-transform: rotateY(33deg) rotateX(10deg) rotateZ(30deg);
+	-ms-animation: float-one 2s ease-in-out infinite;
+	transform: rotateY(33deg) rotateX(10deg) rotateZ(30deg);
+	animation: float-one 2s ease-in-out infinite;
 	z-index: 30;
 }
 .project-1 .foreground .bar3 {
@@ -115,6 +130,12 @@
 	left:10%;
 	-webkit-transform: rotateY(75deg) rotateX(10deg) rotateZ(45deg);
 	-webkit-animation: float-three 2s ease-in-out infinite;
+	-moz-transform: rotateY(75deg) rotateX(10deg) rotateZ(45deg);
+	-moz-animation: float-three 2s ease-in-out infinite;
+	-ms-transform: rotateY(75deg) rotateX(10deg) rotateZ(45deg);
+	-ms-animation: float-three 2s ease-in-out infinite;
+	transform: rotateY(75deg) rotateX(10deg) rotateZ(45deg);
+	animation: float-three 2s ease-in-out infinite;
 	z-index:4;
 }
 .project-1 .foreground .bar5 {
@@ -124,6 +145,12 @@
 	left:60%;
 	-webkit-transform: rotateY(35deg) rotateX(30deg) rotateZ(-5deg);
 	-webkit-animation: float-one 2s ease-in-out infinite;
+	-moz-transform: rotateY(35deg) rotateX(30deg) rotateZ(-5deg);
+	-moz-animation: float-one 2s ease-in-out infinite;
+	-ms-transform: rotateY(35deg) rotateX(30deg) rotateZ(-5deg);
+	-ms-animation: float-one 2s ease-in-out infinite;
+	transform: rotateY(35deg) rotateX(30deg) rotateZ(-5deg);
+	animation: float-one 2s ease-in-out infinite;
 	z-index:40;
 }
 .project-1 .foreground .bar4 {
@@ -133,6 +160,12 @@
 	left:50%;
 	-webkit-transform: rotateY(35deg) rotateX(30deg) rotateZ(15deg);
 	-webkit-animation: float-two 3.2s ease-in-out infinite;
+	-moz-transform: rotateY(35deg) rotateX(30deg) rotateZ(15deg);
+	-moz-animation: float-two 3.2s ease-in-out infinite;
+	-ms-transform: rotateY(35deg) rotateX(30deg) rotateZ(15deg);
+	-ms-animation: float-two 3.2s ease-in-out infinite;
+	transform: rotateY(35deg) rotateX(30deg) rotateZ(15deg);
+	animation: float-two 3.2s ease-in-out infinite;
 	z-index:20;
 }
 .project-1 .foreground .bar1 {
@@ -141,8 +174,15 @@
 	top:55%;
 	left:10%;
 	-webkit-transform: rotateY(45deg) rotateX(50deg) rotateZ(-15deg);
-	z-index:3;
 	-webkit-animation: float-one 3s ease-in-out infinite;
+	-moz-transform: rotateY(45deg) rotateX(50deg) rotateZ(-15deg);
+	-moz-animation: float-one 3s ease-in-out infinite;
+	-ms-transform: rotateY(45deg) rotateX(50deg) rotateZ(-15deg);
+	-ms-animation: float-one 3s ease-in-out infinite;
+	transform: rotateY(45deg) rotateX(50deg) rotateZ(-15deg);
+	animation: float-one 3s ease-in-out infinite;
+	z-index:3;
+	
 }
 .project1-shadow {
 	width:30%;
@@ -153,6 +193,12 @@
 	left:40%;
 	-webkit-animation: float-two 3s ease-in-out infinite;
 	-webkit-transform: rotateY(0deg) rotateX(0deg) rotateZ(20deg);
+	-moz-animation: float-two 3s ease-in-out infinite;
+	-moz-transform: rotateY(0deg) rotateX(0deg) rotateZ(20deg);
+	-ms-animation: float-two 3s ease-in-out infinite;
+	-ms-transform: rotateY(0deg) rotateX(0deg) rotateZ(20deg);
+	animation: float-two 3s ease-in-out infinite;
+	transform: rotateY(0deg) rotateX(0deg) rotateZ(20deg);
 }
 .background .bar1 {
 	width:10%;
@@ -161,6 +207,12 @@
 	left:20%;
 	-webkit-animation: float-three 3s ease-in-out infinite;
 	-webkit-transform: rotateY(5deg) rotateX(0deg) rotateZ(15deg);
+	-moz-animation: float-three 3s ease-in-out infinite;
+	-moz-transform: rotateY(5deg) rotateX(0deg) rotateZ(15deg);
+	-ms-animation: float-three 3s ease-in-out infinite;
+	-ms-transform: rotateY(5deg) rotateX(0deg) rotateZ(15deg);
+	animation: float-three 3s ease-in-out infinite;
+	transform: rotateY(5deg) rotateX(0deg) rotateZ(15deg);
 }
 .background .bar2 {
 	width:7%;
@@ -169,6 +221,12 @@
 	right:20%;
 	-webkit-animation: float-two 3s ease-in-out infinite;
 	-webkit-transform: rotateY(15deg) rotateX(10deg) rotateZ(30deg);
+	-moz-animation: float-two 3s ease-in-out infinite;
+	-moz-transform: rotateY(15deg) rotateX(10deg) rotateZ(30deg);
+	-ms-animation: float-two 3s ease-in-out infinite;
+	-ms-transform: rotateY(15deg) rotateX(10deg) rotateZ(30deg);
+	animation: float-two 3s ease-in-out infinite;
+	transform: rotateY(15deg) rotateX(10deg) rotateZ(30deg);
 }
 .background .bar3 {
 	width:8%;
@@ -177,6 +235,12 @@
 	left:5%;
 	-webkit-animation: float-two 3s ease-in-out infinite;
 	-webkit-transform: rotateY(25deg) rotateX(5deg) rotateZ(3deg);
+	-moz-animation: float-two 3s ease-in-out infinite;
+	-moz-transform: rotateY(25deg) rotateX(5deg) rotateZ(3deg);
+	-ms-animation: float-two 3s ease-in-out infinite;
+	-ms-transform: rotateY(25deg) rotateX(5deg) rotateZ(3deg);
+	animation: float-two 3s ease-in-out infinite;
+	transform: rotateY(25deg) rotateX(5deg) rotateZ(3deg);
 }
 .background .bar4 {
 	width:10%;
@@ -185,6 +249,12 @@
 	left:50%;
 	-webkit-animation: float-two 3s ease-in-out infinite;
 	-webkit-transform: rotateY(5deg) rotateX(5deg) rotateZ(-25deg);
+	-moz-animation: float-two 3s ease-in-out infinite;
+	-moz-transform: rotateY(5deg) rotateX(5deg) rotateZ(-25deg);
+	-ms-animation: float-two 3s ease-in-out infinite;
+	-ms-transform: rotateY(5deg) rotateX(5deg) rotateZ(-25deg);
+	animation: float-two 3s ease-in-out infinite;
+	transform: rotateY(5deg) rotateX(5deg) rotateZ(-25deg);
 }
 .background .bar5 {
 	width:8%;
@@ -193,6 +263,12 @@
 	left:45%;
 	-webkit-animation: float-three 3s ease-in-out infinite;
 	-webkit-transform: rotateY(3deg) rotateX(14deg) rotateZ(-10deg);
+	-moz-animation: float-three 3s ease-in-out infinite;
+	-moz-transform: rotateY(3deg) rotateX(14deg) rotateZ(-10deg);
+	-ms-animation: float-three 3s ease-in-out infinite;
+	-ms-transform: rotateY(3deg) rotateX(14deg) rotateZ(-10deg);
+	animation: float-three 3s ease-in-out infinite;
+	transform: rotateY(3deg) rotateX(14deg) rotateZ(-10deg);
 }
 .background .bar6 {
 	width:12%;
@@ -201,6 +277,12 @@
 	right:5%;
 	-webkit-animation: float-one 3s ease-in-out infinite;
 	-webkit-transform: rotateY(15deg) rotateX(15deg) rotateZ(6deg);
+	-moz-animation: float-one 3s ease-in-out infinite;
+	-moz-transform: rotateY(15deg) rotateX(15deg) rotateZ(6deg);
+	-ms-animation: float-one 3s ease-in-out infinite;
+	-ms-transform: rotateY(15deg) rotateX(15deg) rotateZ(6deg);
+	animation: float-one 3s ease-in-out infinite;
+	transform: rotateY(15deg) rotateX(15deg) rotateZ(6deg);
 }
 .background .bar7 {
 	width:12%;
@@ -209,6 +291,12 @@
 	right:1%;
 	-webkit-animation: float-three 3s ease-in-out infinite;
 	-webkit-transform: rotateY(5deg) rotateX(20deg) rotateZ(16deg);
+	-moz-animation: float-three 3s ease-in-out infinite;
+	-moz-transform: rotateY(5deg) rotateX(20deg) rotateZ(16deg);
+	-ms-animation: float-three 3s ease-in-out infinite;
+	-ms-transform: rotateY(5deg) rotateX(20deg) rotateZ(16deg);
+	animation: float-three 3s ease-in-out infinite;
+	transform: rotateY(5deg) rotateX(20deg) rotateZ(16deg);
 }
 .background .bar8 {
 	width:20%;
@@ -217,6 +305,12 @@
 	left:2%;
 	-webkit-animation: float-two 3s ease-in-out infinite;
 	-webkit-transform: rotateY(15deg) rotateX(5deg) rotateZ(-16deg);
+	-moz-animation: float-two 3s ease-in-out infinite;
+	-moz-transform: rotateY(15deg) rotateX(5deg) rotateZ(-16deg);
+	-ms-animation: float-two 3s ease-in-out infinite;
+	-ms-transform: rotateY(15deg) rotateX(5deg) rotateZ(-16deg);
+	animation: float-two 3s ease-in-out infinite;
+	transform: rotateY(15deg) rotateX(5deg) rotateZ(-16deg);
 }
 .background .bar9 {
 	width:8%;
@@ -225,6 +319,12 @@
 	right:45%;
 	-webkit-animation: float-one 3s ease-in-out infinite;
 	-webkit-transform: rotateY(0deg) rotateX(35deg) rotateZ(6deg);
+	-moz-animation: float-one 3s ease-in-out infinite;
+	-moz-transform: rotateY(0deg) rotateX(35deg) rotateZ(6deg);
+	-ms-animation: float-one 3s ease-in-out infinite;
+	-ms-transform: rotateY(0deg) rotateX(35deg) rotateZ(6deg);
+	animation: float-one 3s ease-in-out infinite;
+	transform: rotateY(0deg) rotateX(35deg) rotateZ(6deg);
 }
 .background .bar10 {
 	width:8%;
@@ -233,6 +333,12 @@
 	left:35%;
 	-webkit-animation: float-two 3s ease-in-out infinite;
 	-webkit-transform: rotateY(0deg) rotateX(35deg) rotateZ(36deg);
+	-moz-animation: float-two 3s ease-in-out infinite;
+	-moz-transform: rotateY(0deg) rotateX(35deg) rotateZ(36deg);
+	-ms-animation: float-two 3s ease-in-out infinite;
+	-ms-transform: rotateY(0deg) rotateX(35deg) rotateZ(36deg);
+	animation: float-two 3s ease-in-out infinite;
+	transform: rotateY(0deg) rotateX(35deg) rotateZ(36deg);
 }
 .background .bar11 {
 	width:8%;
@@ -241,6 +347,12 @@
 	right:55%;
 	-webkit-animation: float-three 3s ease-in-out infinite;
 	-webkit-transform: rotateY(30deg) rotateX(15deg) rotateZ(10deg);
+	-moz-animation: float-three 3s ease-in-out infinite;
+	-moz-transform: rotateY(30deg) rotateX(15deg) rotateZ(10deg);
+	-ms-animation: float-three 3s ease-in-out infinite;
+	-ms-transform: rotateY(30deg) rotateX(15deg) rotateZ(10deg);
+	animation: float-three 3s ease-in-out infinite;
+	transform: rotateY(30deg) rotateX(15deg) rotateZ(10deg);
 }
 .background .bar12 {
 	width:8%;
@@ -249,6 +361,12 @@
 	left:25%;
 	-webkit-animation: float-three 3s ease-in-out infinite;
 	-webkit-transform: rotateY(20deg) rotateX(55deg) rotateZ(-36deg);
+	-moz-animation: float-three 3s ease-in-out infinite;
+	-moz-transform: rotateY(20deg) rotateX(55deg) rotateZ(-36deg);
+	-ms-animation: float-three 3s ease-in-out infinite;
+	-ms-transform: rotateY(20deg) rotateX(55deg) rotateZ(-36deg);
+	animation: float-three 3s ease-in-out infinite;
+	transform: rotateY(20deg) rotateX(55deg) rotateZ(-36deg);
 }
 .middleground .bar1 {
 	width:15%;
@@ -257,6 +375,12 @@
 	left:25%;
 	-webkit-animation: float-three 3s ease-in-out infinite;
 	-webkit-transform: rotateY(20deg) rotateX(55deg) rotateZ(-36deg);
+	-moz-animation: float-three 3s ease-in-out infinite;
+	-moz-transform: rotateY(20deg) rotateX(55deg) rotateZ(-36deg);
+	-ms-animation: float-three 3s ease-in-out infinite;
+	-ms-transform: rotateY(20deg) rotateX(55deg) rotateZ(-36deg);
+	animation: float-three 3s ease-in-out infinite;
+	transform: rotateY(20deg) rotateX(55deg) rotateZ(-36deg);
 }
 .middleground .bar2 {
 	width:12%;
@@ -265,6 +389,12 @@
 	right:25%;
 	-webkit-animation: float-one 3s ease-in-out infinite;
 	-webkit-transform: rotateY(20deg) rotateX(0deg) rotateZ(-30deg);
+	-moz-animation: float-one 3s ease-in-out infinite;
+	-moz-transform: rotateY(20deg) rotateX(0deg) rotateZ(-30deg);
+	-ms-animation: float-one 3s ease-in-out infinite;
+	-ms-transform: rotateY(20deg) rotateX(0deg) rotateZ(-30deg);
+	animation: float-one 3s ease-in-out infinite;
+	transform: rotateY(20deg) rotateX(0deg) rotateZ(-30deg);
 }
 .middleground .bar3 {
 	width:12%;
@@ -273,6 +403,12 @@
 	right:1%;
 	-webkit-animation: float-one 3s ease-in-out infinite;
 	-webkit-transform: rotateY(50deg) rotateX(50deg) rotateZ(20deg);
+	-moz-animation: float-one 3s ease-in-out infinite;
+	-moz-transform: rotateY(50deg) rotateX(50deg) rotateZ(20deg);
+	-ms-animation: float-one 3s ease-in-out infinite;
+	-ms-transform: rotateY(50deg) rotateX(50deg) rotateZ(20deg);
+	animation: float-one 3s ease-in-out infinite;
+	transform: rotateY(50deg) rotateX(50deg) rotateZ(20deg);
 }
 .middleground .bar4 {
 	width:25%;
@@ -281,6 +417,12 @@
 	left:2%;
 	-webkit-animation: float-two 3s ease-in-out infinite;
 	-webkit-transform: rotateY(30deg) rotateX(30deg) rotateZ(20deg);
+	-moz-animation: float-two 3s ease-in-out infinite;
+	-moz-transform: rotateY(30deg) rotateX(30deg) rotateZ(20deg);
+	-ms-animation: float-two 3s ease-in-out infinite;
+	-ms-transform: rotateY(30deg) rotateX(30deg) rotateZ(20deg);
+	animation: float-two 3s ease-in-out infinite;
+	transform: rotateY(30deg) rotateX(30deg) rotateZ(20deg);
 }
 .middleground .bar5 {
 	width:12%;
@@ -289,6 +431,12 @@
 	left:32%;
 	-webkit-animation: float-three 3s ease-in-out infinite;
 	-webkit-transform: rotateY(30deg) rotateX(30deg) rotateZ(-10deg);
+	-moz-animation: float-three 3s ease-in-out infinite;
+	-moz-transform: rotateY(30deg) rotateX(30deg) rotateZ(-10deg);
+	-ms-animation: float-three 3s ease-in-out infinite;
+	-ms-transform: rotateY(30deg) rotateX(30deg) rotateZ(-10deg);
+	animation: float-three 3s ease-in-out infinite;
+	transform: rotateY(30deg) rotateX(30deg) rotateZ(-10deg);
 }
 .middleground .bar6 {
 	width:30%;
@@ -297,6 +445,12 @@
 	right:5%;
 	-webkit-animation: float-two 3s ease-in-out infinite;
 	-webkit-transform: rotateY(30deg) rotateX(30deg) rotateZ(0deg);
+	-moz-animation: float-two 3s ease-in-out infinite;
+	-moz-transform: rotateY(30deg) rotateX(30deg) rotateZ(0deg);
+	-ms-animation: float-two 3s ease-in-out infinite;
+	-ms-transform: rotateY(30deg) rotateX(30deg) rotateZ(0deg);
+	animation: float-two 3s ease-in-out infinite;
+	transform: rotateY(30deg) rotateX(30deg) rotateZ(0deg);
 }
 .middleground .bar7 {
 	width:23%;
@@ -305,6 +459,12 @@
 	left:1%;
 	-webkit-animation: float-two 3s ease-in-out infinite;
 	-webkit-transform: rotateY(50deg) rotateX(50deg) rotateZ(-5deg);
+	-moz-animation: float-two 3s ease-in-out infinite;
+	-moz-transform: rotateY(50deg) rotateX(50deg) rotateZ(-5deg);
+	-ms-animation: float-two 3s ease-in-out infinite;
+	-ms-transform: rotateY(50deg) rotateX(50deg) rotateZ(-5deg);
+	animation: float-two 3s ease-in-out infinite;
+	transform: rotateY(50deg) rotateX(50deg) rotateZ(-5deg);
 }
 .middleground .bar8 {
 	width:15%;
@@ -313,6 +473,12 @@
 	right:1%;
 	-webkit-animation: float-three 3s ease-in-out infinite;
 	-webkit-transform: rotateY(30deg) rotateX(50deg) rotateZ(-10deg);
+	-moz-animation: float-three 3s ease-in-out infinite;
+	-moz-transform: rotateY(30deg) rotateX(50deg) rotateZ(-10deg);
+	-ms-animation: float-three 3s ease-in-out infinite;
+	-ms-transform: rotateY(30deg) rotateX(50deg) rotateZ(-10deg);
+	animation: float-three 3s ease-in-out infinite;
+	transform: rotateY(30deg) rotateX(50deg) rotateZ(-10deg);
 }
 .middleground .bar9 {
 	width:5%;
@@ -321,6 +487,12 @@
 	right:1%;
 	-webkit-animation: float-three 3s ease-in-out infinite;
 	-webkit-transform: rotateY(60deg) rotateX(30deg) rotateZ(-20deg);
+	-moz-animation: float-three 3s ease-in-out infinite;
+	-moz-transform: rotateY(60deg) rotateX(30deg) rotateZ(-20deg);
+	-ms-animation: float-three 3s ease-in-out infinite;
+	-ms-transform: rotateY(60deg) rotateX(30deg) rotateZ(-20deg);
+	animation: float-three 3s ease-in-out infinite;
+	transform: rotateY(60deg) rotateX(30deg) rotateZ(-20deg);
 }
 
 
@@ -347,6 +519,111 @@
     }
 }
 @-webkit-keyframes float-three {
+    0%   {
+        margin-top:0px;
+    }
+    50%  {
+        margin-top:5px;
+    }
+    100% {
+        margin-top:0px;
+    }
+}
+
+
+@-moz-keyframes float-one {
+    0%   {
+        margin-top:0px;
+    }
+    50%  {
+        margin-top:10px;
+    }
+    100% {
+        margin-top:0px;
+    }
+}
+@-moz-keyframes float-two {
+    0%   {
+        margin-top:0px;
+    }
+    50%  {
+        margin-top:12px;
+    }
+    100% {
+        margin-top:0px;
+    }
+}
+@-moz-keyframes float-three {
+    0%   {
+        margin-top:0px;
+    }
+    50%  {
+        margin-top:5px;
+    }
+    100% {
+        margin-top:0px;
+    }
+}
+
+
+@-ms-keyframes float-one {
+    0%   {
+        margin-top:0px;
+    }
+    50%  {
+        margin-top:10px;
+    }
+    100% {
+        margin-top:0px;
+    }
+}
+@-ms-keyframes float-two {
+    0%   {
+        margin-top:0px;
+    }
+    50%  {
+        margin-top:12px;
+    }
+    100% {
+        margin-top:0px;
+    }
+}
+@-ms-keyframes float-three {
+    0%   {
+        margin-top:0px;
+    }
+    50%  {
+        margin-top:5px;
+    }
+    100% {
+        margin-top:0px;
+    }
+}
+
+
+@keyframes float-one {
+    0%   {
+        margin-top:0px;
+    }
+    50%  {
+        margin-top:10px;
+    }
+    100% {
+        margin-top:0px;
+    }
+}
+@keyframes float-two {
+    0%   {
+        margin-top:0px;
+    }
+    50%  {
+        margin-top:12px;
+    }
+    100% {
+        margin-top:0px;
+    }
+}
+@keyframes float-three {
     0%   {
         margin-top:0px;
     }
