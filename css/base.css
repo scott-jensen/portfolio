@@ -354,8 +354,6 @@ img {
             }
 
 
-
-
 /*------------------- HOME -------------------*/
 
 .home {
@@ -1096,6 +1094,25 @@ img {
 .contact-me {
     padding:40px 40px 20px 20px;
 }
+.contact-page #site-header, .contact-page footer {
+    display:none;
+}
+.contact-not-inline {
+    background: #FFF;
+    padding-top:60px;
+}
+    .contact-not-inline p {
+        color:#444;
+    }
+    .contact-not-inline #site-header, .contact-not-inline footer {
+        display:block;
+    }
+    .contact-not-inline #contact-form {
+        background:#FFF;
+    }
+    .contact-not-inline .contact-me {
+        margin-bottom:50px;
+    }
 
 
 /*----------------- FOOTER -------------------*/
@@ -1398,6 +1415,11 @@ select {
 /*--------------- MEDIA QUERIES --------------*/
 /*============================================*/
 
+@media screen and (max-width: 1100px) {
+    #project-info{
+        width:30%;
+    }
+}
 
 /*-------------- iPAD LANDSCAPE --------------*/
 
