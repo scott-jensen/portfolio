@@ -37,10 +37,14 @@ function featuredProjects(){
 	var slideNum = $('.tout-project').length;
 
 	function nextSlide(){
-
+		var slideMargin = 0;
+		if(windowWidth < 1024){
+			slideMargin = '-7.5%';
+		}
 		$('#project-' + onDeck).css({'left': windowWidth + 'px', 'visibility': 'visible'});
+
 		$('#project-' + onDeck).animate({
-			left : 0
+				left : slideMargin
 		}, transitionTime, function(){
 			if (currentSlide == slideNum){
 				currentSlide = 1;
@@ -52,15 +56,36 @@ function featuredProjects(){
 				bottom : -20,
 				opacity : 1
 			}, 400);
-			$('#project-'+ currentSlide +' .foreground').animate({
-				left : '-15%'
-			}, slideTime, "linear");
-			$('#project-'+ currentSlide +' .middleground').animate({
-				left : '-10%'
-			}, slideTime, "linear");
-			$('#project-'+ currentSlide +' .background').animate({
-				left : '-5%'
-			}, slideTime, "linear", function(){
+			if(windowWidth > 1024){
+				$('#project-'+ currentSlide +' .foreground').animate({
+					left : '-15%'
+				}, slideTime, "linear");
+				$('#project-'+ currentSlide +' .middleground').animate({
+					left : '-10%'
+				}, slideTime, "linear");
+				$('#project-'+ currentSlide +' .background').animate({
+					left : '-5%'
+				}, slideTime, "linear", function(){
+					if (currentSlide == slideNum){
+						prevSlide = slideNum;
+						onDeck = 1;
+					}
+					else {
+						onDeck++;
+						prevSlide++;
+					}
+					$('#project-' + currentSlide).animate({
+						left: -windowWidth
+					}, transitionTime, function(){
+						$('#project-' + currentSlide + ' > .tout-element').css('left', 0);
+						$('#project-' + currentSlide).css('visibility', 'hidden');
+						$('#project-'+ currentSlide + ' > .project-details').css({'bottom':'-70px', 'opacity':0})
+					});
+					nextSlide();
+
+				});
+			}
+			else {
 				if (currentSlide == slideNum){
 					prevSlide = slideNum;
 					onDeck = 1;
@@ -69,16 +94,18 @@ function featuredProjects(){
 					onDeck++;
 					prevSlide++;
 				}
-				$('#project-' + currentSlide).animate({
-					left: -windowWidth
-				}, transitionTime, function(){
-					$('#project-' + currentSlide + ' > .tout-element').css('left', 0);
-					$('#project-' + currentSlide).css('visibility', 'hidden');
-					$('#project-'+ currentSlide + ' > .project-details').css({'bottom':'-70px', 'opacity':0})
-				});
-				nextSlide();
-
-			});
+				setTimeout(function(){
+					$('#project-' + currentSlide).animate({
+						left: -windowWidth
+					}, transitionTime, function(){
+						$('#project-' + currentSlide + ' > .tout-element').css('left', 0);
+						$('#project-' + currentSlide).css('visibility', 'hidden');
+						$('#project-'+ currentSlide + ' > .project-details').css({'bottom':'-70px', 'opacity':0})
+					});
+					nextSlide();
+				}, slideTime);
+			}
+			
 
 		});
 
@@ -97,12 +124,12 @@ function homeScroll() {
 	var headerHeight = $('#site-header').height();
 	var toutHeight = windowHeight - headerHeight;
 	var navOffset = windowHeight - $('#site-header').height();
-	var wrapOffset = (windowWidth - $('.wrap').width()) / 2;
+	var wrapOffset = ((windowWidth - $('#site-header > .wrap').width()) / 2) + (windowWidth * .075);
 	var scrollReady = true;
 	$(window).resize(function(){
 		windowHeight = $(window).height();
 		windowWidth = $(window).width();
-		wrapOffset = (windowWidth - $('.wrap').width()) / 2;
+		wrapOffset = ((windowWidth - $('#site-header > .wrap').width()) / 2) + (windowWidth * .075);
 		navOffset = windowHeight - $('#site-header').height();
 		headerHeight = $('#site-header').height();
 		toutHeight = windowHeight - headerHeight;
@@ -124,6 +151,7 @@ function homeScroll() {
 		});
 
 		if(hasScrolled == false){
+			$('body').css('overflow', 'hidden');
 			$('#featured-projects').height(toutHeight);
 			$('#site-header').css('top', toutHeight + 2 + 'px');
 			$('.home-content').css('top', windowHeight + 50 + 'px');
@@ -454,11 +482,11 @@ function launchModule(size, contentURL){
 	$('body').append('<div class="page-overlay"></div><iframe src="'+ contentURL +'" class="module" style="display:none;" frameborder="0" scrolling="no"></iframe>');
 		
 		if(size == 'full'){
-			$('.module').css('position', 'fixed');
+			$('.module').css('position', 'absolute');
 			$('.module').css('left', '5%');
 			$('.module').css('top', '5%');
-			$('.module').css('min-width', '90%');
-			$('.module').css('min-height', '90%');
+			$('.module').css('width', '90%');
+			$('.module').css('height', '90%');
 		}
 		$('.page-overlay').fadeIn('fast');
 		setTimeout(function(){
