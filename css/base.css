@@ -40,10 +40,13 @@ aside {
 .module {
     position: absolute;
     z-index: 102;
-    
+    overflow: hidden;
     min-width: 520px;
     min-height: 570px;
 }
+    .module iframe {
+        max-width:100%;
+    }
 
 
 /*============================================*/
