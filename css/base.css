@@ -1388,6 +1388,7 @@ input[type="text"], input[type="password"], input[type="number"], input[type="em
     border:1px solid #EAEAEA;
     padding:1.5%;
     display:block;
+    border-radius: 0;
     width:97%;
     font-size:.875rem;
     -webkit-transition: all .15s ease-in-out;
@@ -1411,6 +1412,7 @@ input[type="text"], input[type="password"], input[type="number"], input[type="em
         border:none;
         outline: none;
         background:none;
+        border-radius: 0;
         border:1px solid #FFF;
         padding:1.5%;
         display:block;
@@ -1446,6 +1448,7 @@ input[type="submit"]{
     border:1px solid #EAEAEA;
     padding:10px 30px;
     display:inline-block;
+    border-radius: 0;
     color:#000;
     font-weight: bold;
     font-size: .75rem;
@@ -1470,6 +1473,7 @@ textarea {
     background:none;
     border:1px solid #EAEAEA;
     padding:1.5%;
+    border-radius: 0;
     width:97%;
     display:block;
     min-height: 150px;
@@ -1497,6 +1501,7 @@ textarea {
     width:97%;
     color:#FFF;
     display:block;
+    border-radius: 0;
     min-height: 150px;
     font-size: .875rem;
     -webkit-transition: all .15s ease-in-out;
@@ -1974,7 +1979,7 @@ select {
         #site-nav li {
             width:25%;
             position: relative;
-            font-size:.8rem;
+            font-size:.9rem;
         }
     footer p {
         display:none;

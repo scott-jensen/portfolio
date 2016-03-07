@@ -124,12 +124,18 @@ function homeScroll() {
 	var headerHeight = $('#site-header').height();
 	var toutHeight = windowHeight - headerHeight;
 	var navOffset = windowHeight - $('#site-header').height();
-	var wrapOffset = ((windowWidth - $('#site-header > .wrap').width()) / 2) + (windowWidth * .075);
+	var wrapOffset = ((windowWidth - $('#site-header > .wrap').width()) / 2) + 10;
+	if(windowWidth <= 1024){
+		wrapOffset = ((windowWidth - $('#site-header > .wrap').width()) / 2) + (windowWidth * .075);
+	}
 	var scrollReady = true;
 	$(window).resize(function(){
 		windowHeight = $(window).height();
 		windowWidth = $(window).width();
-		wrapOffset = ((windowWidth - $('#site-header > .wrap').width()) / 2) + (windowWidth * .075);
+		wrapOffset = ((windowWidth - $('#site-header > .wrap').width()) / 2) + 10;
+		if(windowWidth <= 1024){
+			wrapOffset = ((windowWidth - $('#site-header > .wrap').width()) / 2) + (windowWidth * .075);
+		}
 		navOffset = windowHeight - $('#site-header').height();
 		headerHeight = $('#site-header').height();
 		toutHeight = windowHeight - headerHeight;
