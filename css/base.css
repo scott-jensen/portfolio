@@ -1952,7 +1952,13 @@ select {
 
 
 @media screen and (max-width: 420px) {
-
+    #logo {
+        margin-top:3px;
+    }
+    #site-nav li a {
+        padding-top:13px;
+        padding-bottom:10px;
+    }
     .book-list li {
         display:block;
         max-width:inherit;
