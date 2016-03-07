@@ -829,10 +829,10 @@ img {
 }
     #article-content img {
         max-width: 100%;
-        width:100%;
     }
 .article-cover {
     margin-bottom:20px;
+    width:100%;
 }
 .book-list {
     border-bottom:1px solid #EAEAEA;
