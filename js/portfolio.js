@@ -56,7 +56,28 @@ function featuredProjects(){
 				bottom : -20,
 				opacity : 1
 			}, 400);
-			if(windowWidth > 1024){
+			if(navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1){
+
+				if (currentSlide == slideNum){
+					prevSlide = slideNum;
+					onDeck = 1;
+				}
+				else {
+					onDeck++;
+					prevSlide++;
+				}
+				setTimeout(function(){
+					$('#project-' + currentSlide).animate({
+						left: -windowWidth
+					}, transitionTime, function(){
+						$('#project-' + currentSlide + ' > .tout-element').css('left', 0);
+						$('#project-' + currentSlide).css('visibility', 'hidden');
+						$('#project-'+ currentSlide + ' > .project-details').css({'bottom':'-70px', 'opacity':0})
+					});
+					nextSlide();
+				}, slideTime);
+			}
+			else {
 				$('#project-'+ currentSlide +' .foreground').animate({
 					left : '-15%'
 				}, slideTime, "linear");
@@ -85,26 +106,6 @@ function featuredProjects(){
 
 				});
 			}
-			else {
-				if (currentSlide == slideNum){
-					prevSlide = slideNum;
-					onDeck = 1;
-				}
-				else {
-					onDeck++;
-					prevSlide++;
-				}
-				setTimeout(function(){
-					$('#project-' + currentSlide).animate({
-						left: -windowWidth
-					}, transitionTime, function(){
-						$('#project-' + currentSlide + ' > .tout-element').css('left', 0);
-						$('#project-' + currentSlide).css('visibility', 'hidden');
-						$('#project-'+ currentSlide + ' > .project-details').css({'bottom':'-70px', 'opacity':0})
-					});
-					nextSlide();
-				}, slideTime);
-			}
 			
 
 		});
@@ -124,12 +125,18 @@ function homeScroll() {
 	var headerHeight = $('#site-header').height();
 	var toutHeight = windowHeight - headerHeight;
 	var navOffset = windowHeight - $('#site-header').height();
-	var wrapOffset = ((windowWidth - $('#site-header > .wrap').width()) / 2) + (windowWidth * .075);
+	var wrapOffset = ((windowWidth - $('#site-header > .wrap').width()) / 2) + 10;
+	if(windowWidth <= 1024){
+		wrapOffset = ((windowWidth - $('#site-header > .wrap').width()) / 2) + (windowWidth * .075);
+	}
 	var scrollReady = true;
 	$(window).resize(function(){
 		windowHeight = $(window).height();
 		windowWidth = $(window).width();
-		wrapOffset = ((windowWidth - $('#site-header > .wrap').width()) / 2) + (windowWidth * .075);
+		wrapOffset = ((windowWidth - $('#site-header > .wrap').width()) / 2) + 10;
+		if(windowWidth <= 1024){
+			wrapOffset = ((windowWidth - $('#site-header > .wrap').width()) / 2) + (windowWidth * .075);
+		}
 		navOffset = windowHeight - $('#site-header').height();
 		headerHeight = $('#site-header').height();
 		toutHeight = windowHeight - headerHeight;
@@ -151,7 +158,7 @@ function homeScroll() {
 		});
 
 		if(hasScrolled == false){
-			$('body').css('overflow', 'hidden');
+			$('.home-content').hide();
 			$('#featured-projects').height(toutHeight);
 			$('#site-header').css('top', toutHeight + 2 + 'px');
 			$('.home-content').css('top', windowHeight + 50 + 'px');
@@ -171,6 +178,7 @@ function homeScroll() {
 
 	function hideTout(){
 		scrollReady = false;
+		$('.home-content').show();
 		$('#tout').animate({
 			top : -toutHeight
 		}, 600);
@@ -208,6 +216,7 @@ function homeScroll() {
 			top : windowHeight + 50
 		},600, function(){
 			$('body').css('overflow', 'hidden');
+			$('.home-content').hide();
 			scrollReady = true;
 		});
 
@@ -258,9 +267,6 @@ function projectGallery(){
                     $(this).css('width', viewHeight * imageRatio + 'px'); 
                     var leftOffset = -(($(this).width() - viewWidth) / 2);
                     $(this).css('margin-left', leftOffset + 'px'); 
-                    
-                    //var topOffset = -((imageHeight - viewHeight) / 2);
-                    //$(this).css('margin-top', topOffset + 'px');  
 
                 }
                 // for width
@@ -268,7 +274,7 @@ function projectGallery(){
                     $(this).css('width', viewWidth + 'px');
                     $(this).css('height', viewWidth / imageRatio + 'px');
                     var topOffset = -(($(this).height() - viewHeight) / 2);
-                    $(this).css('margin-top', topOffset + 'px');
+                    $(this).css('margin-top', '0px');
                 }
 
             });
@@ -480,13 +486,24 @@ function contactForm() {
 // moved this out of the module function so it can be utilized by the dispatch function
 function launchModule(size, contentURL){
 	$('body').append('<div class="page-overlay"></div><iframe src="'+ contentURL +'" class="module" style="display:none;" frameborder="0" scrolling="no"></iframe>');
-		
+		var windowHeight = $(window).height();
+		var windowWidth = $(window).width();
+		$(window).resize(function(){
+			windowHeight = $(window).height();
+			windowWidth = $(window).width();
+		});
 		if(size == 'full'){
-			$('.module').css('position', 'absolute');
-			$('.module').css('left', '5%');
-			$('.module').css('top', '5%');
-			$('.module').css('width', '90%');
-			$('.module').css('height', '90%');
+			$('.module').css('position', 'fixed');
+			$('.module').css('left', windowWidth * .05 + 'px');
+			$('.module').css('top', windowHeight * .05 + 'px');
+			$('.module').css('width', windowWidth * .9 + 'px');
+			$('.module').css('height', windowHeight * .9 + 'px');
+			$(window).resize(function(){
+				$('.module').css('left', windowWidth * .05 + 'px');
+				$('.module').css('top', windowHeight * .05 + 'px');
+				$('.module').css('width', windowWidth * .9 + 'px');
+				$('.module').css('height', windowHeight * .9 + 'px');
+			});
 		}
 		$('.page-overlay').fadeIn('fast');
 		setTimeout(function(){

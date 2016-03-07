@@ -43,6 +43,7 @@ aside {
     overflow: hidden;
     min-width: 520px;
     min-height: 570px;
+    box-shadow:0px 10px 35px rgba(0,0,0,.2);
 }
     .module iframe {
         max-width:100%;
@@ -79,6 +80,7 @@ h2 {
     margin-bottom:20px;
     letter-spacing: .02em;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h3 {
@@ -89,6 +91,7 @@ h3 {
     letter-spacing: .02em;
     color:#000;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 h4 {
     font-size: .875rem;
@@ -476,7 +479,7 @@ img {
     display:inline-block;
     font-family: HelveticaNeue-CondensedBold, Bebas, Helvetica, Arial, sans-serif;
     text-transform: uppercase;
-    font-weight: normal;
+    font-weight: 300;
     font-size: 1.3rem;
     color:#000;
     float:left;
@@ -487,6 +490,7 @@ img {
     margin-left:0;
     letter-spacing: inherit;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
     #site-header #wordmark a {
         color:inherit;
@@ -522,6 +526,7 @@ img {
         #site-nav li a {
             display:block;
             padding:10px;
+            font-weight: normal;
             padding-bottom:6px;
             font-family: HelveticaNeue-CondensedBold, Bebas, Helvetica, Arial, sans-serif;
             color:#000;
@@ -534,6 +539,7 @@ img {
             cursor: pointer;
             border-bottom:4px solid #FFF;
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
             .home #site-nav li a {
                 visibility: hidden;
@@ -650,6 +656,7 @@ img {
             width:93%;
             color:#FFF;
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
 
         }
         .project-list li h5 {
@@ -659,6 +666,7 @@ img {
             margin-bottom:5px;
             text-transform: uppercase;
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         .project-list li .project-meta {
             position: absolute;
@@ -738,7 +746,7 @@ img {
         color:#FFF;
         letter-spacing: .02em;
         -webkit-font-smoothing: antialiased;
-
+        -moz-osx-font-smoothing: grayscale;
     }
 
         #project-info h1 .box {
@@ -799,14 +807,18 @@ img {
 
 /*----------------- WRITING ------------------*/
 
-
+.article-list {
+    width:100%;
+}
 .article-list li {
     list-style: none;
+    width:100%;
     margin-left:0;
     padding-left:0;
 }
     .article-list .article-lead {
         margin-bottom:40px;
+        width:100%;
     }
         .article-list h2 a {
             text-decoration: none;
@@ -821,6 +833,7 @@ img {
     }
 .article-cover {
     margin-bottom:20px;
+    width:100%;
 }
 .book-list {
     border-bottom:1px solid #EAEAEA;
@@ -887,6 +900,7 @@ img {
     margin-bottom:20px;
     letter-spacing: .02em;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 .post-date {
     text-transform: uppercase;
@@ -898,6 +912,7 @@ img {
 }
     .article-page .article-cover {
         margin-bottom:60px;
+        max-width: 100%;
     }
 
     .article-page aside {
@@ -916,6 +931,7 @@ img {
     float:left;
     color:#000;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-weight: bold;
 }
 .article-page #article-content .full-width {
@@ -1004,6 +1020,7 @@ img {
 
 .article-list img {
     margin-bottom:10px;
+    max-width: 100%;
 }
 .about-me {
     overflow: hidden;
@@ -1372,6 +1389,7 @@ input[type="text"], input[type="password"], input[type="number"], input[type="em
     border:1px solid #EAEAEA;
     padding:1.5%;
     display:block;
+    border-radius: 0;
     width:97%;
     font-size:.875rem;
     -webkit-transition: all .15s ease-in-out;
@@ -1395,6 +1413,7 @@ input[type="text"], input[type="password"], input[type="number"], input[type="em
         border:none;
         outline: none;
         background:none;
+        border-radius: 0;
         border:1px solid #FFF;
         padding:1.5%;
         display:block;
@@ -1430,6 +1449,7 @@ input[type="submit"]{
     border:1px solid #EAEAEA;
     padding:10px 30px;
     display:inline-block;
+    border-radius: 0;
     color:#000;
     font-weight: bold;
     font-size: .75rem;
@@ -1454,6 +1474,7 @@ textarea {
     background:none;
     border:1px solid #EAEAEA;
     padding:1.5%;
+    border-radius: 0;
     width:97%;
     display:block;
     min-height: 150px;
@@ -1481,6 +1502,7 @@ textarea {
     width:97%;
     color:#FFF;
     display:block;
+    border-radius: 0;
     min-height: 150px;
     font-size: .875rem;
     -webkit-transition: all .15s ease-in-out;
@@ -1936,7 +1958,13 @@ select {
 
 
 @media screen and (max-width: 420px) {
-
+    #logo {
+        margin-top:3px;
+    }
+    #site-nav li a {
+        padding-top:13px;
+        padding-bottom:10px;
+    }
     .book-list li {
         display:block;
         max-width:inherit;
@@ -1952,7 +1980,7 @@ select {
         #site-nav li {
             width:25%;
             position: relative;
-            font-size:.8rem;
+            font-size:.9rem;
         }
     footer p {
         display:none;
