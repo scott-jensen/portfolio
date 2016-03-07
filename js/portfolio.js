@@ -56,7 +56,28 @@ function featuredProjects(){
 				bottom : -20,
 				opacity : 1
 			}, 400);
-			if(windowWidth > 1024){
+			if(navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1){
+
+				if (currentSlide == slideNum){
+					prevSlide = slideNum;
+					onDeck = 1;
+				}
+				else {
+					onDeck++;
+					prevSlide++;
+				}
+				setTimeout(function(){
+					$('#project-' + currentSlide).animate({
+						left: -windowWidth
+					}, transitionTime, function(){
+						$('#project-' + currentSlide + ' > .tout-element').css('left', 0);
+						$('#project-' + currentSlide).css('visibility', 'hidden');
+						$('#project-'+ currentSlide + ' > .project-details').css({'bottom':'-70px', 'opacity':0})
+					});
+					nextSlide();
+				}, slideTime);
+			}
+			else {
 				$('#project-'+ currentSlide +' .foreground').animate({
 					left : '-15%'
 				}, slideTime, "linear");
@@ -84,26 +105,6 @@ function featuredProjects(){
 					nextSlide();
 
 				});
-			}
-			else {
-				if (currentSlide == slideNum){
-					prevSlide = slideNum;
-					onDeck = 1;
-				}
-				else {
-					onDeck++;
-					prevSlide++;
-				}
-				setTimeout(function(){
-					$('#project-' + currentSlide).animate({
-						left: -windowWidth
-					}, transitionTime, function(){
-						$('#project-' + currentSlide + ' > .tout-element').css('left', 0);
-						$('#project-' + currentSlide).css('visibility', 'hidden');
-						$('#project-'+ currentSlide + ' > .project-details').css({'bottom':'-70px', 'opacity':0})
-					});
-					nextSlide();
-				}, slideTime);
 			}
 			
 
