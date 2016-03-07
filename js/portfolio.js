@@ -260,9 +260,6 @@ function projectGallery(){
                     $(this).css('width', viewHeight * imageRatio + 'px'); 
                     var leftOffset = -(($(this).width() - viewWidth) / 2);
                     $(this).css('margin-left', leftOffset + 'px'); 
-                    
-                    //var topOffset = -((imageHeight - viewHeight) / 2);
-                    //$(this).css('margin-top', topOffset + 'px');  
 
                 }
                 // for width
@@ -270,7 +267,7 @@ function projectGallery(){
                     $(this).css('width', viewWidth + 'px');
                     $(this).css('height', viewWidth / imageRatio + 'px');
                     var topOffset = -(($(this).height() - viewHeight) / 2);
-                    $(this).css('margin-top', topOffset + 'px');
+                    $(this).css('margin-top', '0px');
                 }
 
             });
