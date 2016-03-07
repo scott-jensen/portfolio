@@ -482,15 +482,21 @@ function launchModule(size, contentURL){
 		var windowHeight = $(window).height();
 		var windowWidth = $(window).width();
 		$(window).resize(function(){
-			var windowHeight = $(window).height();
-			var windowWidth = $(window).width();
+			windowHeight = $(window).height();
+			windowWidth = $(window).width();
 		});
 		if(size == 'full'){
 			$('.module').css('position', 'fixed');
-			$('.module').css('left', '5%');
-			$('.module').css('top', '5%');
+			$('.module').css('left', windowWidth * .05 + 'px');
+			$('.module').css('top', windowHeight * .05 + 'px');
 			$('.module').css('width', windowWidth * .9 + 'px');
 			$('.module').css('height', windowHeight * .9 + 'px');
+			$(window).resize(function(){
+				$('.module').css('left', windowWidth * .05 + 'px');
+				$('.module').css('top', windowHeight * .05 + 'px');
+				$('.module').css('width', windowWidth * .9 + 'px');
+				$('.module').css('height', windowHeight * .9 + 'px');
+			});
 		}
 		$('.page-overlay').fadeIn('fast');
 		setTimeout(function(){
