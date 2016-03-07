@@ -799,14 +799,18 @@ img {
 
 /*----------------- WRITING ------------------*/
 
-
+.article-list {
+    width:100%;
+}
 .article-list li {
     list-style: none;
+    width:100%;
     margin-left:0;
     padding-left:0;
 }
     .article-list .article-lead {
         margin-bottom:40px;
+        width:100%;
     }
         .article-list h2 a {
             text-decoration: none;
@@ -818,6 +822,7 @@ img {
 }
     #article-content img {
         max-width: 100%;
+        width:100%;
     }
 .article-cover {
     margin-bottom:20px;
@@ -898,6 +903,7 @@ img {
 }
     .article-page .article-cover {
         margin-bottom:60px;
+        max-width: 100%;
     }
 
     .article-page aside {
@@ -1004,6 +1010,7 @@ img {
 
 .article-list img {
     margin-bottom:10px;
+    max-width: 100%;
 }
 .about-me {
     overflow: hidden;

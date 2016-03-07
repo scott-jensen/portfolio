@@ -151,7 +151,7 @@ function homeScroll() {
 		});
 
 		if(hasScrolled == false){
-			$('body').css('overflow', 'hidden');
+			$('.home-content').hide();
 			$('#featured-projects').height(toutHeight);
 			$('#site-header').css('top', toutHeight + 2 + 'px');
 			$('.home-content').css('top', windowHeight + 50 + 'px');
@@ -171,6 +171,7 @@ function homeScroll() {
 
 	function hideTout(){
 		scrollReady = false;
+		$('.home-content').show();
 		$('#tout').animate({
 			top : -toutHeight
 		}, 600);
@@ -208,6 +209,7 @@ function homeScroll() {
 			top : windowHeight + 50
 		},600, function(){
 			$('body').css('overflow', 'hidden');
+			$('.home-content').hide();
 			scrollReady = true;
 		});
 
@@ -480,13 +482,18 @@ function contactForm() {
 // moved this out of the module function so it can be utilized by the dispatch function
 function launchModule(size, contentURL){
 	$('body').append('<div class="page-overlay"></div><iframe src="'+ contentURL +'" class="module" style="display:none;" frameborder="0" scrolling="no"></iframe>');
-		
+		var windowHeight = $(window).height();
+		var windowWidth = $(window).width();
+		$(window).resize(function(){
+			var windowHeight = $(window).height();
+			var windowWidth = $(window).width();
+		});
 		if(size == 'full'){
-			$('.module').css('position', 'absolute');
+			$('.module').css('position', 'fixed');
 			$('.module').css('left', '5%');
 			$('.module').css('top', '5%');
-			$('.module').css('width', '90%');
-			$('.module').css('height', '90%');
+			$('.module').css('width', windowWidth * .9 + 'px');
+			$('.module').css('height', windowHeight * .9 + 'px');
 		}
 		$('.page-overlay').fadeIn('fast');
 		setTimeout(function(){
