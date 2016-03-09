@@ -30,68 +30,9 @@
         $(document).ready(function(){
             featuredProjects();
             homeScroll();
-            $('.home-content').css('height', $(window).height() + 100 + 'px');
-
-
-            // project thumbnail hover states
-            function projectOverlay (){
-                $('.project').mouseenter(function(){
-           
-                    var projectOverlay = $(this).find('.overlay');
-                    var projectTitle = $(this).find('h4');
-                    var projectMeta = $(this).find('.project-meta');
-
-                    $(projectOverlay).stop();
-                    $(projectTitle).stop();
-                    $(projectMeta).stop();  
-
-                    $(projectOverlay).animate({
-                        left : '0px'
-                    }, 300);
-                    $(projectTitle).animate({
-                        left : '20px'
-                    }, 370);
-                    $(projectMeta).animate({
-                        left : '20px'
-                    }, 440);
-
-                    $('.project').mouseleave(function(){  
-                        $(projectOverlay).stop();
-                        $(projectTitle).stop();
-                        $(projectMeta).stop();        
-                        $(projectOverlay).animate({
-                            left : '120%'
-                        }, 320);
-                        $(projectTitle).animate({
-                            left : '480px'
-                        }, 430);
-                        $(projectMeta).animate({
-                            left : '580px'
-                        }, 490);
-                    });
-
-                });
-            }
-            
-            $('.project').click(function(){
-                window.location.hash = this.id + '-gallery';
-            });
-
-
-            // Dribbble Shots
-            var dataURL = "https://api.dribbble.com/v1/users/ScottJensen/shots?access_token=74a5e6faf815227977fab652c9c6cfd67c70d3ade9fdfc3c1818258db190b3bb"
-            $.getJSON(dataURL, function(dribbbleList) {
-                for(i = 1; i <= 6; i++){
-                    var shotHTML = '<li class="project thumb-' + i + '"><div class="live-area"><div class="overlay"></div><img src="' + dribbbleList[i-1].images.normal + '" /><h4 class="project-title">' + dribbbleList[i-1].title + '</h4><div class="project-meta"><h5>Description:</h5><p>' + dribbbleList[i-1].description.replace(/(<([^>]+)>)/ig,"").substring(0,78) + '...</p></div></div><a href="' + dribbbleList[i-1].html_url + '" class="project-link" target="_blank"></a></li>';
-                    $('#dribbble-gallery .project-list').append(shotHTML);
-                    
-                };
-                projectOverlay();
-            });
-
+            dribbbleGallery();
             module(); 
-            dispatch();  
-            
+            dispatch();    
         });
 
     </script>
