@@ -645,7 +645,7 @@ img {
         }
 
         .project-list li  h4 {
-            font-family: HelveticaNeue-CondensedBold, Helvetica, Arial, sans-serif;
+            font-family: HelveticaNeue-CondensedBold, Bebas, Helvetica, Arial, sans-serif;
             font-size: 1.65em;
             font-weight: normal;
             text-transform: uppercase;
@@ -661,10 +661,11 @@ img {
 
         }
         .project-list li h5 {
-            font-family: HelveticaNeue-CondensedBold, Helvetica, Arial, sans-serif;
+            font-family: HelveticaNeue-CondensedBold, Bebas, Helvetica, Arial, sans-serif;
             font-size:1.1em;
             color:#666666;
             margin-bottom:5px;
+            font-weight:normal;
             text-transform: uppercase;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;

@@ -285,7 +285,7 @@ function projectGallery(){
             });
         }
 
-        //displayGallery();
+        displayGallery();
         galleryVisible = true;
 
     };
