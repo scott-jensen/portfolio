@@ -162,7 +162,7 @@
         <div class="wrap">
             <h2><span class="box"></span>Project Gallery</h2>
             <ul class="project-list">
-                <li class="project thumb-1" id="project1">
+                <li class="project thumb-1" id="eventboard-product">
                     <div class="live-area">
                         <div class="overlay"></div>
                         <img src="<?php echo bloginfo( 'template_directory' ) . '/images/eventboard-product-thumb.jpg'; ?>" alt="thumbnail" />
@@ -174,9 +174,9 @@
                             </div>
 
                     </div>
-                    <a href="project1" class="project-link module-link" size="full"></a>
+                    <a href="/work/eventboard-product" class="project-link module-link" size="full"></a>
                 </li>
-                <li class="project thumb-2" id="project2">
+                <li class="project thumb-2" id="ender-labs">
                     <div class="live-area">
                         <div class="overlay"></div>
                         <img src="<?php echo bloginfo( 'template_directory' ) . '/images/ender-thumb.jpg'; ?>" alt="thumbnail" />
@@ -188,63 +188,63 @@
                             </div>
 
                     </div>
-                    <a href="" class="project-link"></a>
+                    <a href="/work/ender-labs" class="project-link module-link" size="full"></a>
                 </li>
-                <li class="project thumb-3" id="project3">
+                <li class="project thumb-3" id="track-8">
                     <div class="live-area">
                         <div class="overlay"></div>
                         <img src="<?php echo bloginfo( 'template_directory' ) . '/images/track8-thumb.jpg'; ?>" alt="thumbnail" />
 
-                            <h4 class="project-title">Ender Labs</h4>
+                            <h4 class="project-title">Track 8</h4>
                             <div class="project-meta">
                                 <h5>Media:</h5>
                                 <p>Identity, Website, Print</p>
                             </div>
 
                     </div>
-                    <a href="" class="project-link"></a>
+                    <a href="/work/track-8" class="project-link module-link" size="full"></a>
                 </li>
-                <li class="project thumb-4" id="project4">
+                <li class="project thumb-4" id="neutron-interactive">
                     <div class="live-area">
                         <div class="overlay"></div>
                         <img src="<?php echo bloginfo( 'template_directory' ) . '/images/neutron-thumb.jpg'; ?>" alt="thumbnail" />
 
-                            <h4 class="project-title">Ender Labs</h4>
+                            <h4 class="project-title">Neutron Interactive</h4>
                             <div class="project-meta">
                                 <h5>Media:</h5>
                                 <p>Identity, Website, Print</p>
                             </div>
 
                     </div>
-                    <a href="" class="project-link"></a>
+                    <a href="/work/neutron-interactive" class="project-link module-link" size="full"></a>
                 </li>
-                <li class="project thumb-5" id="project5">
+                <li class="project thumb-5" id="iphone-blueprints">
                     <div class="live-area">
                         <div class="overlay"></div>
                         <img src="<?php echo bloginfo( 'template_directory' ) . '/images/blueprints-thumb.jpg'; ?>" alt="thumbnail" />
 
-                            <h4 class="project-title">Ender Labs</h4>
+                            <h4 class="project-title">iPhone Blueprints</h4>
                             <div class="project-meta">
                                 <h5>Media:</h5>
                                 <p>Identity, Website, Print</p>
                             </div>
 
                     </div>
-                    <a href="" class="project-link"></a>
+                    <a href="/work/iphone-blueprints" class="project-link module-link" size="full" ></a>
                 </li>
-                <li class="project thumb-6" id="project6">
+                <li class="project thumb-6" id="eventboard-marketing">
                     <div class="live-area">
                         <div class="overlay"></div>
                         <img src="<?php echo bloginfo( 'template_directory' ) . '/images/eventboard-marketing-thumb.jpg'; ?>" alt="thumbnail" />
 
-                            <h4 class="project-title">Ender Labs</h4>
+                            <h4 class="project-title">EventBoard Marketing</h4>
                             <div class="project-meta">
                                 <h5>Media:</h5>
                                 <p>Identity, Website, Print</p>
                             </div>
 
                     </div>
-                    <a href="" class="project-link"></a>
+                    <a href="/work/eventboard-marketing" class="project-link module-link" size="full"></a>
                 </li>
             </ul>
         </div>

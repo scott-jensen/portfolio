@@ -411,7 +411,7 @@ function dispatch(){
 		var windowHash = window.location.hash;
 		// if there is a hash but they are on mobile
 		if(windowHash.length > 1 && windowWidth < 768){
-			var projectNum = windowHash.split('-')[0];
+			var projectNum = windowHash.split('-gallery')[0];
 			console.debug(projectNum.split('#')[1]);
 			window.location.replace('/' + projectNum.split('#')[1]);
 		}
