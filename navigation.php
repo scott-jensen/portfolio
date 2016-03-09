@@ -8,7 +8,7 @@
                 <div class="logo-4"></div>
             </a>
         </div>
-        <h1 id="wordmark">Scott Jensen <span>Design</span></h1>
+        <h1 id="wordmark"><a href="http://scottjensen.design">Scott Jensen <span>Design</span></a></h1>
         <nav id="site-nav">
             <ul id="main-nav">    
                 <li><a href="/work" class="black-btn work-nav">Work</a></li>

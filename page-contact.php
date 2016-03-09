@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<head>
-	<title>Scott Jensen Design ▪ Contact</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/base.css" />
-    <!-- Load Jquery -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script>
+<?php include(TEMPLATEPATH . '/header.php'); ?>
+<body class="contact-page dark">
+	<script>
     $(document).ready(function(){
     	$('.contact-nav').addClass('selected');
     	if(self == top){
@@ -21,30 +14,7 @@
     })
     	
     </script>
-
-</head>
-<body class="contact-page dark">
-	<header id="site-header">
-	    <div class="wrap">
-	        <div id="logo">
-	            <a href="index.html">
-	                <div class="logo-1"></div>
-	                <div class="logo-2"></div>
-	                <div class="logo-3"></div>
-	                <div class="logo-4"></div>
-	            </a>
-	        </div>
-	        <h1 id="wordmark"><a href="index.html">Scott Jensen <span>Design</span></a></h1>
-	        <nav id="site-nav">
-	            <ul id="main-nav">    
-	                <li><a href="index.html" class="black-btn work-nav">Work</a></li>
-	                <li><a href="writing.html" class="black-btn writing-nav">Writing</a></li>
-	                <li><a href="about.html" class="black-btn about-nav">About</a></li>
-	                <li><a href="contact.html" class="black-btn contact-nav module-link">Contact</a></li>
-	            </ul>
-	        </nav>
-	    </div>
-	</header>
+<?php include(TEMPLATEPATH . '/navigation.php'); ?>
 	<section class="contact-me">
 
 		<div class="wrap">
@@ -75,16 +45,5 @@
 		</div>
 
 	</section>
-	<footer>
-    <div class="wrap">
-        <p>
-        &copy; 2015 Scott Jensen
-        </p>
-        <div class="share-links">
-            <a href="https://twitter.com/_scottjensen" target="_blank" class="twitter">Twitter</a>
-            <a href="https://dribbble.com/scottjensen" target="_blank" class="dribbble">Dribbble</a>
-            <a href="https://github.com/scott-jensen" target="_blank" class="github">Github</a>
-        </div>
-    </div>
-</footer> 
-</body>
+<?php include(TEMPLATEPATH . '/footer.php'); ?>
+	

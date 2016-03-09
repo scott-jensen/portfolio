@@ -170,7 +170,8 @@ function homeScroll() {
 	$(window).resize(positionTout);
 
 
-	$('#wordmark').click(function(){
+	$('#wordmark').click(function(event){
+		event.preventDefault();
 		if(hasScrolled == true){
 			showTout();
 		}

@@ -1,31 +1,5 @@
-<!DOCTYPE html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
-
-
-    <title>Scott Jensen Design ▪ About</title>
-    <meta name="description" content="" />
-    <link rel="icon" type="image/png" href="favicon.png">
-
-    <!-- iTunes App Link 
-    <meta name="apple-itunes-app" content="app-id=55555555">
-    -->
-
-    <!-- Homescreen Bookmark Icon
-    <link rel="apple-touch-icon-precomposed" href="sample-icon.png"/>
-    -->
-
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/base.css" />
-
-    
-    <!-- Load Jquery -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-
-    <script type="text/javascript" src="js/portfolio.js"></script>
-    <script type="text/javascript" src="js/jquery.fancybox-1.3.4.js"></script>
-
+<?php include(TEMPLATEPATH . '/header.php'); ?>
+<body class="article-page about">
     <script>
 
         $(document).ready(function(){
@@ -37,46 +11,13 @@
         });
 
     </script>
-
-    <!--[if IE]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]--> 
-
-
-    <!-- Use this block for the Fancybox pluggin  
-    <link rel="stylesheet" href="css/fancybox2.css" />
-    <script type="text/javascript" src="js/jquery.fancybox-1.3.4.js"></script>
-    -->
-
-</head>
-<body class="article-page about">
-<header id="site-header">
-    <div class="wrap">
-        <div id="logo">
-            <a href="index.html">
-                <div class="logo-1"></div>
-                <div class="logo-2"></div>
-                <div class="logo-3"></div>
-                <div class="logo-4"></div>
-            </a>
-        </div>
-        <h2 id="wordmark"><a href="index.html">Scott Jensen <span>Design</span></a></h2>
-        <nav id="site-nav">
-            <ul>    
-                <li><a href="index.html" class="black-btn work-nav">Work</a></li>
-                <li><a href="writing.html" class="black-btn writing-nav">Writing</a></li>
-                <li><a href="about.html" class="black-btn about-nav">About</a></li>
-                <li><a href="contact.html" class="black-btn contact-nav module-link">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<?php include(TEMPLATEPATH . '/navigation.php'); ?>
 
 <section id="content">
     <div class="wrap">
 
         <h1 id="article-title"><span class="box"></span>Let Me Introduce Myself</h1>
-        <img src="images/article-image.jpg" alt="" class="article-cover" />
+        <img src="<?php echo bloginfo( 'template_directory' ) . '/images/article-image.jpg'; ?>" alt="" class="article-cover" />
         <section id="article-content">
 
                     <article class="entry" id="entry">
@@ -255,19 +196,19 @@
                     <h2><span class="box"></span>Where You'll Find My Work</h2>
                     <ul class="press-logos full-width">
                         <li>
-                            <a href="http://lifehacker.com/5908148/track-8-is-a-beautiful-metro-inspired-music-player-for-the-ipad" target="_blank"><img src="images/logo-lifehacker.jpg" alt="Lifehacker" /></a>
+                            <a href="http://lifehacker.com/5908148/track-8-is-a-beautiful-metro-inspired-music-player-for-the-ipad" target="_blank"><img src="<?php echo bloginfo( 'template_directory' ) . '/images/logo-lifehacker.jpg'; ?>" alt="Lifehacker" /></a>
                         </li>
                         <li>
-                            <a href="http://www.wsj.com/articles/new-office-flashpoint-who-gets-the-conference-room-1413307377" target="_blank"><img src="images/logo-wsj.jpg" alt="WSJ" /></a>
+                            <a href="http://www.wsj.com/articles/new-office-flashpoint-who-gets-the-conference-room-1413307377" target="_blank"><img src="<?php echo bloginfo( 'template_directory' ) . '/images/logo-wsj.jpg'; ?>" alt="WSJ" /></a>
                         </li>
                         <li>
-                            <a href="http://beautifulpixels.com/books/iphone-blueprints-a-delicious-guide-for-effective-ui-design/" target="_blank"><img src="images/logo-bp.jpg" alt="Beautiful Pixels" /></a>
+                            <a href="http://beautifulpixels.com/books/iphone-blueprints-a-delicious-guide-for-effective-ui-design/" target="_blank"><img src="<?php echo bloginfo( 'template_directory' ) . '/images/logo-bp.jpg'; ?>" alt="Beautiful Pixels" /></a>
                         </li>
                         <li>
-                            <a href="http://techcrunch.com/2015/11/11/eventboard-a-smart-conference-room-booking-startup-raises-6-5m/" target="_blank"><img src="images/logo-techcrunch.jpg" alt="VentureBeat" /></a>
+                            <a href="http://techcrunch.com/2015/11/11/eventboard-a-smart-conference-room-booking-startup-raises-6-5m/" target="_blank"><img src="<?php echo bloginfo( 'template_directory' ) . '/images/logo-techcrunch.jpg'; ?>" alt="VentureBeat" /></a>
                         </li>
                         <li>
-                            <a href="http://www.forbes.com/sites/katiasavchuk/2014/10/01/room-scheduling-startup-raises-1-5-million-from-google-ventures-marc-benioff-zetta-venture-partners/" target="_blank"><img src="images/logo-forbes.jpg" alt="Forbes" /></a>
+                            <a href="http://www.forbes.com/sites/katiasavchuk/2014/10/01/room-scheduling-startup-raises-1-5-million-from-google-ventures-marc-benioff-zetta-venture-partners/" target="_blank"><img src="<?php echo bloginfo( 'template_directory' ) . '/images/logo-forbes.jpg'; ?>" alt="Forbes" /></a>
                         </li>
                         
                         
@@ -281,7 +222,7 @@
 
         <aside>
 
-            <h3 class="find-me"><img src="images/avatar.png" alt="avatar" class="avatar" />Where You <br />Can Find Me</h3>
+            <h3 class="find-me"><img src="<?php echo bloginfo( 'template_directory' ) . '/images/avatar.png'; ?>" alt="avatar" class="avatar" />Where You <br />Can Find Me</h3>
             <ul class="share-links social-media">
                 <li>
                     <a href="https://twitter.com/_scottjensen" target="_blank" class="twitter">Twitter</a>
@@ -306,24 +247,4 @@
     </div>
 
 </section>
-<footer>
-    <div class="wrap">
-        <p>
-        &copy; 2015 Scott Jensen
-        </p>
-        <div class="share-links">
-            <a href="https://twitter.com/_scottjensen" target="_blank" class="twitter">Twitter</a>
-            <a href="https://dribbble.com/scottjensen" target="_blank" class="dribbble">Dribbble</a>
-            <a href="https://github.com/scott-jensen" target="_blank" class="github">Github</a>
-        </div>
-    </div>
-</footer>
-<!--
-<div class="overlay"></div>
-<section id="contact-form" class="module">
-    <iframe id="contact-iframe" src="contact.html" frameborder="0" scrolling="no"></iframe>
-</section>
--->
-</body>
-
-</html>
+<?php include(TEMPLATEPATH . '/footer.php'); ?>
