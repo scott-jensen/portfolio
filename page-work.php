@@ -174,7 +174,7 @@
                             </div>
 
                     </div>
-                    <a href="portfolio/project-1" class="project-link module-link" size="full"></a>
+                    <a href="project1" class="project-link module-link" size="full"></a>
                 </li>
                 <li class="project thumb-2" id="project2">
                     <div class="live-area">
