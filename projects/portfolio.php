@@ -1,69 +1,19 @@
-<!DOCTYPE html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
+<?php /* Template Name: Project Template */ ?>
+<?php include(TEMPLATEPATH . '/header.php'); ?>
 
-    <title>Scott Jensen Design</title>
-    <meta name="description" content="" />
-    <link rel="icon" type="image/png" href="favicon.png">
-
-    <!-- iTunes App Link 
-    <meta name="apple-itunes-app" content="app-id=55555555">
-    -->
-
-    <!-- Homescreen Bookmark Icon
-    <link rel="apple-touch-icon-precomposed" href="sample-icon.png"/>
-    -->
-
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/preloader.css" type="text/css">
-    <link rel="stylesheet" href="../css/base.css" />
-
-    
-    <!-- Load Jquery -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-
-    <script type="text/javascript" src="../js/portfolio.js"></script>
-
-    <script>
-
-    $(document).ready(function(){
-        $('.work-nav').addClass('selected');
-        projectGallery();
-        module();
-        dispatch();
-
-    });
-
-    </script>
-
-    <!--[if IE]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]--> 
-
-</head>
 <body class="project-page" id="project1">
-<header id="site-header">
-    <div class="wrap">
-        <div id="logo">
-            <a href="../index.html">
-                <div class="logo-1"></div>
-                <div class="logo-2"></div>
-                <div class="logo-3"></div>
-                <div class="logo-4"></div>
-            </a>
-        </div>
-        <h1 id="wordmark"><a href="../index.html">Scott Jensen <span>Design</span></a></h1>
-        <nav id="site-nav">
-            <ul id="main-nav">    
-                <li><a href="index.html" class="black-btn work-nav selected">Work</a></li>
-                <li><a href="../writing.html" class="black-btn writing-nav">Writing</a></li>
-                <li><a href="../about.html" class="black-btn about-nav">About</a></li>
-                <li><a href="../contact.html" class="black-btn contact-nav module-link">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<script>
+
+$(document).ready(function(){
+    $('.work-nav').addClass('selected');
+    projectGallery();
+    module();
+    dispatch();
+
+});
+
+</script>
+<?php include(TEMPLATEPATH . '/navigation.php'); ?>
 <div id="full-project">
     <article id="project-info">
 

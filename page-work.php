@@ -1,48 +1,17 @@
-<!DOCTYPE html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
-
-    <title>Scott Jensen Design</title>
-    <meta name="description" content="" />
-    <link rel="icon" type="image/png" href="favicon.png">
-
-    <!-- iTunes App Link 
-    <meta name="apple-itunes-app" content="app-id=55555555">
-    -->
-
-    <!-- Homescreen Bookmark Icon
-    <link rel="apple-touch-icon-precomposed" href="sample-icon.png"/>
-    -->
-
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/featured-work.css" />
-    <link rel="stylesheet" href="css/preloader.css" />
-
-    
-    <!-- Load Jquery -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script type="text/javascript" src="js/portfolio.js"></script>
-
-    <script>
-
-        $(document).ready(function(){
-            featuredProjects();
-            homeScroll();
-            dribbbleGallery();
-            module(); 
-            dispatch();    
-        });
-
-    </script>
-
-    <!--[if IE]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]--> 
-
-</head>
+<?php include(TEMPLATEPATH . '/header.php'); ?>
 <body class="home">
+
+<script>
+
+    $(document).ready(function(){
+        featuredProjects();
+        homeScroll();
+        dribbbleGallery();
+        module(); 
+        dispatch();    
+    });
+
+</script>
 
 <section id="tout">
     
@@ -80,7 +49,7 @@
                 <div class="bar bar4 project-obj"></div>
                 <div class="bar bar5 project-obj"></div>
                 <div class="bar bar6 project-obj"></div>
-                <img src="images/tout-sample.png" alt="featured project" class=" artwork ipad project-obj" />
+                <img src="<?php echo bloginfo( 'template_directory' ) . '/images/tout-sample.png'; ?>" alt="featured project" class=" artwork ipad project-obj" />
             </div>
             <div class="project-details">
                 <article>
@@ -126,7 +95,7 @@
                 <div class="bar bar4 project-obj"></div>
                 <div class="bar bar5 project-obj"></div>
                 <div class="bar bar6 project-obj"></div>
-                <img src="images/tout-sample.png" alt="featured project" class="ipad project-obj artwork" />
+                <img src="<?php echo bloginfo( 'template_directory' ) . '/images/tout-sample.png'; ?>" alt="featured project" class="ipad project-obj artwork" />
             </div>
             <div class="project-details">
                 <article>
@@ -172,7 +141,7 @@
                 <div class="bar bar4 project-obj"></div>
                 <div class="bar bar5 project-obj"></div>
                 <div class="bar bar6 project-obj"></div>
-                <img src="images/tout-sample.png" alt="featured project" class="ipad project-obj artwork" />
+                <img src="<?php echo bloginfo( 'template_directory' ) . '/images/tout-sample.png'; ?>" alt="featured project" class="ipad project-obj artwork" />
             </div>
             <div class="project-details">
                 <article>
@@ -187,28 +156,7 @@
     </ul>
 
 </section>
-
-<header id="site-header">
-    <div class="wrap">
-        <div id="logo">
-            <a href="index.html">
-                <div class="logo-1"></div>
-                <div class="logo-2"></div>
-                <div class="logo-3"></div>
-                <div class="logo-4"></div>
-            </a>
-        </div>
-        <h1 id="wordmark">Scott Jensen <span>Design</span></h1>
-        <nav id="site-nav">
-            <ul id="main-nav">    
-                <li><a class="black-btn work-nav">Work</a></li>
-                <li><a href="writing.html" class="black-btn writing-nav">Writing</a></li>
-                <li><a href="about.html" class="black-btn about-nav">About</a></li>
-                <li><a href="contact.html" class="black-btn contact-nav module-link">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<?php include(TEMPLATEPATH . '/navigation.php'); ?>
 <div class="home-content">
     <section id="project-gallery">
         <div class="wrap">
@@ -217,7 +165,7 @@
                 <li class="project thumb-1" id="project1">
                     <div class="live-area">
                         <div class="overlay"></div>
-                        <img src="images/eventboard-product-thumb.jpg" alt="thumbnail" />
+                        <img src="<?php echo bloginfo( 'template_directory' ) . '/images/eventboard-product-thumb.jpg'; ?>" alt="thumbnail" />
 
                             <h4 class="project-title">EventBoard Product</h4>
                             <div class="project-meta">
@@ -226,12 +174,12 @@
                             </div>
 
                     </div>
-                    <a href="projects/project1.html" class="project-link module-link" size="full"></a>
+                    <a href="portfolio/project-1" class="project-link module-link" size="full"></a>
                 </li>
                 <li class="project thumb-2" id="project2">
                     <div class="live-area">
                         <div class="overlay"></div>
-                        <img src="images/ender-thumb.jpg" alt="thumbnail" />
+                        <img src="<?php echo bloginfo( 'template_directory' ) . '/images/ender-thumb.jpg'; ?>" alt="thumbnail" />
 
                             <h4 class="project-title">Ender Labs</h4>
                             <div class="project-meta">
@@ -245,7 +193,7 @@
                 <li class="project thumb-3" id="project3">
                     <div class="live-area">
                         <div class="overlay"></div>
-                        <img src="images/track8-thumb.jpg" alt="thumbnail" />
+                        <img src="<?php echo bloginfo( 'template_directory' ) . '/images/track8-thumb.jpg'; ?>" alt="thumbnail" />
 
                             <h4 class="project-title">Ender Labs</h4>
                             <div class="project-meta">
@@ -259,7 +207,7 @@
                 <li class="project thumb-4" id="project4">
                     <div class="live-area">
                         <div class="overlay"></div>
-                        <img src="images/neutron-thumb.jpg" alt="thumbnail" />
+                        <img src="<?php echo bloginfo( 'template_directory' ) . '/images/neutron-thumb.jpg'; ?>" alt="thumbnail" />
 
                             <h4 class="project-title">Ender Labs</h4>
                             <div class="project-meta">
@@ -273,7 +221,7 @@
                 <li class="project thumb-5" id="project5">
                     <div class="live-area">
                         <div class="overlay"></div>
-                        <img src="images/blueprints-thumb.jpg" alt="thumbnail" />
+                        <img src="<?php echo bloginfo( 'template_directory' ) . '/images/blueprints-thumb.jpg'; ?>" alt="thumbnail" />
 
                             <h4 class="project-title">Ender Labs</h4>
                             <div class="project-meta">
@@ -287,7 +235,7 @@
                 <li class="project thumb-6" id="project6">
                     <div class="live-area">
                         <div class="overlay"></div>
-                        <img src="images/eventboard-marketing-thumb.jpg" alt="thumbnail" />
+                        <img src="<?php echo bloginfo( 'template_directory' ) . '/images/eventboard-marketing-thumb.jpg'; ?>" alt="thumbnail" />
 
                             <h4 class="project-title">Ender Labs</h4>
                             <div class="project-meta">
@@ -325,18 +273,4 @@
             </ul>
         </div>
     </section>
-
-<footer>
-    <div class="wrap">
-        <p>
-        &copy; 2015 Scott Jensen
-        </p>
-        <div class="share-links">
-            <a href="https://twitter.com/_scottjensen" target="_blank" class="twitter">Twitter</a>
-            <a href="https://dribbble.com/scottjensen" target="_blank" class="dribbble">Dribbble</a>
-            <a href="https://github.com/scott-jensen" target="_blank" class="github">Github</a>
-        </div>
-    </div>
-</footer>
-</body>
-</html>
+<?php include(TEMPLATEPATH . '/footer.php'); ?>

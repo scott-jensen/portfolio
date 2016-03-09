@@ -227,7 +227,11 @@ function homeScroll() {
 		$('#logo').fadeOut();
 		$('.work-nav').removeClass('selected');
 	}
-	$('.work-nav').click(hideTout);
+	$('.work-nav').click(function(event){
+		event.preventDefault();
+		hideTout();
+		$('.work-nav').blur();
+	});
 
 	$('#site-header').css('border-top', '1px solid #EAEAEA');
 }
@@ -398,7 +402,7 @@ function dispatch(){
 	// rediret to the homepage if screen size is bigger than iPad portrait
 	if($('body').hasClass('project-page') && !$('body').hasClass('home')){
 		if(windowWidth > 768 && self == top ) {
-			window.location.replace('../index.html#' + projectID + '-gallery')
+			window.location.replace('http://scottjensen.design#' + projectID + '-gallery')
 		}
 	}
 	// check for hash and load project if mobile and on homepage
@@ -408,12 +412,12 @@ function dispatch(){
 		if(windowHash.length > 1 && windowWidth < 768){
 			var projectNum = windowHash.split('-')[0];
 			console.debug(projectNum.split('#')[1]);
-			window.location.replace('projects/' + projectNum.split('#')[1] + '.html' );
+			window.location.replace('/' + projectNum.split('#')[1]);
 		}
 		// if there is a hash on desktop, load the project
 		else if(windowHash.length > 1){
 			var projectNum = windowHash.split('-')[0];
-			launchModule('full', 'projects/' + projectNum.split('#')[1] + '.html');
+			launchModule('full', '/' + projectNum.split('#')[1]);
 		}
 	}
 }
