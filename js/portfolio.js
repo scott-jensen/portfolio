@@ -472,6 +472,9 @@ function projectOverlay (){
     $('.project').click(function(){
         window.location.hash = this.id + '-gallery';
     });
+    $('.related-project').click(function(){
+        window.top.location.hash = this.id + '-gallery';
+    });
 }
 
 //Dribbble shots

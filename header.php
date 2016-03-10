@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <head>
+    <!--
+
+    Well Hello there! Usually I make someone buy me a drink before
+    I'll show them my code, but I guess for you I can make an
+    exception. This site was designed, built, and deployed by yours
+    truly. Other than jQuery for a javascript library and Wordpress
+    to handle templating and the CMS of the blog, this site was built
+    without any pluggins or 3rd party libraries. Yep, every single
+    line was hand-crafted with love and purpose. Some of the javascript
+    got a little messy - I mean how many times should I really have to
+    capture the window width, amiright? I'll clean that up later. But 
+    overall it's a site that accurately represents my skill set and
+    abilities in both design and front-end development. I sincerely
+    hope that you enjoy it!
+
+    -->
+    
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
-
     <title>Scott Jensen Design</title>
     <meta name="description" content="" />
     <link rel="icon" type="image/png" href="favicon.png">

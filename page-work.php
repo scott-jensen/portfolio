@@ -55,7 +55,8 @@
                 <article>
                     <h2><span class="box"></span>EventBoard Product</h2>
                     <p>
-                        EventBoard builds beautiful, powerful apps and dashboards that change employee productivity in the enterprise.
+                        EventBoard builds beautiful, powerful apps and dashboards 
+                        that change employee productivity in the enterprise.
                     </p>
                     <a href="work/eventboard-product" class="module-link black-btn" size="full">View Project</a>
                 </article>
@@ -101,7 +102,8 @@
                 <article>
                     <h2><span class="box"></span>iPhone Blueprints</h2>
                     <p>
-                        This interactive iBook focusses on the fundamentals of user interface design as they pertain to iPhone apps.
+                        This interactive iBook focusses on the fundamentals of user 
+                        interface design as they pertain to iPhone apps.
                     </p>
                     <a href="work/iphone-blueprints" class="module-link black-btn" size="full">View Project</a>
                 </article>
@@ -147,7 +149,8 @@
                 <article>
                     <h2><span class="box"></span>Track 8</h2>
                     <p>
-                        Track 8 was a music player inspired by the metro design language. It was flat before flat was cool.
+                        Track 8 was a music player inspired by the metro design language. 
+                        It was flat before flat was cool.
                     </p>
                     <a href="work/track-8" class="module-link black-btn" size="full">View Project</a>
                 </article>

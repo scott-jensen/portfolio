@@ -1,7 +1,7 @@
 <footer>
     <div class="wrap">
         <p>
-        &copy; 2015 Scott Jensen
+        &copy; <?php echo date("Y"); ?> Scott Jensen
         </p>
         <div class="share-links">
             <a href="https://twitter.com/_scottjensen" target="_blank" class="twitter">Twitter</a>
