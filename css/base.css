@@ -952,6 +952,10 @@ dd {
     -moz-osx-font-smoothing: grayscale;
     font-weight: bold;
 }
+    .article-page blockquote p {
+        font-size:1em;
+        margin-bottom:0;
+    }
 
 .article-page #article-content .full-width {
     width:160%;
