@@ -4,7 +4,7 @@
 <script>
 
     $(document).ready(function(){
-        featuredProjects();
+        //featuredProjects();
         homeScroll();
         dribbbleGallery();
         module(); 
@@ -53,11 +53,11 @@
             </div>
             <div class="project-details">
                 <article>
-                    <h2><span class="box"></span>Project Title</h2>
+                    <h2><span class="box"></span>EventBoard Product</h2>
                     <p>
-                        Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue.
+                        EventBoard builds beautiful, powerful apps and dashboards that change employee productivity in the enterprise.
                     </p>
-                    <a href="projects/project1.html" class="module-link black-btn" size="full">View Project</a>
+                    <a href="work/eventboard-product" class="module-link black-btn" size="full">View Project</a>
                 </article>
             </div>
         </li>
@@ -99,11 +99,11 @@
             </div>
             <div class="project-details">
                 <article>
-                    <h2><span class="box"></span>Project Title</h2>
+                    <h2><span class="box"></span>iPhone Blueprints</h2>
                     <p>
-                        Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue.
+                        This interactive iBook focusses on the fundamentals of user interface design as they pertain to iPhone apps.
                     </p>
-                    <a href="projects/project1.html" class="module-link black-btn" size="full">View Project</a>
+                    <a href="work/iphone-blueprints" class="module-link black-btn" size="full">View Project</a>
                 </article>
             </div>
         </li>
@@ -145,11 +145,11 @@
             </div>
             <div class="project-details">
                 <article>
-                    <h2><span class="box"></span>Project Title</h2>
+                    <h2><span class="box"></span>Track 8</h2>
                     <p>
-                        Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue.
+                        Track 8 was a music player inspired by the metro design language. It was flat before flat was cool.
                     </p>
-                    <a href="projects/project1.html" class="module-link black-btn" size="full">View Project</a>
+                    <a href="work/track-8" class="module-link black-btn" size="full">View Project</a>
                 </article>
             </div>
         </li>
@@ -157,7 +157,7 @@
 
 </section>
 <?php include(TEMPLATEPATH . '/navigation.php'); ?>
-<div class="home-content">
+<div class="home-content" style="display:none;">
     <section id="project-gallery">
         <div class="wrap">
             <h2><span class="box"></span>Project Gallery</h2>
@@ -170,7 +170,10 @@
                             <h4 class="project-title">EventBoard Product</h4>
                             <div class="project-meta">
                                 
-                                <p>Identity, Website, Print</p>
+                                <p>
+                                    Enterprise level apps, websites, and dashboards 
+                                    centered around employee productivity
+                                </p>
                             </div>
 
                     </div>
@@ -183,8 +186,11 @@
 
                             <h4 class="project-title">Ender Labs</h4>
                             <div class="project-meta">
-                                <h5>Media:</h5>
-                                <p>Identity, Website, Print</p>
+                                
+                                <p>
+                                    Beautiful iPhone and iPad apps, employee 
+                                    materials, and company website
+                                </p>
                             </div>
 
                     </div>
@@ -197,8 +203,10 @@
 
                             <h4 class="project-title">Track 8</h4>
                             <div class="project-meta">
-                                <h5>Media:</h5>
-                                <p>Identity, Website, Print</p>
+                                <p>
+                                    App, website, and iBook that brought the metro 
+                                    design language to iOS
+                                </p>
                             </div>
 
                     </div>
@@ -211,8 +219,10 @@
 
                             <h4 class="project-title">Neutron Interactive</h4>
                             <div class="project-meta">
-                                <h5>Media:</h5>
-                                <p>Identity, Website, Print</p>
+                                <p>
+                                    Corporate marketing materials, magazine ads, 
+                                    tradeshow booths, and other collateral
+                                </p>
                             </div>
 
                     </div>
@@ -225,8 +235,10 @@
 
                             <h4 class="project-title">iPhone Blueprints</h4>
                             <div class="project-meta">
-                                <h5>Media:</h5>
-                                <p>Identity, Website, Print</p>
+                                <p>
+                                    Self-published iBook and ePub centered on the 
+                                    fundamentals of UI design
+                                </p>
                             </div>
 
                     </div>
@@ -239,8 +251,10 @@
 
                             <h4 class="project-title">EventBoard Marketing</h4>
                             <div class="project-meta">
-                                <h5>Media:</h5>
-                                <p>Identity, Website, Print</p>
+                                <p>
+                                    Company website, print and digital collateral, 
+                                    and just about everything else
+                                </p>
                             </div>
 
                     </div>
@@ -254,22 +268,7 @@
         <div class="wrap">
             <h2><span class="box"></span>From Dribbble</h2>
             <ul class="project-list">
-                <!-- Placeholder Dribbble Project
-                <li class="project thumb-1" id="">
-                    <div class="live-area">
-                        <div class="overlay"></div>
-                        <img src="images/thumbnail.png" alt="thumbnail" />
 
-                            <h4 class="project-title">Ender Labs</h4>
-                            <div class="project-meta">
-                                <h5>Media:</h5>
-                                <p>Identity, Website, Print</p>
-                            </div>
-
-                    </div>
-                    <a href="" class="project-link"></a>
-                </li>
-                -->
             </ul>
         </div>
     </section>

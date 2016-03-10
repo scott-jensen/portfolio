@@ -28,7 +28,10 @@ function featuredProjects(){
 		}, 220);
 
 	}
+
 	loadNav();
+
+	
 	var currentSlide = 0;
 	var onDeck = 1;
 	var prevSlide = 0;
@@ -111,7 +114,7 @@ function featuredProjects(){
 		});
 
 	}
-	$('#tout').preloader(nextSlide);
+	nextSlide();
 
 }
 
@@ -164,9 +167,14 @@ function homeScroll() {
 			$('.home-content').css('top', windowHeight + 50 + 'px');
 			$('.home').css('height', windowHeight + 2 + 'px');
 		}
+		$('#site-header').css('visibility', 'visible');
 		
 	}
-	positionTout();
+	function loadTout(){
+		positionTout();
+		featuredProjects();
+	}
+	$('#tout').preloader(loadTout);
 	$(window).resize(positionTout);
 
 
@@ -285,7 +293,7 @@ function projectGallery(){
             });
         }
 
-        displayGallery();
+        //displayGallery();
         galleryVisible = true;
 
     };
@@ -417,7 +425,7 @@ function dispatch(){
 		}
 		// if there is a hash on desktop, load the project
 		else if(windowHash.length > 1){
-			var projectNum = windowHash.split('-')[0];
+			var projectNum = windowHash.split('-gallery')[0];
 			launchModule('full', '/' + projectNum.split('#')[1]);
 		}
 	}
