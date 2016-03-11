@@ -17,12 +17,12 @@
 		<div class="wrap">
 			<h2><span class="box"></span>Message Received!</h2>
 			<img src="<?php echo bloginfo( 'template_directory' ) . '/images/dance-bmo-1.gif'; ?>" alt="BMO" />
+			<h3>Thanks for Dropping Me a Line</h3>
 			<p>
-				Thanks for reaching out! I'm probably just perched 
-				over my laptop, hitting refresh on my email, and just waiting 
-				for a message like that to come in. But even I know how to 
-				play hard to get; so it might be up to 24 hours before I get 
-				back to you.
+				I'm probably just perched over my laptop, hitting refresh 
+				on my email, and just waiting for a message like yours to 
+				come in. But even I know how to play hard to get; so it 
+				might be up to 24 hours before I get back to you.
 			</p>
 
 			

@@ -11,7 +11,34 @@
     		$('#contact-name').focus();
     	}, 50)
     	
-    })
+    	$('#submit-button').click(function(event){
+    		event.preventDefault();
+    		var inputCount = 0;
+			$('.form-field').each(function(){
+				
+				if($(this).attr('id') == 'contact-robot' && $(this).val() == '18'){
+					inputCount++;
+					$(this).removeClass('error-message');
+				}
+				else if ($(this).attr('id') == 'contact-robot' && $(this).val() != '18') {
+					$(this).addClass('error-input');
+				};
+				
+				if($(this).attr('id') != 'contact-robot' && $(this).val() != ''){
+					inputCount++;
+					$(this).removeClass('error-input')
+				}
+				else{
+					$(this).addClass('error-input');
+				};
+
+			});
+			if (inputCount == 4){
+				//submit the form
+				$('#the-form').submit();
+			};
+    	});
+    });
     	
     </script>
 <?php include(TEMPLATEPATH . '/navigation.php'); ?>
@@ -20,26 +47,26 @@
 		<div class="wrap">
 			<h2><span class="box"></span>Say Hello!</h2>
 			
-			<form method="post" name="myemailform" action="<?php echo bloginfo( 'template_directory' ) . '/form-to-email.php'; ?>">
+			<form method="post" name="myemailform" id="the-form" action="<?php echo bloginfo( 'template_directory' ) . '/form-to-email.php'; ?>">
                 
 				<ul>
 					<li>
 						<label>Your Name</label>
-						<input type="text" name="name" id="contact-name">
+						<input type="text" name="name" id="contact-name" class="form-field">
 					</li>
 					<li>
 						<label>Email</label>
-						<input type="text" name="email">
+						<input type="text" name="email" id="contact-email" class="form-field">
 					</li>
 					<li>
 						<label for='robot'>13 + 5 = ?</label>
-                		<input type="text" name="robot">
+                		<input type="text" name="robot" id="contact-robot" class="form-field">
 					<li>
 						<label>Your Message</label>
-						<textarea name="message"></textarea>
+						<textarea name="message" id="contact-message" class="form-field"></textarea>
 					</li>
 					<li>
-						<input type="submit" name='submit' value="submit" class="black-btn" />
+						<input type="submit" name='submit' value="submit" class="black-btn" id="submit-button" />
 					</li>
 				</ul>
 
