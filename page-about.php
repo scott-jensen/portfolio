@@ -23,15 +23,34 @@
                     <article class="entry" id="entry">
                     
                     <p>
-                        Aot the last time. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congu. Proin quis tortor orci. Etiam at Risus et justo dignissim congue. Donec cone lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus ongu. Proin quis tortor orci. Etiam at Risus et justo dignissim congue. Donec cone lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus
+                        Well I guess I should tell you a little bit about myself. I am 
+                        a multi-facetted designer and art director. Art has always been 
+                        my bread and butter. I completed my BFA in visual communications 
+                        in 2009 and have been working in the Greater Salt Lake area ever 
+                        since. I've written a couple <a href="http://iphoneblueprints.com" 
+                        target="_blank">books,</a> been a part of a few different startups 
+                        at the ground floor, and worked across a wide range of design media. 
+                        And when I'm not working on design? I'm probably buried in a pile 
+                        of legos looking for a 2x6 dark gray block.
                     </p>
                     <p>
-                        Not the last time. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse <a href="">dictum</a> feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congu. Proin quis tortor orci. <a href="">Etiam at Risus</a> et justo dignissim congue. 
+                        I work full-time at <a href="https://eventboard.io" target="_blank">
+                        EventBoard,</a> a small little startup from Salt Lake City that is 
+                        making some pretty big waves. As one of the founding members, I've 
+                        been worn several hats there - designer, front-end developer, 
+                        copywriter, customer support guy, etc. Currently, I am the Art 
+                        Director in charge of building a design team and leading product 
+                        and marketing design initiatives.  
                     </p>
                     <h2><span class="box"></span>My Skillset</h2>
 
                      <p>
-                        Not the last time. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congu. Proin quis tortor orci. Etiam at Risus et justo dignissim congue. 
+                        While much of my work has centered around user interface and user 
+                        experience design, I strongly believe in being a full-stack designer. 
+                        That means maintaining a wide range of abilities that allow me to 
+                        follow a project through every stage of production. This includes 
+                        designing for any media, strong front-end development skills, and 
+                        even writing copy and messaging.
                     </p>
                     <div class="abilities-section">
                         <section class="pie-chart">

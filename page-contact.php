@@ -19,24 +19,27 @@
 
 		<div class="wrap">
 			<h2><span class="box"></span>Say Hello!</h2>
-			<p>Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque.
-</p>
-			<form>
+			
+			<form method="post" name="myemailform" action="<?php echo bloginfo( 'template_directory' ) . '/form-to-email.php'; ?>">
+                
 				<ul>
 					<li>
 						<label>Your Name</label>
-						<input type="text" id="contact-name">
+						<input type="text" name="name" id="contact-name">
 					</li>
 					<li>
 						<label>Email</label>
-						<input type="text">
+						<input type="text" name="email">
 					</li>
 					<li>
-						<label>Email</label>
-						<textarea></textarea>
+						<label for='robot'>13 + 5 = ?</label>
+                		<input type="text" name="robot">
+					<li>
+						<label>Your Message</label>
+						<textarea name="message"></textarea>
 					</li>
 					<li>
-						<input type="submit" value="Send" class="black-btn" />
+						<input type="submit" name='submit' value="submit" class="black-btn" />
 					</li>
 				</ul>
 
