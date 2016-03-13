@@ -49,7 +49,8 @@
                 <div class="bar bar4 project-obj"></div>
                 <div class="bar bar5 project-obj"></div>
                 <div class="bar bar6 project-obj"></div>
-                <img src="<?php echo bloginfo( 'template_directory' ) . '/images/tout-sample.png'; ?>" alt="featured project" class=" artwork ipad project-obj" />
+                <img src="<?php echo bloginfo( 'template_directory' ) . '/images/tout-eventboard-1.png'; ?>" alt="featured project" class=" artwork ipad project-obj object-1" />
+                <img src="<?php echo bloginfo( 'template_directory' ) . '/images/tout-eventboard-2.png'; ?>" alt="featured project" class=" artwork ipad project-obj object-2" />
             </div>
             <div class="project-details">
                 <article>
@@ -63,7 +64,7 @@
             </div>
         </li>
 
-       <li class="project-1 tout-project" id="project-2">
+       <li class="project-2 tout-project" id="project-2">
             <div class="background tout-element">
                 <div class="bar bar1"></div>
                 <div class="bar bar2"></div>
@@ -96,7 +97,7 @@
                 <div class="bar bar4 project-obj"></div>
                 <div class="bar bar5 project-obj"></div>
                 <div class="bar bar6 project-obj"></div>
-                <img src="<?php echo bloginfo( 'template_directory' ) . '/images/tout-sample.png'; ?>" alt="featured project" class="ipad project-obj artwork" />
+                <img src="<?php echo bloginfo( 'template_directory' ) . '/images/tout-sample.png'; ?>" alt="featured project" class="ipad project-obj object-1 artwork" />
             </div>
             <div class="project-details">
                 <article>
@@ -110,7 +111,7 @@
             </div>
         </li>
 
-        <li class="project-1 tout-project" id="project-3">
+        <li class="project-3 tout-project" id="project-3">
             <div class="background tout-element">
                 <div class="bar bar1"></div>
                 <div class="bar bar2"></div>
@@ -143,7 +144,8 @@
                 <div class="bar bar4 project-obj"></div>
                 <div class="bar bar5 project-obj"></div>
                 <div class="bar bar6 project-obj"></div>
-                <img src="<?php echo bloginfo( 'template_directory' ) . '/images/tout-sample.png'; ?>" alt="featured project" class="ipad project-obj artwork" />
+                <img src="<?php echo bloginfo( 'template_directory' ) . '/images/tout-track8-1.png'; ?>" alt="featured project" class="ipad project-obj artwork object-1" />
+                <img src="<?php echo bloginfo( 'template_directory' ) . '/images/tout-track8-2.png'; ?>" alt="featured project" class="ipad project-obj artwork object-2" />
             </div>
             <div class="project-details">
                 <article>

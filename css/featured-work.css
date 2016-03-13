@@ -62,8 +62,20 @@
 	top:0;
 	left:0;
 }
+#featured-projects .object-1 {
+	-webkit-animation: float-two 3s ease-in-out infinite;
+	-moz-animation: float-two 3s ease-in-out infinite;
+	-ms-animation: float-two 3s ease-in-out infinite;
+	animation: float-two 3s ease-in-out infinite;
+}
+#featured-projects .object-2 {
+	-webkit-animation: float-one 3.3s ease-in-out infinite;
+	-moz-animation: float-one 3.3s ease-in-out infinite;
+	-ms-animation: float-one 3.3s ease-in-out infinite;
+	animation: float-one 3.3s ease-in-out infinite;
+}
 .background .bar {
-	background:#DDD;
+	background:#EAEAEA;
 	border-radius: 6px;
 	-webkit-filter: blur(5px);
   	-moz-filter: blur(5px);
@@ -79,38 +91,34 @@
   	-ms-filter: blur(3px);
   	filter: blur(3px);
 }
-.project-1 .ipad {
+#featured-projects .ipad {
 	width:50%;
 	left:25%;
 	top:15%;
-
 	position: absolute;
 	z-index: 10;
-	-webkit-animation: float-two 3s ease-in-out infinite;
-	-moz-animation: float-two 3s ease-in-out infinite;
-	-ms-animation: float-two 3s ease-in-out infinite;
-	animation: float-two 3s ease-in-out infinite;
 }
+
 .project-1 .foreground .bar2 {
 	height:30px;
 	width:25%;
-	top:40%;
+	top:30%;
 	z-index: 6;
-	left:20%;
-	-webkit-transform: rotateY(40deg) rotateX(60deg) rotateZ(-20deg);
+	left:15%;
+	-webkit-transform: rotateY(30deg) rotateX(50deg) rotateZ(-30deg);
 	-webkit-animation: float-three 3s ease-in-out infinite;
-	-moz-transform: rotateY(40deg) rotateX(60deg) rotateZ(-20deg);
+	-moz-transform: rotateY(30deg) rotateX(50deg) rotateZ(-30deg);
 	-moz-animation: float-three 3s ease-in-out infinite;
-	-ms-transform: rotateY(40deg) rotateX(60deg) rotateZ(-20deg);
+	-ms-transform: rotateY(30deg) rotateX(50deg) rotateZ(-30deg);
 	-ms-animation: float-three 3s ease-in-out infinite;
-	transform: rotateY(40deg) rotateX(60deg) rotateZ(-20deg);
+	transform: rotateY(30deg) rotateX(50deg) rotateZ(-30deg);
 	animation: float-three 3s ease-in-out infinite;
 }
 .project-1 .foreground .bar6 {
 	height:4px;
 	width:25%;
-	top:35%;
-	left:55%;
+	top:40%;
+	left:60%;
 	-webkit-transform: rotateY(33deg) rotateX(10deg) rotateZ(30deg);
 	-webkit-animation: float-one 2s ease-in-out infinite;
 	-moz-transform: rotateY(33deg) rotateX(10deg) rotateZ(30deg);
@@ -122,81 +130,248 @@
 	z-index: 30;
 }
 .project-1 .foreground .bar3 {
-	height:10px;
-	width:35%;
-	top:65%;
-	left:10%;
-	-webkit-transform: rotateY(75deg) rotateX(10deg) rotateZ(45deg);
+	height:4px;
+	width:24%;
+	top:63%;
+	left:23%;
+	-webkit-transform: rotateY(5deg) rotateX(30deg) rotateZ(35deg);
 	-webkit-animation: float-three 2s ease-in-out infinite;
-	-moz-transform: rotateY(75deg) rotateX(10deg) rotateZ(45deg);
+	-moz-transform: rotateY(5deg) rotateX(30deg) rotateZ(35deg);
 	-moz-animation: float-three 2s ease-in-out infinite;
-	-ms-transform: rotateY(75deg) rotateX(10deg) rotateZ(45deg);
+	-ms-transform: rotateY(5deg) rotateX(30deg) rotateZ(35deg);
 	-ms-animation: float-three 2s ease-in-out infinite;
-	transform: rotateY(75deg) rotateX(10deg) rotateZ(45deg);
+	transform: rotateY(5deg) rotateX(30deg) rotateZ(35deg);
 	animation: float-three 2s ease-in-out infinite;
 	z-index:4;
 }
 .project-1 .foreground .bar5 {
 	height:20px;
-	width:20%;
-	top:60%;
+	width:30%;
+	top:63%;
 	left:60%;
-	-webkit-transform: rotateY(35deg) rotateX(30deg) rotateZ(-5deg);
+	-webkit-transform: rotateY(45deg) rotateX(30deg) rotateZ(-15deg);
 	-webkit-animation: float-one 2s ease-in-out infinite;
-	-moz-transform: rotateY(35deg) rotateX(30deg) rotateZ(-5deg);
+	-moz-transform: rotateY(45deg) rotateX(30deg) rotateZ(-15deg);
 	-moz-animation: float-one 2s ease-in-out infinite;
-	-ms-transform: rotateY(35deg) rotateX(30deg) rotateZ(-5deg);
+	-ms-transform: rotateY(45deg) rotateX(30deg) rotateZ(-15deg);
 	-ms-animation: float-one 2s ease-in-out infinite;
-	transform: rotateY(35deg) rotateX(30deg) rotateZ(-5deg);
+	transform: rotateY(45deg) rotateX(30deg) rotateZ(-15deg);
 	animation: float-one 2s ease-in-out infinite;
 	z-index:40;
 }
 .project-1 .foreground .bar4 {
 	height:10px;
-	width:20%;
-	top:60%;
-	left:50%;
-	-webkit-transform: rotateY(35deg) rotateX(30deg) rotateZ(15deg);
+	width:25%;
+	top:50%;
+	left:65%;
+	-webkit-transform: rotateY(35deg) rotateX(30deg) rotateZ(5deg);
 	-webkit-animation: float-two 3.2s ease-in-out infinite;
-	-moz-transform: rotateY(35deg) rotateX(30deg) rotateZ(15deg);
+	-moz-transform: rotateY(35deg) rotateX(30deg) rotateZ(5deg);
 	-moz-animation: float-two 3.2s ease-in-out infinite;
-	-ms-transform: rotateY(35deg) rotateX(30deg) rotateZ(15deg);
+	-ms-transform: rotateY(35deg) rotateX(30deg) rotateZ(5deg);
 	-ms-animation: float-two 3.2s ease-in-out infinite;
-	transform: rotateY(35deg) rotateX(30deg) rotateZ(15deg);
+	transform: rotateY(35deg) rotateX(30deg) rotateZ(5deg);
 	animation: float-two 3.2s ease-in-out infinite;
 	z-index:20;
 }
 .project-1 .foreground .bar1 {
-	height:3px;
-	width:10%;
+	height:8px;
+	width:16%;
 	top:55%;
-	left:10%;
-	-webkit-transform: rotateY(45deg) rotateX(50deg) rotateZ(-15deg);
+	left:20%;
+	-webkit-transform: rotateY(55deg) rotateX(-34deg) rotateZ(15deg);
 	-webkit-animation: float-one 3s ease-in-out infinite;
-	-moz-transform: rotateY(45deg) rotateX(50deg) rotateZ(-15deg);
+	-moz-transform: rotateY(55deg) rotateX(-34deg) rotateZ(15deg);
 	-moz-animation: float-one 3s ease-in-out infinite;
-	-ms-transform: rotateY(45deg) rotateX(50deg) rotateZ(-15deg);
+	-ms-transform: rotateY(55deg) rotateX(-34deg) rotateZ(15deg);
 	-ms-animation: float-one 3s ease-in-out infinite;
-	transform: rotateY(45deg) rotateX(50deg) rotateZ(-15deg);
+	transform: rotateY(55deg) rotateX(-34deg) rotateZ(15deg);
 	animation: float-one 3s ease-in-out infinite;
 	z-index:3;
 	
 }
-.project1-shadow {
+.project-2 .foreground .bar2 {
+	height:23px;
 	width:30%;
-	height:60%;
-	border-radius: 20px;
-	z-index: 1;
 	top:30%;
-	left:40%;
-	-webkit-animation: float-two 3s ease-in-out infinite;
-	-webkit-transform: rotateY(0deg) rotateX(0deg) rotateZ(20deg);
-	-moz-animation: float-two 3s ease-in-out infinite;
-	-moz-transform: rotateY(0deg) rotateX(0deg) rotateZ(20deg);
-	-ms-animation: float-two 3s ease-in-out infinite;
-	-ms-transform: rotateY(0deg) rotateX(0deg) rotateZ(20deg);
-	animation: float-two 3s ease-in-out infinite;
-	transform: rotateY(0deg) rotateX(0deg) rotateZ(20deg);
+	z-index: 6;
+	left:25%;
+	-webkit-transform: rotateY(0deg) rotateX(60deg) rotateZ(60deg);
+	-webkit-animation: float-three 3s ease-in-out infinite;
+	-moz-transform: rotateY(0deg) rotateX(60deg) rotateZ(60deg);
+	-moz-animation: float-three 3s ease-in-out infinite;
+	-ms-transform: rotateY(0deg) rotateX(60deg) rotateZ(60deg);
+	-ms-animation: float-three 3s ease-in-out infinite;
+	transform: rotateY(0deg) rotateX(60deg) rotateZ(60deg);
+	animation: float-three 3s ease-in-out infinite;
+}
+.project-2 .foreground .bar6 {
+	height:4px;
+	width:25%;
+	top:40%;
+	left:55%;
+	-webkit-transform: rotateY(33deg) rotateX(10deg) rotateZ(30deg);
+	-webkit-animation: float-three 2s ease-in-out infinite;
+	-moz-transform: rotateY(33deg) rotateX(10deg) rotateZ(30deg);
+	-moz-animation: float-three 2s ease-in-out infinite;
+	-ms-transform: rotateY(33deg) rotateX(10deg) rotateZ(30deg);
+	-ms-animation: float-three 2s ease-in-out infinite;
+	transform: rotateY(33deg) rotateX(10deg) rotateZ(30deg);
+	animation: float-three 2s ease-in-out infinite;
+	z-index: 30;
+}
+.project-2 .foreground .bar3 {
+	height:4px;
+	width:24%;
+	top:53%;
+	left:15%;
+	-webkit-transform: rotateY(5deg) rotateX(30deg) rotateZ(35deg);
+	-webkit-animation: float-three 2s ease-in-out infinite;
+	-moz-transform: rotateY(5deg) rotateX(30deg) rotateZ(35deg);
+	-moz-animation: float-three 2s ease-in-out infinite;
+	-ms-transform: rotateY(5deg) rotateX(30deg) rotateZ(35deg);
+	-ms-animation: float-three 2s ease-in-out infinite;
+	transform: rotateY(5deg) rotateX(30deg) rotateZ(35deg);
+	animation: float-three 2s ease-in-out infinite;
+	z-index:4;
+}
+.project-2 .foreground .bar5 {
+	height:2px;
+	width:30%;
+	top:55%;
+	left:50%;
+	-webkit-transform: rotateY(45deg) rotateX(30deg) rotateZ(15deg);
+	-webkit-animation: float-one 2s ease-in-out infinite;
+	-moz-transform: rotateY(45deg) rotateX(30deg) rotateZ(15deg);
+	-moz-animation: float-one 2s ease-in-out infinite;
+	-ms-transform: rotateY(45deg) rotateX(30deg) rotateZ(15deg);
+	-ms-animation: float-one 2s ease-in-out infinite;
+	transform: rotateY(45deg) rotateX(30deg) rotateZ(15deg);
+	animation: float-one 2s ease-in-out infinite;
+	z-index:40;
+}
+.project-2 .foreground .bar4 {
+	height:10px;
+	width:25%;
+	top:50%;
+	left:50%;
+	-webkit-transform: rotateY(35deg) rotateX(30deg) rotateZ(-5deg);
+	-webkit-animation: float-two 3.2s ease-in-out infinite;
+	-moz-transform: rotateY(35deg) rotateX(30deg) rotateZ(-5deg);
+	-moz-animation: float-two 3.2s ease-in-out infinite;
+	-ms-transform: rotateY(35deg) rotateX(30deg) rotateZ(-5deg);
+	-ms-animation: float-two 3.2s ease-in-out infinite;
+	transform: rotateY(35deg) rotateX(30deg) rotateZ(-5deg);
+	animation: float-two 3.2s ease-in-out infinite;
+	z-index:20;
+}
+.project-2 .foreground .bar1 {
+	height:8px;
+	width:16%;
+	top:55%;
+	left:20%;
+	-webkit-transform: rotateY(55deg) rotateX(-34deg) rotateZ(15deg);
+	-webkit-animation: float-one 3s ease-in-out infinite;
+	-moz-transform: rotateY(55deg) rotateX(-34deg) rotateZ(15deg);
+	-moz-animation: float-one 3s ease-in-out infinite;
+	-ms-transform: rotateY(55deg) rotateX(-34deg) rotateZ(15deg);
+	-ms-animation: float-one 3s ease-in-out infinite;
+	transform: rotateY(55deg) rotateX(-34deg) rotateZ(15deg);
+	animation: float-one 3s ease-in-out infinite;
+	z-index:3;
+	
+}
+
+.project-3 .foreground .bar2 {
+	height:5px;
+	width:30%;
+	top:30%;
+	z-index: 6;
+	left:25%;
+	-webkit-transform: rotateY(0deg) rotateX(60deg) rotateZ(-20deg);
+	-webkit-animation: float-three 3s ease-in-out infinite;
+	-moz-transform: rotateY(0deg) rotateX(60deg) rotateZ(-20deg);
+	-moz-animation: float-three 3s ease-in-out infinite;
+	-ms-transform: rotateY(0deg) rotateX(60deg) rotateZ(-20deg);
+	-ms-animation: float-three 3s ease-in-out infinite;
+	transform: rotateY(0deg) rotateX(60deg) rotateZ(-20deg);
+	animation: float-three 3s ease-in-out infinite;
+}
+.project-3 .foreground .bar6 {
+	height:4px;
+	width:25%;
+	top:25%;
+	left:55%;
+	-webkit-transform: rotateY(33deg) rotateX(10deg) rotateZ(30deg);
+	-webkit-animation: float-three 2s ease-in-out infinite;
+	-moz-transform: rotateY(33deg) rotateX(10deg) rotateZ(30deg);
+	-moz-animation: float-three 2s ease-in-out infinite;
+	-ms-transform: rotateY(33deg) rotateX(10deg) rotateZ(30deg);
+	-ms-animation: float-three 2s ease-in-out infinite;
+	transform: rotateY(33deg) rotateX(10deg) rotateZ(30deg);
+	animation: float-three 2s ease-in-out infinite;
+	z-index: 30;
+}
+.project-3 .foreground .bar3 {
+	height:4px;
+	width:24%;
+	top:53%;
+	left:15%;
+	-webkit-transform: rotateY(5deg) rotateX(30deg) rotateZ(35deg);
+	-webkit-animation: float-three 2s ease-in-out infinite;
+	-moz-transform: rotateY(5deg) rotateX(30deg) rotateZ(35deg);
+	-moz-animation: float-three 2s ease-in-out infinite;
+	-ms-transform: rotateY(5deg) rotateX(30deg) rotateZ(35deg);
+	-ms-animation: float-three 2s ease-in-out infinite;
+	transform: rotateY(5deg) rotateX(30deg) rotateZ(35deg);
+	animation: float-three 2s ease-in-out infinite;
+	z-index:4;
+}
+.project-3 .foreground .bar5 {
+	height:2px;
+	width:30%;
+	top:55%;
+	left:60%;
+	-webkit-transform: rotateY(45deg) rotateX(30deg) rotateZ(-5deg);
+	-webkit-animation: float-one 2s ease-in-out infinite;
+	-moz-transform: rotateY(45deg) rotateX(30deg) rotateZ(-5deg);
+	-moz-animation: float-one 2s ease-in-out infinite;
+	-ms-transform: rotateY(45deg) rotateX(30deg) rotateZ(-5deg);
+	-ms-animation: float-one 2s ease-in-out infinite;
+	transform: rotateY(45deg) rotateX(30deg) rotateZ(-5deg);
+	animation: float-one 2s ease-in-out infinite;
+	z-index:40;
+}
+.project-3 .foreground .bar4 {
+	height:12px;
+	width:25%;
+	top:50%;
+	left:60%;
+	-webkit-transform: rotateY(35deg) rotateX(30deg) rotateZ(-5deg);
+	-webkit-animation: float-two 3.2s ease-in-out infinite;
+	-moz-transform: rotateY(35deg) rotateX(30deg) rotateZ(-5deg);
+	-moz-animation: float-two 3.2s ease-in-out infinite;
+	-ms-transform: rotateY(35deg) rotateX(30deg) rotateZ(-5deg);
+	-ms-animation: float-two 3.2s ease-in-out infinite;
+	transform: rotateY(35deg) rotateX(30deg) rotateZ(-5deg);
+	animation: float-two 3.2s ease-in-out infinite;
+	z-index:20;
+}
+.project-3 .foreground .bar1 {
+	height:28px;
+	width:16%;
+	top:50%;
+	left:20%;
+	-webkit-transform: rotateY(55deg) rotateX(-34deg) rotateZ(-25deg);
+	-webkit-animation: float-one 3s ease-in-out infinite;
+	-moz-transform: rotateY(55deg) rotateX(-34deg) rotateZ(-25deg);
+	-moz-animation: float-one 3s ease-in-out infinite;
+	-ms-transform: rotateY(55deg) rotateX(-34deg) rotateZ(-25deg);
+	-ms-animation: float-one 3s ease-in-out infinite;
+	transform: rotateY(55deg) rotateX(-34deg) rotateZ(-25deg);
+	animation: float-one 3s ease-in-out infinite;
+	z-index:3;
+	
 }
 .background .bar1 {
 	width:10%;
@@ -556,7 +731,7 @@
         margin-top:0px;
     }
     50%  {
-        margin-top:5px;
+        margin-top:8px;
     }
     100% {
         margin-top:0px;
