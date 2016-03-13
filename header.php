@@ -16,11 +16,59 @@
     hope that you enjoy it!
 
     -->
-    
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Beta Crumb" href="feed" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Scott Jensen Design" />
     <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
-    <title>Scott Jensen Design</title>
-    <meta name="description" content="" />
+    <meta name="description" content="<?php 
+        if ( is_front_page() ) {
+          echo 'I am a designer, artist, writer, and Oxford Comma enthusiast. Most of my work focuses on user interface and user experience design. Take a look at my work.';
+        } elseif ( is_home() ) {
+          echo 'I am a designer, artist, writer, and Oxford Comma enthusiast. You can find some of my writing and thoughts here. Take a look.';// blog page
+        } elseif ( is_single() ){
+          $excerpt = strip_tags(get_the_excerpt());
+          echo $excerpt; // single page // single page
+        } else {
+          echo 'I am a designer, artist, writer, and Oxford Comma enthusiast. Most of my work focuses on user interface and user experience design. Take a look at my work.';
+        }
+    ?>" />
+    <title><?php
+        if ( is_front_page() ) {
+          echo 'Scott Jensen Design';
+        } elseif ( is_home() ) {
+          echo 'Writing | Scott Jensen Design';// blog page
+        } elseif ( is_page('contact')){
+          echo 'Contact | Scott Jensen Design';
+        } elseif ( is_page('about')){
+          echo 'About | Scott Jensen Design';
+        } elseif ( is_single() ){
+          echo the_title().' | Scott Jensen Design'; // single page
+        } else {
+          echo 'Scott Jensen Design';
+        }
+    ?></title>
+    <meta property="og:description" content="<?php
+        if ( is_front_page() ) {
+          echo 'I am a designer, artist, writer, and Oxford Comma enthusiast. Most of my work focuses on user interface and user experience design. Take a look at my work.';
+        } elseif ( is_home() ) {
+          echo 'I am a designer, artist, writer, and Oxford Comma enthusiast. You can find some of my writing and thoughts here. Take a look.';// blog page
+        } elseif ( is_single() ){
+          $excerpt = strip_tags(get_the_excerpt());
+          echo $excerpt; // single page
+        } else {
+          echo 'I am a designer, artist, writer, and Oxford Comma enthusiast. Most of my work focuses on user interface and user experience design. Take a look at my work.';
+        }
+    ?>" />
+    <meta property="og:url" content="<?php echo 'http://scottjensen.design'.$_SERVER['REQUEST_URI']; ?>" />
+    <link rel="canonical" href="<?php echo 'http://scottjensen.design'.$_SERVER['REQUEST_URI']; ?>" />
+    <meta property="og:image" content="<?php 
+        if( is_single()){
+            // post main image
+        } else {
+            // default site image
+        }
+    ?>" />
     <link rel="icon" type="image/png" href="favicon.png">
 
     <!-- iTunes App Link 

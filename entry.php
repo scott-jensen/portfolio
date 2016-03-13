@@ -13,8 +13,14 @@
 			
             <section class="share-links">
                 <h4>Share This:</h4>
-                <a href="" class="twitter">Twitter</a>
-                <a href="" class="facebook">Facebook</a>
+                <a href="https://twitter.com/intent/tweet?text=<?php the_title(); ?>:%20<?php the_permalink(); ?>&amp;via=_scottjensen" target="_blank" class="twitter">Twitter</a>
+                <a onclick="
+				    window.open(
+				      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+				      'facebook-share-dialog', 
+				      'width=626,height=436'); 
+				    return false;" 
+				class="facebook">Facebook</a>
             </section>
             <section class="about-me">
                 <img src="<?php echo bloginfo( 'template_directory' ) . '/images/avatar.png'; ?>" class="avatar" alt="Scott Jensen" />
