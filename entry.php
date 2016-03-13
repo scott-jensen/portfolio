@@ -24,7 +24,7 @@
 			<?php # if ( ! post_password_required() ) comments_template( '', true ); ?>
 		</section>
 		<aside>
-			<?php include(TEMPLATEPATH . '/my-books.php'); ?>
+			<?php include(TEMPLATEPATH . '/recent-posts.php'); ?>
 		</aside>
 	</div>
 </section>
