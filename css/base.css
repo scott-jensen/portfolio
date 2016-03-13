@@ -49,6 +49,9 @@ aside {
     .module iframe {
         max-width:100%;
     }
+.centered-content {
+    text-align: center;
+}
 
 
 /*============================================*/
@@ -165,6 +168,11 @@ dd {
     padding-left:20px;
     margin-bottom:20px;
     line-height: 1.4em;
+}
+.big-text {
+    font-size: 20rem;
+    color:#000;
+    font-family: HelveticaNeue-Condensed, Bebas, Helvetica, Arial, sans-serif;
 }
 
 
@@ -898,7 +906,7 @@ dd {
     color:#FFF;
     float:left;
     vertical-align: top;
-    font-family:HelveticaNeue-CondensedBold;
+    font-family:HelveticaNeue-CondensedBold, Bebas, Helvetica, Arial, sans-serif;
 
 }
 

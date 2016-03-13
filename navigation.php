@@ -1,7 +1,7 @@
 <header id="site-header">
     <div class="wrap">
         <div id="logo">
-            <a href="index.html">
+            <a href="http://scottjensen.design">
                 <div class="logo-1"></div>
                 <div class="logo-2"></div>
                 <div class="logo-3"></div>
