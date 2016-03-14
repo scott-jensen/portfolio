@@ -65,14 +65,14 @@
     ?>" />
     <meta property="og:description" content="<?php
         if ( is_front_page() ) {
-          echo 'I am a designer, artist, writer, and Oxford Comma enthusiast. Most of my work focuses on user interface and user experience design. Take a look at my work.';
+          echo 'I am a designer, artist, writer, and Oxford Comma enthusiast. Most of my work focuses on user interface and user experience design. Take a look at my portfolio.';
         } elseif ( is_home() ) {
           echo 'I am a designer, artist, writer, and Oxford Comma enthusiast. You can find some of my writing and thoughts here. Take a look.';// blog page
         } elseif ( is_single() ){
           $excerpt = strip_tags(get_the_excerpt());
           echo $excerpt; // single page
         } else {
-          echo 'I am a designer, artist, writer, and Oxford Comma enthusiast. Most of my work focuses on user interface and user experience design. Take a look at my work.';
+          echo 'I am a designer, artist, writer, and Oxford Comma enthusiast. Most of my work focuses on user interface and user experience design. Take a look at my portfolio.';
         }
     ?>" />
     <meta property="og:url" content="<?php echo 'http://scottjensen.design'.$_SERVER['REQUEST_URI']; ?>" />
