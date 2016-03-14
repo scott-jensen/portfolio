@@ -31,7 +31,7 @@ function featuredProjects(){
 
 	loadNav();
 	//getting rid of bars because of safari's poor performance
-	if(navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome')){
+	if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1){
 		//$('.middleground').hide();
 		$('.background').hide();
 		$('.foreground > .bar').hide();
@@ -259,7 +259,12 @@ function projectGallery(){
     var userInteraction = false;
     var galleryVisible = false;
     $('#full-project').height($(window).height());
-    $('#full-project').preloader(displayGallery);
+    if($(window).width() > 768){
+    	$('#full-project').preloader(displayGallery);
+    }
+    else {
+    	displayGallery();
+    }
 
     // function to show gallery when loaded
     function displayGallery() {

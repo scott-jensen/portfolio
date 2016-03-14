@@ -1797,7 +1797,9 @@ select {
     .project-page header {
         display:block;
     }
-
+    .project-page #project-slides {
+        opacity: 1;
+    }
     .project-page #project-slides .slide {
         width:auto;
         height:auto;
