@@ -1,9 +1,11 @@
 <?php
-if(!isset($_POST['submit']))
+/*
+if(!isset($_POST['submit-btn']))
 {
 	//This page should not be accessed directly. Need to submit the form.
 	echo "error; you need to submit the form!";
 }
+*/
 $name = $_POST['name'];
 $robot_answer = $_POST['robot'];
 $visitor_email = $_POST['email'];

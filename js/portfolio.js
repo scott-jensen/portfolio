@@ -30,12 +30,17 @@ function featuredProjects(){
 	}
 
 	loadNav();
-
+	//getting rid of bars because of safari's poor performance
+	if(navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome')){
+		//$('.middleground').hide();
+		$('.background').hide();
+		$('.foreground > .bar').hide();
+	}
 	
 	var currentSlide = 0;
 	var onDeck = 1;
 	var prevSlide = 0;
-	var slideTime = 6000;
+	var slideTime = 7000;
 	var transitionTime = 600;
 	var slideNum = $('.tout-project').length;
 
@@ -59,8 +64,8 @@ function featuredProjects(){
 				bottom : -20,
 				opacity : 1
 			}, 400);
-			if(navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1){
-
+			if(navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1 || windowWidth < 500){
+				
 				if (currentSlide == slideNum){
 					prevSlide = slideNum;
 					onDeck = 1;
@@ -78,6 +83,7 @@ function featuredProjects(){
 						$('#project-'+ currentSlide + ' > .project-details').css({'bottom':'-70px', 'opacity':0})
 					});
 					nextSlide();
+					
 				}, slideTime);
 			}
 			else {
@@ -156,7 +162,7 @@ function homeScroll() {
 		$('.project-details').css('left', wrapOffset + 'px');
 		$('.tout-element > .artwork').each(function(){
 			if(this.height >= toutHeight * .7){
-				$(this).css({'height':toutHeight * .70 + 'px', 'top':'10%', 'width':'auto'});
+				$(this).css({'height':toutHeight * .80 + 'px', 'top':'0', 'width':'auto'});
 			}
 		});
 
@@ -473,7 +479,7 @@ function projectOverlay (){
         window.location.hash = this.id + '-gallery';
     });
     $('.related-project').click(function(){
-        window.top.location.hash = this.id + '-gallery';
+        window.location.hash = this.id + '-gallery';
     });
 }
 

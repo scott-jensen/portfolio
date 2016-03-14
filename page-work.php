@@ -159,7 +159,10 @@
             </div>
         </li>
     </ul>
-
+    <!-- I'll add these later
+    <div id="next-btn"><a></a></div>
+    <div id="prev-btn"><a></a></div>
+    -->
 </section>
 <?php include(TEMPLATEPATH . '/navigation.php'); ?>
 <div class="home-content" style="display:none;">

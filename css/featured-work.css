@@ -807,3 +807,31 @@
         margin-top:0px;
     }
 }
+
+/*--------------- iPAD PORTRAIT --------------*/
+
+@media screen and (max-width: 768px) {
+	.home .middleground, .home .background {
+		display:none;
+	}
+	#featured-projects .ipad {
+		left:5%;
+		width:90%;
+		top:5%;
+	}
+}
+@media screen and (max-width: 508px) {
+	.home .foreground .bar {
+		display:none;
+	}
+	#featured-projects .ipad {
+		left:5%;
+		width:90%;
+		top:5%;
+	}
+	#featured-projects li {
+		height: 93%;
+		top:0;
+	}
+}
+

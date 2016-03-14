@@ -6,37 +6,40 @@
     	if(self == top){
     		$('body').removeClass('dark');
     		$('body').addClass('contact-not-inline');
-    	}
+    	};
     	setTimeout(function(){
     		$('#contact-name').focus();
-    	}, 50)
+    	}, 50);
     	
     	$('#submit-button').click(function(event){
     		event.preventDefault();
+    		
     		var inputCount = 0;
 			$('.form-field').each(function(){
-				
-				if($(this).attr('id') == 'contact-robot' && $(this).val() == '18'){
-					inputCount++;
-					$(this).removeClass('error-message');
-				}
-				else if ($(this).attr('id') == 'contact-robot' && $(this).val() != '18') {
-					$(this).addClass('error-input');
-				};
-				
-				if($(this).attr('id') != 'contact-robot' && $(this).val() != ''){
-					inputCount++;
-					$(this).removeClass('error-input')
+				if($(this).val() != ''){
+					inputCount++
+					$(this).removeClass('error-input');
 				}
 				else{
 					$(this).addClass('error-input');
-				};
+				}
 
 			});
+			
+			if($('#contact-robot').val() == '18'){
+				$('#contact-robot').removeClass('error-input');
+			}
+			else {
+				inputCount--;
+				$('#contact-robot').addClass('error-input');
+			};
 			if (inputCount == 4){
 				//submit the form
 				$('#the-form').submit();
+				return true;
 			};
+			return true;
+
     	});
     });
     	
@@ -66,7 +69,7 @@
 						<textarea name="message" id="contact-message" class="form-field"></textarea>
 					</li>
 					<li>
-						<input type="submit" name='submit' value="submit" class="black-btn" id="submit-button" />
+						<input type="submit" name='submit-btn' value="submit" class="black-btn" id="submit-button" />
 					</li>
 				</ul>
 

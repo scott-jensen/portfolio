@@ -590,6 +590,20 @@ dd {
     position: absolute;
     overflow: hidden;
 }
+    .home #tout #next-btn, .home #tout #prev-btn {
+        top:0;
+        width:20%;
+        position: absolute;
+        height: 100%;
+        z-index: 100;
+        cursor: pointer;
+    }
+        .home #tout #next-btn {
+            right:0;
+        }
+        .home #tout #prev-btn {
+            left:0;
+        }
 
 .home-content {
     position: absolute;
@@ -815,7 +829,7 @@ dd {
         position: absolute;
         right:0;
         top:0;
-        width:50%;
+        width:30%;
         height:100%;
         cursor: pointer;
     }
@@ -823,7 +837,7 @@ dd {
         position: absolute;
         left:0;
         top:0;
-        width:50%;
+        width:30%;
         height:100%;
         cursor: pointer;
     }
@@ -1667,7 +1681,7 @@ select {
         background-position: center bottom;
         border:1px solid #000;
     }
-.nav-previous a, .nav-next a {
+.nav-previous a, .nav-next a, #next-btn a, #prev-btn a {
     border:1px solid #EAEAEA;
     height:45px;
     width:45px;
@@ -1684,19 +1698,33 @@ select {
     transition: all .15s ease-in-out;
     cursor: pointer;
 }
-.nav-next a {
+    #next-btn a, #prev-btn a {
+        position: absolute;
+        top:45%;
+        opacity: .9;
+        margin:0;
+    }
+    #next-btn a {
+        right:10px;
+    }
+    #prev-btn a {
+        left:10px;
+    }
+.nav-next a, #next-btn a {
     background-position: -46px center;
     background-image:url(../images/next-btn-bg.jpg);
 }
-    .nav-next a:hover {
+    .nav-next:hover a, #next-btn:hover a{
         background-position: left center;
+        border:1px solid #333;
     }
-.nav-previous a {
+.nav-previous a, #prev-btn a {
     background-position: 1px center;
     background-image:url(../images/prev-btn-bg.jpg);
 }
-    .nav-previous a:hover {
+    .nav-previous:hover a, #prev-btn:hover a {
         background-position: right center;
+        border:1px solid #333;
     }
 
 
