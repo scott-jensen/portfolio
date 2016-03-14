@@ -93,7 +93,7 @@
     <?php if( is_single() ){ ?>
     <meta property="article:published_time" content="<?php the_time('c') ?>" />
     <?php } ?>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="<?php echo bloginfo( 'template_directory' ) . '/images/favicon.png'; ?>">
 
     <!-- Homescreen Bookmark Icon
     <link rel="apple-touch-icon-precomposed" href="sample-icon.png"/>
